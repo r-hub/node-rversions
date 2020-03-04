@@ -16,6 +16,15 @@ test('r_versions', async t => {
     t.pass()
 });
 
+test('r_release', async t => {
+    const result = await me.r_release();
+    t.deepEqual(Object.keys(result).sort(), ['date', 'nickname', 'version'])
+    t.true(/^[0-9]+\.[0-9]+\.[0-9]+$/.test(result.version));
+    Date.parse(result.date);
+    t.pass()
+    t.is(result.nickname, await get_nick(result.version));
+});
+
 test('get_nick', async t => {
     // get_nick
     // We remove this from the cache, so we can test that it is downloaded
