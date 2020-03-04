@@ -50,6 +50,15 @@ test('r_release_tarball', async t => {
     t.is(result.nickname, await get_nick(result.version));
 });
 
+test('r_release_win', async t => {
+    const result = await me.r_release_win();
+    t.deepEqual(Object.keys(result).sort(), ['date', 'nickname', 'version'])
+    t.true(/^[0-9]+\.[0-9]+\.[0-9]+$/.test(result.version));
+    Date.parse(result.date);
+    t.pass()
+    t.is(result.nickname, await get_nick(result.version));
+});
+
 test('get_nick', async t => {
     // get_nick
     // We remove this from the cache, so we can test that it is downloaded

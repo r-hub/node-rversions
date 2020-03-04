@@ -4,11 +4,13 @@ const r_release         = require('./lib/r-release');
 const r_oldrel          = require('./lib/r-oldrel');
 const r_release_macos   = require('./lib/r-release-macos');
 const r_release_tarball = require('./lib/r-release-tarball');
+const r_release_win     = require('./lib/r-release-win');
 
 module.exports = {
     r_versions:        r_versions,
     r_release:         r_release,
     r_oldrel:          r_oldrel,
     r_release_macos:   r_release_macos,
-    r_release_tarball: r_release_tarball
+    r_release_tarball: r_release_tarball,
+    r_release_win:     r_release_win
 };
