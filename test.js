@@ -25,6 +25,13 @@ test('r_release', async t => {
     t.is(result.nickname, await get_nick(result.version));
 });
 
+test('r_oldrel', async t => {
+    const vers = await Promise.all([me.r_release(), me.r_oldrel()]);
+    const rm = vers[0].version.replace(/^[0-9]+\.([0-9]+).*$/, '$1');
+    const om = vers[1].version.replace(/^[0-9]+\.([0-9]+).*$/, '$1');
+    t.is(Number(rm) - 1, Number(om));
+});
+
 test('get_nick', async t => {
     // get_nick
     // We remove this from the cache, so we can test that it is downloaded
