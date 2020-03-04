@@ -34,7 +34,10 @@ test('r_oldrel', async t => {
 
 test('r_release_macos', async t => {
     const result = await me.r_release_macos();
-    t.deepEqual(Object.keys(result).sort(), ['date', 'nickname', 'version'])
+    t.deepEqual(
+        Object.keys(result).sort(),
+        ['URL', 'date', 'nickname', 'version']
+    )
     t.true(/^[0-9]+\.[0-9]+\.[0-9]+$/.test(result.version));
     Date.parse(result.date);
     t.pass()
@@ -43,7 +46,10 @@ test('r_release_macos', async t => {
 
 test('r_release_tarball', async t => {
     const result = await me.r_release_tarball();
-    t.deepEqual(Object.keys(result).sort(), ['date', 'nickname', 'version'])
+    t.deepEqual(
+        Object.keys(result).sort(),
+        ['URL', 'date', 'nickname', 'version']
+    )
     t.true(/^[0-9]+\.[0-9]+\.[0-9]+$/.test(result.version));
     Date.parse(result.date);
     t.pass()
@@ -52,7 +58,10 @@ test('r_release_tarball', async t => {
 
 test('r_release_win', async t => {
     const result = await me.r_release_win();
-    t.deepEqual(Object.keys(result).sort(), ['date', 'nickname', 'version'])
+    t.deepEqual(
+        Object.keys(result).sort(),
+        ['URL', 'date', 'nickname', 'version']
+    )
     t.true(/^[0-9]+\.[0-9]+\.[0-9]+$/.test(result.version));
     Date.parse(result.date);
     t.pass()
