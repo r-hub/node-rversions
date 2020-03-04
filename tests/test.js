@@ -1,7 +1,8 @@
 
 const test = require('ava');
-const me = require('.');
-const get_nick = require('./lib/get-nick');
+const me = require('..');
+const get_nick = require('../lib/get-nick');
+const mycache = require('../lib/cache');
 
 test('r_versions', async t => {
     const result = await me.r_versions();
