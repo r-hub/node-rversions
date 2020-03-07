@@ -1,7 +1,7 @@
 
 # rversions
 
-[![Build Status](https://travis-ci.org/r-hub/node-rversions.svg?branch=master)](https://travis-ci.org/r-hub/node-rversions)
+[![Build Status](https://travis-ci.com/r-hub/node-rversions.svg?branch=master)](https://travis-ci.com/r-hub/node-rversions)
 
 > Past and present R versions
 
