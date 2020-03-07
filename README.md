@@ -1,5 +1,5 @@
 
-# file-type [![Build Status](https://travis-ci.org/r-hub/node-rversions.svg?branch=master)](https://travis-ci.org/r-hub/node-rversions)
+# rversions [![Build Status](https://travis-ci.org/r-hub/node-rversions.svg?branch=master)](https://travis-ci.org/r-hub/node-rversions)
 
 ## rversions
 
