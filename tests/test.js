@@ -1,8 +1,15 @@
 
 const test = require('ava');
-const me = require('..');
-const get_nick = require('../lib/get-nick');
-const mycache = require('../lib/cache');
+const srv = require('./helpers/server');
+
+let me, mycache;
+
+test.before(async () => {
+    await srv();
+    me = require('..');
+    get_nick = require('../lib/get-nick');
+    mycache = require('../lib/cache');
+});
 
 test('r_versions', async t => {
     // We run it twive, the second result comes from the cache

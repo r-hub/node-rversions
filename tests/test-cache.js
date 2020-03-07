@@ -3,8 +3,15 @@
 // and will not interfere with the cache of the other test file(s).
 
 const test = require('ava');
-const me = require('..');
-const mycache = require('../lib/cache');
+const srv = require('./helpers/server');
+
+let me, mycache;
+
+test.before(async () => {
+    await srv();
+    me = require('..');
+    mycache = require('../lib/cache');
+});
 
 test('cache', async t => {
     mycache.set('foo', 'bar');
