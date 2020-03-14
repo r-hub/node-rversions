@@ -4,7 +4,7 @@
   "description": "Query the current and past R versions",
   "main": "index.js",
   "scripts": {
-    "test": "ava"
+    "test": "nyc ava"
   },
   "repository": {
     "type": "git",
@@ -27,6 +27,7 @@
   },
   "devDependencies": {
     "ava": "^3.5.0",
-    "create-test-server": "^3.0.1"
+    "create-test-server": "^3.0.1",
+    "nyc": "^15.0.0"
   }
 }
