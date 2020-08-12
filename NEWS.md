@@ -1,6 +1,9 @@
 
 # 1.1.0
 
+* New `r_devel()` function to get the (possible future) version number
+  of the next R release.
+
 * Fix caching of the list of all releases.
 
 # 1.0.2
