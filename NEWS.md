@@ -6,6 +6,9 @@
 
 * Fix caching of the list of all releases.
 
+* Fix a caching issue, where the cache could be inadvertently modified
+  if queries were running concurrently.
+
 # 1.0.2
 
 * Fix `r_oldrel()` calculation, that was broken on R 4.x.
