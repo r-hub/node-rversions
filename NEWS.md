@@ -1,4 +1,8 @@
 
+# 1.2.0
+
+* Fix detection of the macOS installer version.
+
 # 1.1.0
 
 * New `r_devel()` function to get the (possible future) version number
