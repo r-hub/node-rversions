@@ -26,6 +26,8 @@ async function srv() {
                 res.send("Dark and Stormy Night");
             } else if (ver == "R-3-6-3") {
                 res.send('Holding the Windsock');
+            } else if (ver == "R-4-1-3") {
+                res.send('One Push-Up');
             } else {
                 res.send('This is ' + req.params.ver);
             }
