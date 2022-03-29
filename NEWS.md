@@ -1,6 +1,9 @@
 
 # 1.4.0 (unreleased)
 
+* New `r_next()` function to query the next release. This can be an
+  alpha, beta, RC or pre-release version, or the devel version (#16).
+
 # 1.3.0
 
 * Older oldrel versions: e.g. the release before `r_oldrel()` is

@@ -155,6 +155,20 @@ const rversions = require('rversions');
 { version: '4.0.0', date: null, nickname: 'Unsuffered Consequences' }
 ```
 
+#### The next version of R
+
+This can be an alpha, beta, RC or pre-release if a release process is
+currently happenning. Otherwise it is the development version.
+
+```js
+const rversions = require('rversions');
+
+(async () => {
+	console.log(await rversions.r_devel());
+})();
+
+```
+
 ## Caching
 
 All queries are cached for five minutes by default. If you don't want to
@@ -164,7 +178,7 @@ use the cached value, then set the (first) cache argument to `false`. E.g.:
 const rversions = require('rversions');
 
 (async () => {
-	console.log(await rversions.r_release_macos(false));
+	console.log(await rversions.r_next(false));
 })();
 ```
 
