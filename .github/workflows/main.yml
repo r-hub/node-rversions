@@ -1,7 +1,13 @@
 name: CI
 on:
-  - push
-  - pull_request
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+  schedule:
+  - cron: '30 14 * * *'
+
 jobs:
   test:
     name: Node.js ${{ matrix.node-version }}
