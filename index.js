@@ -9,6 +9,8 @@ if (!process.env.NODE_RVERSIONS_DUMMY) {
     const r_release_win     = require('./lib/r-release-win');
     const r_devel           = require('./lib/r-devel');
     const r_next            = require('./lib/r-next');
+    const r_next_win        = require('./lib/r-next-win');
+    const r_next_macos      = require('./lib/r-next-macos');
 
     module.exports = {
         r_versions:        r_versions,
@@ -18,7 +20,9 @@ if (!process.env.NODE_RVERSIONS_DUMMY) {
         r_release_tarball: r_release_tarball,
         r_release_win:     r_release_win,
         r_devel:           r_devel,
-        r_next:            r_next
+        r_next:            r_next,
+        r_next_win:        r_next_win,
+        r_next_macos:      r_next_macos
     };
 
 } else {
@@ -33,6 +37,8 @@ if (!process.env.NODE_RVERSIONS_DUMMY) {
         r_release_tarball: dummy.r_release_tarball,
         r_release_win:     dummy.r_release_win,
         r_devel:           dummy.r_devel,
-        r_next:            dummy.r_next
+        r_next:            dummy.r_next,
+        r_next_win:        dummy.r_next_win,
+        r_next_macos:      dummy.r_next_macos
     };
 }

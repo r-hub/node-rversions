@@ -174,7 +174,47 @@ const rversions = require('rversions');
   date: null,
   nickname: null,
   type: 'alpha',
-  url: 'https://cran.r-project.org/src/base-prerelease/R-latest.tar.gz'
+  URL: 'https://cran.r-project.org/src/base-prerelease/R-latest.tar.gz'
+}
+```
+
+#### Windows installer for the next version
+
+```js
+const rversions = require('rversions');
+
+(async () => {
+	console.log(await rversions.r_next_win());
+})();
+```
+
+```
+{
+  version: '4.2.0',
+  date: null,
+  nickname: null,
+  type: 'alpha',
+  URL: 'https://cran.r-project.org/bin/windows/base/R-4.2.0alpha-win.exe'
+}
+```
+
+#### macOS installer for the next version
+
+```js
+const rversions = require('rversions');
+
+(async () => {
+	console.log(await rversions.r_next_macos());
+})();
+```
+
+```
+{
+  version: '4.2.0',
+  date: null,
+  nickname: null,
+  type: 'alpha',
+  URL: 'https://mac.r-project.org/high-sierra/last-success/R-4.2-branch-x86_64.pkg'
 }
 ```
 
@@ -182,14 +222,6 @@ const rversions = require('rversions');
 
 All queries are cached for five minutes by default. If you don't want to
 use the cached value, then set the (first) cache argument to `false`. E.g.:
-
-```js
-const rversions = require('rversions');
-
-(async () => {
-	console.log(await rversions.r_next(false));
-})();
-```
 
 ## License
 
