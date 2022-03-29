@@ -1,12 +1,10 @@
 
 const createTestServer = require('create-test-server');
 
-// We use a test server, unless NODE_RVERSIONS_NOMOCK is set _or_
-// we are running in a Travis cron job.
+// We use a test server, unless NODE_RVERSIONS_NOMOCK is set
 
 async function srv() {
-    if (! process.env.NODE_RVERSIONS_NOMOCK &&
-        process.env.TRAVIS_EVENT_TYPE !== "cron") {
+    if (! process.env.NODE_RVERSIONS_NOMOCK) {
         const {promisify} = require('util');
         const fs = require('fs');
         const readFile = promisify(fs.readFile);

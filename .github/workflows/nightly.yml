@@ -1,10 +1,8 @@
 name: CI
 on:
-  push:
-    branches: [main, master]
-  pull_request:
-    branches: [main, master]
   workflow_dispatch:
+  schedule:
+  - cron: '30 14 * * *'
 
 jobs:
   test:
@@ -24,3 +22,5 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - run: npm install
       - run: npm test
+        env:
+          NODE_RVERSIONS_NOMOCK: 1
