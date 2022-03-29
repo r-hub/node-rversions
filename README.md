@@ -158,7 +158,7 @@ const rversions = require('rversions');
 #### The next version of R
 
 This can be an alpha, beta, RC or pre-release if a release process is
-currently happenning. Otherwise it is the development version.
+currently happenning. Otherwise it is the current patched version.
 
 ```js
 const rversions = require('rversions');
@@ -166,7 +166,16 @@ const rversions = require('rversions');
 (async () => {
 	console.log(await rversions.r_devel());
 })();
+```
 
+```
+{
+  version: '4.2.0',
+  date: null,
+  nickname: null,
+  type: 'alpha',
+  url: 'https://cran.r-project.org/src/base-prerelease/R-latest.tar.gz'
+}
 ```
 
 ## Caching
