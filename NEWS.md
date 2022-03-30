@@ -5,6 +5,10 @@
   alpha, beta, RC or pre-release version, or the current patched version
   if no release is in progress (#16).
 
+  New `r_next_win()` and `r_next_macos()` functions to query the installers
+  for `r_next()` if they are available. If they are not available, it falls
+  back to R-patched installers (#17).
+
 # 1.3.0
 
 * Older oldrel versions: e.g. the release before `r_oldrel()` is
