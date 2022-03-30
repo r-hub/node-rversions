@@ -52,6 +52,29 @@ async function srv() {
         srv.get('/devel-nick', async (req, res) => {
             res.send('Unsuffered Consequences\n');
         });
+
+        process.env.NODE_RVERSIONS_BRANCHES = srv.url + '/branches';
+        process.env.NODE_RVERSIONS_BRANCH = srv.url + '/branch';
+        process.env.NODE_RVERSIONS_BRANCH_NICK = srv.url + '/branch-nick';
+        srv.propfind('/branches', async (req, res) => {
+            const xml = await readFile('tests/fixtures/branches.txt', 'utf8');
+            res.send(xml);
+        });
+        srv.get('/branch', async(req, res) => {
+            res.send('4.2.0 alpha\n');
+        });
+        srv.get('/branch-nick', async(req, res) => {
+            res.send('\n');
+        });
+
+        process.env.NODE_RVERSIONS_PATCHED_WIN = srv.url + '/patched-win';
+        process.env.NODE_RVERSIONS_PATCHED_MACOS= srv.url + '/patched-macos';
+        srv.head('/patched-win', async(req, res) => {
+            res.status(200).end();
+        });
+        srv.head('/patched-macos', async(req, res) => {
+            res.status(404).end();
+        });
     }
 }
 

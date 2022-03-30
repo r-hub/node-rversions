@@ -19,9 +19,11 @@ const me = require('.');
     var win = me.r_release_win();
     var dev = me.r_devel();
     var nxt = me.r_next();
+    var nxw = me.r_next_win();
+    var nxm = me.r_next_macos();
 
     var all = await Promise.all(
-        [rel, old, ol1, ol2, ol3, ol4, ol5, mac, tar, win, dev, nxt]
+        [rel, old, ol1, ol2, ol3, ol4, ol5, mac, tar, win, dev, nxt, nxw, nxm]
     );
 
     var all2 = {
@@ -37,7 +39,9 @@ const me = require('.');
         "r_release_tarball": all[8],
         "r_release_win":     all[9],
         "r_devel":           all[10],
-        "r_next":            all[11]
+        "r_next":            all[11],
+        "r_next_win":        all[12],
+        "r_next_macos":      all[13]
     };
 
     console.log(all2);

@@ -121,6 +121,38 @@ function run(dummy = '') {
             );
         }
     });
+
+    test('r_next_win' + dummy, async t => {
+        for (let i = 0; i < 2; i++) {
+            const result = await me.r_next_win();
+            t.deepEqual(
+                Object.keys(result).sort(),
+                ['URL', 'date', 'nickname', 'type', 'version']
+            )
+            t.true(/^[0-9]+\.[0-9]+\.[0-9]+$/.test(result.version));
+            t.pass()
+            t.true(
+                result.nickname === null ||
+                    typeof result.nickname == 'string'
+            );
+        }
+    });
+
+    test('r_next_macos' + dummy, async t => {
+        for (let i = 0; i < 2; i++) {
+            const result = await me.r_next_macos();
+            t.deepEqual(
+                Object.keys(result).sort(),
+                ['URL', 'date', 'nickname', 'type', 'version']
+            )
+            t.true(/^[0-9]+\.[0-9]+\.[0-9]+$/.test(result.version));
+            t.pass()
+            t.true(
+                result.nickname === null ||
+                    typeof result.nickname == 'string'
+            );
+        }
+    });
 }
 
 module.exports = run;
