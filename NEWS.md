@@ -1,5 +1,5 @@
 
-# 1.4.0 (unreleased)
+# 1.4.0
 
 * New `r_next()` function to query the next release. This can be an
   alpha, beta, RC or pre-release version, or the current patched version
