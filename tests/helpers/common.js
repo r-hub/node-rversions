@@ -1,31 +1,14 @@
 
 const test = require('ava');
-const srv = require('./helpers/server');
+const srv = require('./server');
 
 let me, mycache, get_nick;
 
 test.before(async () => {
     await srv();
-    me = require('..');
-    get_nick = require('../lib/get-nick');
-    mycache = require('../lib/cache');
-});
-
-test('get_nick', async t => {
-    // get_nick
-    // We remove this from the cache, so we can test that it is downloaded
-    // on demand and updated in the cache.
-    delete get_nick.internals.cached['3.6.3'];
-    t.is(get_nick.internals.cached['3.6.3'], undefined);
-    const p362 = get_nick('3.6.2');
-    const p363 = get_nick('3.6.3');
-    const nicks = await Promise.all([p362, p363]);
-    t.deepEqual(nicks, [ 'Dark and Stormy Night', 'Holding the Windsock' ]);
-    t.is(get_nick.internals.cached['3.6.3'], 'Holding the Windsock');
-
-    // download_nick
-    const n363 = await get_nick.internals.download_nick('3.6.3');
-    t.is(n363, 'Holding the Windsock');
+    me = require('../..');
+    get_nick = require('../../lib/get-nick');
+    mycache = require('../../lib/cache');
 });
 
 function run(dummy = '') {
@@ -122,11 +105,22 @@ function run(dummy = '') {
             t.is(typeof result.nickname, 'string');
         }
     });
+
+    test('r_next' + dummy, async t => {
+        for (let i = 0; i < 2; i++) {
+            const result = await me.r_next();
+            t.deepEqual(
+                Object.keys(result).sort(),
+                ['URL', 'date', 'nickname', 'type', 'version']
+            )
+            t.true(/^[0-9]+\.[0-9]+\.[0-9]+$/.test(result.version));
+            t.pass()
+            t.true(
+                result.nickname === null ||
+                    typeof result.nickname == 'string'
+            );
+        }
+    });
 }
 
-// Test the proper implementation
-run();
-
-// Test the dummy
-process.env.NODE_RVERSIONS_DUMMY = 'true';
-run('-dummy');
+module.exports = run;
