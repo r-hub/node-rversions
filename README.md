@@ -124,11 +124,13 @@ const rversions = require('rversions');
 
 #### The latest available macOS installer
 
+Set the second argument (`arch`) to `x86_64` (default) or `arm64`.
+
 ```js
 const rversions = require('rversions');
 
 (async () => {
-	console.log(await rversions.r_release_macos());
+	console.log(await rversions.r_release_macos(undefined, 'x86_64'));
 })();
 ```
 
@@ -200,11 +202,13 @@ const rversions = require('rversions');
 
 #### macOS installer for the next version
 
+Set the second argument (`arch`) to `x86_64` (default) or `arm64`.
+
 ```js
 const rversions = require('rversions');
 
 (async () => {
-	console.log(await rversions.r_next_macos());
+	console.log(await rversions.r_next_macos(undefined, 'x86_64'));
 })();
 ```
 
@@ -221,7 +225,7 @@ const rversions = require('rversions');
 ## Caching
 
 All queries are cached for five minutes by default. If you don't want to
-use the cached value, then set the (first) cache argument to `false`. E.g.:
+use the cached value, then set the (first) cache argument to `false`.
 
 ## License
 

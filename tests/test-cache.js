@@ -25,7 +25,8 @@ test('caching', async t => {
     mycache.del('r_versions');
     mycache.del('r_release');
     mycache.del('r_oldrel/1');
-    mycache.del('r_release_macos');
+    mycache.del('r_release_macos_x86_64');
+    mycache.del('r_release_macos_arm64');
     mycache.del('r_release_tarball');
     mycache.del('r_release_win');
 
@@ -36,19 +37,23 @@ test('caching', async t => {
     t.is(mycache.get('r_release'), undefined);
     await me.r_release();
     t.true(mycache.get('r_release') !== undefined);
-    
+
     t.is(mycache.get('r_oldrel/1'), undefined);
     await me.r_oldrel();
     t.true(mycache.get('r_oldrel/1') !== undefined);
 
-    t.is(mycache.get('r_release_macos'), undefined);
+    t.is(mycache.get('r_release_macos_x86_64'), undefined);
     await me.r_release_macos();
-    t.true(mycache.get('r_release_macos') !== undefined);
+    t.true(mycache.get('r_release_macos_x86_64') !== undefined);
+
+    t.is(mycache.get('r_release_macos_arm64'), undefined);
+    await me.r_release_macos(undefined, 'arm64');
+    t.true(mycache.get('r_release_macos_arm64') !== undefined);
 
     t.is(mycache.get('r_release_tarball'), undefined);
     await me.r_release_tarball();
     t.true(mycache.get('r_release_tarball') !== undefined);
-    
+
     t.is(mycache.get('r_release_win'), undefined);
     await me.r_release_win();
     t.true(mycache.get('r_release_win') !== undefined);

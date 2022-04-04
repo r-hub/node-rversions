@@ -1,4 +1,9 @@
 
+# 1.5.0
+
+* `r_release_macos()` and `r_release_next()` now have a second argument: 'arch'.
+  You can set this to `x86_64` (default) or `arm64`.
+
 # 1.4.0
 
 * New `r_next()` function to query the next release. This can be an
