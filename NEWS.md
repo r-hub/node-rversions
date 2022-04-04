@@ -1,4 +1,8 @@
 
+# 1.5.2
+
+* Fixed built-in testing dummy.
+
 # 1.5.0
 
 * `r_release_macos()` and `r_release_next()` now have a second argument: 'arch'.
