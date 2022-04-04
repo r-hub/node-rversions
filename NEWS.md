@@ -1,6 +1,10 @@
 
 # 1.5.2
 
+* Another dummy fix.
+
+# 1.5.1
+
 * Fixed built-in testing dummy.
 
 # 1.5.0
