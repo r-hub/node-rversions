@@ -1,4 +1,8 @@
 
+# 1.5.3
+
+* Fix `r_next_win()` for RC (#19).
+
 # 1.5.2
 
 * Another dummy fix.
