@@ -1,4 +1,8 @@
 
+# 1.6.0 (not released yet)
+
+* New `r_minor()` to resolve the latest version without a minor branch (#21).
+
 # 1.5.3
 
 * Fix `r_next_win()` for RC (#19).

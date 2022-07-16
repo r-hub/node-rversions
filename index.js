@@ -11,6 +11,7 @@ if (!process.env.NODE_RVERSIONS_DUMMY) {
     const r_next            = require('./lib/r-next');
     const r_next_win        = require('./lib/r-next-win');
     const r_next_macos      = require('./lib/r-next-macos');
+    const r_minor           = require('./lib/r-minor');
 
     module.exports = {
         r_versions:        r_versions,
@@ -22,7 +23,8 @@ if (!process.env.NODE_RVERSIONS_DUMMY) {
         r_devel:           r_devel,
         r_next:            r_next,
         r_next_win:        r_next_win,
-        r_next_macos:      r_next_macos
+        r_next_macos:      r_next_macos,
+        r_minor:           r_minor
     };
 
 } else {
@@ -39,6 +41,7 @@ if (!process.env.NODE_RVERSIONS_DUMMY) {
         r_devel:           dummy.r_devel,
         r_next:            dummy.r_next,
         r_next_win:        dummy.r_next_win,
-        r_next_macos:      dummy.r_next_macos
+        r_next_macos:      dummy.r_next_macos,
+        r_minor:           dummy.r_minor
     };
 }

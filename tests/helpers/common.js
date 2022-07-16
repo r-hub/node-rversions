@@ -153,6 +153,23 @@ function run(dummy = '') {
             );
         }
     });
+
+    test('r-minor' + dummy, async t => {
+        for (let i = 0; i < 2; i++) {
+            const result = await me.r_minor('3.6');
+            t.deepEqual(
+                result,
+                {
+                    'version': '3.6.3',
+                    'date': '2020-02-29T08:05:16.744223Z',
+                    'nickname': 'Holding the Windsock'
+                }
+            );
+        }
+        await t.throwsAsync(async () => {
+	    await me.r_minor('3.7');
+	}, { message: 'Cannot find minor version 3.7' });
+    });
 }
 
 module.exports = run;

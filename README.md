@@ -222,6 +222,24 @@ const rversions = require('rversions');
 }
 ```
 
+#### The latest version within a minor branch
+
+```js
+const rversions = require('rvresions');
+
+(async () => {
+	console.log(await rversions.r_minor('4.0', 'x86_64'));
+})();
+```
+
+```
+{
+  version: '4.0.5',
+  date: '2021-03-31T07:05:15.035437Z',
+  nickname: 'Shake and Throw'
+}
+```
+
 ## Caching
 
 All queries are cached for five minutes by default. If you don't want to
