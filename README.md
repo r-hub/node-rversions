@@ -214,11 +214,11 @@ const rversions = require('rversions');
 
 ```
 {
-  version: '4.2.0',
+  version: '4.3.0',
   date: null,
-  nickname: null,
-  type: 'alpha',
-  URL: 'https://mac.r-project.org/high-sierra/last-success/R-4.2-branch-x86_64.pkg'
+  nickname: 'Already Tomorrow',
+  type: 'beta',
+  URL: 'https://mac.r-project.org/big-sur/last-success/R-4.3-branch-x86_64.pkg'
 }
 ```
 

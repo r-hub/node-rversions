@@ -46,7 +46,7 @@ const me = require('.');
         "r_next":                 all[12],
         "r_next_win":             all[13],
         "r_next_macos_x86_64":    all[14],
-        "r_next_macos_arm65":     all[15],
+        "r_next_macos_arm64":     all[15],
     };
 
     console.log(all2);
