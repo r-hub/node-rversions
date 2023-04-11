@@ -1,6 +1,6 @@
 {
   "name": "rversions",
-  "version": "1.5.3",
+  "version": "1.6.0",
   "description": "Query the current and past R versions",
   "main": "index.js",
   "scripts": {

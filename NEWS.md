@@ -3,6 +3,8 @@
 
 * New `r_minor()` to resolve the latest version without a minor branch (#21).
 
+* URL updates for changes in the macOS infrastructure for R 4.3.0.
+
 # 1.5.3
 
 * Fix `r_next_win()` for RC (#19).
