@@ -1,5 +1,7 @@
 
-# 1.6.0 (not released yet)
+# development version
+
+# 1.6.0
 
 * New `r_minor()` to resolve the latest version without a minor branch (#21).
 

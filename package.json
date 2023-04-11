@@ -1,6 +1,6 @@
 {
   "name": "rversions",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "Query the current and past R versions",
   "main": "index.js",
   "scripts": {
@@ -21,13 +21,13 @@
   },
   "homepage": "https://github.com/r-hub/node-rversions#readme",
   "dependencies": {
-    "got": "^11.8.5",
+    "got": "^11.8.6",
     "lodash": "^4.17.20",
-    "xmldom": "^0.6.0",
+    "@xmldom/xmldom": "^0.7.0",
     "xpath": "0.0.27"
   },
   "devDependencies": {
-    "ava": "^3.14.0",
+    "ava": "^5.2.0",
     "create-test-server": "^3.0.1",
     "nyc": "^15.1.0"
   }
