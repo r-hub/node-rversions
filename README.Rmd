@@ -1,0 +1,293 @@
+---
+output:
+  github_document:
+always_allow_html: yes
+editor_options:
+  markdown:
+    wrap: sentence
+---
+
+```{r include = FALSE}
+oldhook <- knitr::knit_hooks$get("source")
+knitr::knit_hooks$set(source = function(x, options) {
+  oldhook(sub("await import('./index.js')", "require('rversions')", x, fixed = TRUE), options)
+})
+knitr::opts_chunk$set(engine.opts = list(node = "--input-type=module"))
+```
+
+# rversions
+
+[![Test status](https://github.com/r-hub/node-rversions/actions/workflows/main.yml/badge.svg)](https://github.com/r-hub/node-rversions/actions)
+
+> Past and present R versions
+
+## Install
+
+```
+$ npm install rversions
+```
+
+## Usage (new API)
+
+### R-devel
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.resolve("devel"));
+```
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.resolve("devel", "win"));
+```
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.resolve("devel", "macos"));
+```
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.resolve("devel", "linux-ubuntu-22.04"));
+```
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.resolve("devel", "linux-ubuntu-22.04", "arm64"));
+```
+
+### R-next
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.resolve("next"));
+```
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.resolve("next", "win"));
+```
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.resolve("next", "macos"));
+```
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.resolve("next", "linux-ubuntu-22.04"));
+```
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.resolve("next", "linux-ubuntu-22.04", "arm64"));
+```
+
+### R-release
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.resolve("release"));
+```
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.resolve("release", "win"));
+```
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.resolve("release", "macos"));
+```
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.resolve("release", "linux-ubuntu-22.04"));
+```
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.resolve("release", "linux-ubuntu-22.04", "arm64"));
+```
+
+### R-oldrel
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.resolve("oldrel/1"));
+```
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.resolve("oldrel/1", "win"));
+```
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.resolve("oldrel/1", "macos"));
+```
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.resolve("oldrel/1", "linux-ubuntu-22.04"));
+```
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.resolve("oldrel/1", "linux-ubuntu-22.04", "arm64"));
+```
+
+### Specific R version
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.resolve("4.2.2"));
+```
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.resolve("4.2.2", "win"));
+```
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.resolve("4.2.2", "macos"));
+```
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.resolve("4.2.2", "linux-ubuntu-22.04"));
+```
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.resolve("4.2.2", "linux-ubuntu-22.04", "arm64"));
+```
+
+### Minor R version
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.resolve("4.1"));
+```
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.resolve("4.1", "win"));
+```
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.resolve("4.1", "macos"));
+```
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.resolve("4.1", "linux-ubuntu-22.04"));
+```
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.resolve("4.1", "linux-ubuntu-22.04", "arm64"));
+```
+
+## Usage (old API)
+
+### The current R-release version (release)
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.r_release());
+```
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.r_release_macos());
+```
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.r_release_win());
+```
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.r_release_tarball());
+```
+
+### The latest release of the previous minor version (oldrel)
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.r_oldrel());
+```
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.r_oldrel(2));
+```
+
+### All R releases
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.r_versions());
+```
+
+### The (current) version number of R-devel
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.r_devel());
+```
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.r_devel_macos());
+```
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.r_devel_win());
+```
+
+### The next version of R
+
+This can be an alpha, beta, RC or pre-release if a release process is
+currently happenning. Otherwise it is the current patched version.
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.r_next());
+```
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.r_next_win());
+```
+
+For macOS set the second argument (`arch`) to `x86_64` (default) or `arm64`.
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.r_next_macos());
+```
+
+### The latest version within a minor branch
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.r_minor('4.0'));
+```
+
+## Caching
+
+All queries are cached for five minutes by default. If you don't want to
+use the cached value, then set the (first) cache argument to `false`.
+
+## License
+
+ISC @ R Consortium
+
+This repo is part of the R-hub project, supported by
+the R Consortium.
