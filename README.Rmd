@@ -1,6 +1,10 @@
 ---
 output:
   github_document:
+    toc: true
+    toc_depth: 3
+    includes:
+      before_body: README-header.md
 always_allow_html: yes
 editor_options:
   markdown:
@@ -14,12 +18,6 @@ knitr::knit_hooks$set(source = function(x, options) {
 })
 knitr::opts_chunk$set(engine.opts = list(node = "--input-type=module"))
 ```
-
-# rversions
-
-[![Test status](https://github.com/r-hub/node-rversions/actions/workflows/main.yml/badge.svg)](https://github.com/r-hub/node-rversions/actions)
-
-> Past and present R versions
 
 ## Install
 
@@ -278,6 +276,13 @@ console.log(await rversions.r_next_macos());
 ```{node}
 const rversions = await import('./index.js');
 console.log(await rversions.r_minor('4.0'));
+```
+
+### Rtools versions
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.rtools_versions());
 ```
 
 ## Caching

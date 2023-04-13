@@ -15,6 +15,11 @@ if (!process.env.NODE_RVERSIONS_DUMMY) {
     const r_next_win        = require('./lib/r-next-win');
     const r_next_macos      = require('./lib/r-next-macos');
     const r_minor           = require('./lib/r-minor');
+    const rtools_versions   = require('./lib/rtools').rtools_versions;
+
+    function get_rtools_versions() {
+        return rtools_versions;
+    }
 
     module.exports = {
         resolve:           resolve,
@@ -30,7 +35,8 @@ if (!process.env.NODE_RVERSIONS_DUMMY) {
         r_next:            r_next,
         r_next_win:        r_next_win,
         r_next_macos:      r_next_macos,
-        r_minor:           r_minor
+        r_minor:           r_minor,
+        rtools_versions:   get_rtools_versions
     };
 
 } else {

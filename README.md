@@ -1,10 +1,39 @@
 
+
 # rversions
 
-[![Test
-status](https://github.com/r-hub/node-rversions/actions/workflows/main.yml/badge.svg)](https://github.com/r-hub/node-rversions/actions)
+[![Test status](https://github.com/r-hub/node-rversions/actions/workflows/main.yml/badge.svg)](https://github.com/r-hub/node-rversions/actions)
 
 > Past and present R versions
+
+- <a href="#install" id="toc-install">Install</a>
+- <a href="#usage-new-api" id="toc-usage-new-api">Usage (new API)</a>
+  - <a href="#r-devel" id="toc-r-devel">R-devel</a>
+  - <a href="#r-next" id="toc-r-next">R-next</a>
+  - <a href="#r-release" id="toc-r-release">R-release</a>
+  - <a href="#r-oldrel" id="toc-r-oldrel">R-oldrel</a>
+  - <a href="#specific-r-version" id="toc-specific-r-version">Specific R
+    version</a>
+  - <a href="#minor-r-version" id="toc-minor-r-version">Minor R version</a>
+- <a href="#usage-old-api" id="toc-usage-old-api">Usage (old API)</a>
+  - <a href="#the-current-r-release-version-release"
+    id="toc-the-current-r-release-version-release">The current R-release
+    version (release)</a>
+  - <a href="#the-latest-release-of-the-previous-minor-version-oldrel"
+    id="toc-the-latest-release-of-the-previous-minor-version-oldrel">The
+    latest release of the previous minor version (oldrel)</a>
+  - <a href="#all-r-releases" id="toc-all-r-releases">All R releases</a>
+  - <a href="#the-current-version-number-of-r-devel"
+    id="toc-the-current-version-number-of-r-devel">The (current) version
+    number of R-devel</a>
+  - <a href="#the-next-version-of-r" id="toc-the-next-version-of-r">The next
+    version of R</a>
+  - <a href="#the-latest-version-within-a-minor-branch"
+    id="toc-the-latest-version-within-a-minor-branch">The latest version
+    within a minor branch</a>
+  - <a href="#rtools-versions" id="toc-rtools-versions">Rtools versions</a>
+- <a href="#caching" id="toc-caching">Caching</a>
+- <a href="#license" id="toc-license">License</a>
 
 ## Install
 
@@ -23,7 +52,7 @@ console.log(await rversions.resolve("devel"));
     ##   version: '4.4.0',
     ##   nickname: 'Unsuffered Consequences',
     ##   type: 'devel',
-    ##   URL: 'https://cran.r-project.org/src/base-prerelease/R-devel.tar.gz',
+    ##   url: 'https://cran.r-project.org/src/base-prerelease/R-devel.tar.gz',
     ##   date: null
     ## }
 
@@ -36,8 +65,10 @@ console.log(await rversions.resolve("devel", "win"));
     ##   version: '4.4.0',
     ##   nickname: 'Unsuffered Consequences',
     ##   type: 'devel',
-    ##   URL: 'https://cloud.r-project.org/bin/windows/base/R-devel-win.exe',
-    ##   date: null
+    ##   url: 'https://cloud.r-project.org/bin/windows/base/R-devel-win.exe',
+    ##   date: null,
+    ##   rtools: '43',
+    ##   rtools_url: 'https://github.com/r-hub/rtools43/releases/download/latest/rtools43.exe'
     ## }
 
 ``` javascript
@@ -49,7 +80,7 @@ console.log(await rversions.resolve("devel", "macos"));
     ##   version: '4.4.0',
     ##   nickname: 'Unsuffered Consequences',
     ##   type: 'devel',
-    ##   URL: 'https://mac.r-project.org/high-sierra/last-success/R-devel-x86_64.pkg',
+    ##   url: 'https://mac.r-project.org/high-sierra/last-success/R-devel-x86_64.pkg',
     ##   date: null
     ## }
 
@@ -62,7 +93,7 @@ console.log(await rversions.resolve("devel", "linux-ubuntu-22.04"));
     ##   version: '4.4.0',
     ##   nickname: 'Unsuffered Consequences',
     ##   type: 'devel',
-    ##   URL: 'https://cdn.posit.co/r/ubuntu-2204/pkgs/r-devel_1_amd64.deb',
+    ##   url: 'https://cdn.posit.co/r/ubuntu-2204/pkgs/r-devel_1_amd64.deb',
     ##   date: null
     ## }
 
@@ -75,7 +106,7 @@ console.log(await rversions.resolve("devel", "linux-ubuntu-22.04", "arm64"));
     ##   version: '4.4.0',
     ##   nickname: 'Unsuffered Consequences',
     ##   type: 'devel',
-    ##   URL: 'https://github.com/r-hub/R/releases/download/vdevel/r-rstudio-ubuntu-2204-devel_1_arm64.deb',
+    ##   url: 'https://github.com/r-hub/R/releases/download/vdevel/r-rstudio-ubuntu-2204-devel_1_arm64.deb',
     ##   date: null
     ## }
 
@@ -90,7 +121,7 @@ console.log(await rversions.resolve("next"));
     ##   version: '4.3.0',
     ##   nickname: 'Already Tomorrow',
     ##   type: 'beta',
-    ##   URL: 'https://cran.r-project.org/src/base-prerelease/R-latest.tar.gz',
+    ##   url: 'https://cran.r-project.org/src/base-prerelease/R-latest.tar.gz',
     ##   date: null
     ## }
 
@@ -103,8 +134,10 @@ console.log(await rversions.resolve("next", "win"));
     ##   version: '4.3.0',
     ##   nickname: 'Already Tomorrow',
     ##   type: 'next',
-    ##   URL: 'https://cran.r-project.org/bin/windows/base/R-4.3.0beta-win.exe',
-    ##   date: null
+    ##   url: 'https://cran.r-project.org/bin/windows/base/R-4.3.0beta-win.exe',
+    ##   date: null,
+    ##   rtools: '43',
+    ##   rtools_url: 'https://github.com/r-hub/rtools43/releases/download/latest/rtools43.exe'
     ## }
 
 ``` javascript
@@ -116,7 +149,7 @@ console.log(await rversions.resolve("next", "macos"));
     ##   version: '4.3.0',
     ##   nickname: 'Already Tomorrow',
     ##   type: 'next',
-    ##   URL: 'https://mac.r-project.org/big-sur/last-success/R-4.3-branch-x86_64.pkg',
+    ##   url: 'https://mac.r-project.org/big-sur/last-success/R-4.3-branch-x86_64.pkg',
     ##   date: null
     ## }
 
@@ -129,7 +162,7 @@ console.log(await rversions.resolve("next", "linux-ubuntu-22.04"));
     ##   version: '4.3.0',
     ##   nickname: 'Already Tomorrow',
     ##   type: 'next',
-    ##   URL: 'https://cdn.posit.co/r/ubuntu-2204/pkgs/r-next_1_amd64.deb',
+    ##   url: 'https://cdn.posit.co/r/ubuntu-2204/pkgs/r-next_1_amd64.deb',
     ##   date: null
     ## }
 
@@ -142,7 +175,7 @@ console.log(await rversions.resolve("next", "linux-ubuntu-22.04", "arm64"));
     ##   version: '4.3.0',
     ##   nickname: 'Already Tomorrow',
     ##   type: 'next',
-    ##   URL: 'https://github.com/r-hub/R/releases/download/vnext/r-rstudio-ubuntu-2204-next_1_arm64.deb',
+    ##   url: 'https://github.com/r-hub/R/releases/download/vnext/r-rstudio-ubuntu-2204-next_1_arm64.deb',
     ##   date: null
     ## }
 
@@ -157,7 +190,7 @@ console.log(await rversions.resolve("release"));
     ##   version: '4.2.3',
     ##   nickname: 'Shortstop Beagle',
     ##   type: 'release',
-    ##   URL: 'https://cran.r-project.org/src/base/R-4/R-4.2.3.tar.gz',
+    ##   url: 'https://cran.r-project.org/src/base/R-4/R-4.2.3.tar.gz',
     ##   date: '2023-03-15T08:06:01.008593Z'
     ## }
 
@@ -170,8 +203,10 @@ console.log(await rversions.resolve("release", "win"));
     ##   version: '4.2.3',
     ##   nickname: 'Shortstop Beagle',
     ##   type: 'release',
-    ##   URL: 'https://cran.r-project.org/bin/windows/base/R-4.2.3-win.exe',
-    ##   date: '2023-03-15T08:06:01.008593Z'
+    ##   url: 'https://cran.r-project.org/bin/windows/base/R-4.2.3-win.exe',
+    ##   date: '2023-03-15T08:06:01.008593Z',
+    ##   rtools: '40',
+    ##   rtools_url: 'https://cran.r-project.org/bin/windows/Rtools/rtools40-x86_64.exe'
     ## }
 
 ``` javascript
@@ -183,7 +218,7 @@ console.log(await rversions.resolve("release", "macos"));
     ##   version: '4.2.3',
     ##   nickname: 'Shortstop Beagle',
     ##   type: 'release',
-    ##   URL: 'https://cran.r-project.org/bin/macosx/base/R-4.2.3.pkg',
+    ##   url: 'https://cran.r-project.org/bin/macosx/base/R-4.2.3.pkg',
     ##   date: '2023-03-15T08:06:01.008593Z'
     ## }
 
@@ -196,7 +231,7 @@ console.log(await rversions.resolve("release", "linux-ubuntu-22.04"));
     ##   version: '4.2.3',
     ##   nickname: 'Shortstop Beagle',
     ##   type: 'release',
-    ##   URL: 'https://cdn.posit.co/r/ubuntu-2204/pkgs/r-4.2.3_1_amd64.deb',
+    ##   url: 'https://cdn.posit.co/r/ubuntu-2204/pkgs/r-4.2.3_1_amd64.deb',
     ##   date: '2023-03-15T08:06:01.008593Z'
     ## }
 
@@ -209,7 +244,7 @@ console.log(await rversions.resolve("release", "linux-ubuntu-22.04", "arm64"));
     ##   version: '4.2.3',
     ##   nickname: 'Shortstop Beagle',
     ##   type: 'release',
-    ##   URL: 'https://github.com/r-hub/R/releases/download/v4.2.3/r-rstudio-ubuntu-2204-4.2.3_1_arm64.deb',
+    ##   url: 'https://github.com/r-hub/R/releases/download/v4.2.3/r-rstudio-ubuntu-2204-4.2.3_1_arm64.deb',
     ##   date: '2023-03-15T08:06:01.008593Z'
     ## }
 
@@ -224,7 +259,7 @@ console.log(await rversions.resolve("oldrel/1"));
     ##   version: '4.1.3',
     ##   nickname: 'One Push-Up',
     ##   type: 'oldrel/1',
-    ##   URL: 'https://cran.r-project.org/src/base/R-4/R-4.1.3.tar.gz',
+    ##   url: 'https://cran.r-project.org/src/base/R-4/R-4.1.3.tar.gz',
     ##   date: '2022-03-10T08:05:38.083503Z'
     ## }
 
@@ -237,8 +272,10 @@ console.log(await rversions.resolve("oldrel/1", "win"));
     ##   version: '4.1.3',
     ##   nickname: 'One Push-Up',
     ##   type: 'oldrel/1',
-    ##   URL: 'https://cloud.r-project.org/bin/windows/base/old/4.1.3/R-4.1.3-win.exe',
-    ##   date: '2022-03-10T08:05:38.083503Z'
+    ##   url: 'https://cloud.r-project.org/bin/windows/base/old/4.1.3/R-4.1.3-win.exe',
+    ##   date: '2022-03-10T08:05:38.083503Z',
+    ##   rtools: '40',
+    ##   rtools_url: 'https://cran.r-project.org/bin/windows/Rtools/rtools40-x86_64.exe'
     ## }
 
 ``` javascript
@@ -250,7 +287,7 @@ console.log(await rversions.resolve("oldrel/1", "macos"));
     ##   version: '4.1.3',
     ##   nickname: 'One Push-Up',
     ##   type: 'oldrel/1',
-    ##   URL: undefined,
+    ##   url: undefined,
     ##   date: '2022-03-10T08:05:38.083503Z'
     ## }
 
@@ -263,7 +300,7 @@ console.log(await rversions.resolve("oldrel/1", "linux-ubuntu-22.04"));
     ##   version: '4.1.3',
     ##   nickname: 'One Push-Up',
     ##   type: 'oldrel/1',
-    ##   URL: 'https://cdn.posit.co/r/ubuntu-2204/pkgs/r-4.1.3_1_amd64.deb',
+    ##   url: 'https://cdn.posit.co/r/ubuntu-2204/pkgs/r-4.1.3_1_amd64.deb',
     ##   date: '2022-03-10T08:05:38.083503Z'
     ## }
 
@@ -276,7 +313,7 @@ console.log(await rversions.resolve("oldrel/1", "linux-ubuntu-22.04", "arm64"));
     ##   version: '4.1.3',
     ##   nickname: 'One Push-Up',
     ##   type: 'oldrel/1',
-    ##   URL: 'https://github.com/r-hub/R/releases/download/v4.1.3/r-rstudio-ubuntu-2204-4.1.3_1_arm64.deb',
+    ##   url: 'https://github.com/r-hub/R/releases/download/v4.1.3/r-rstudio-ubuntu-2204-4.1.3_1_arm64.deb',
     ##   date: '2022-03-10T08:05:38.083503Z'
     ## }
 
@@ -292,7 +329,7 @@ console.log(await rversions.resolve("4.2.2"));
     ##   nickname: 'Innocent and Trusting',
     ##   type: '4.2.2',
     ##   date: '2022-10-31T08:05:54.268400Z',
-    ##   URL: 'https://cran.r-project.org/src/base/R-4/R-4.2.2.tar.gz'
+    ##   url: 'https://cran.r-project.org/src/base/R-4/R-4.2.2.tar.gz'
     ## }
 
 ``` javascript
@@ -305,7 +342,9 @@ console.log(await rversions.resolve("4.2.2", "win"));
     ##   nickname: 'Innocent and Trusting',
     ##   type: '4.2.2',
     ##   date: '2022-10-31T08:05:54.268400Z',
-    ##   URL: 'https://cloud.r-project.org/bin/windows/base/old/4.2.2/R-4.2.2-win.exe'
+    ##   url: 'https://cloud.r-project.org/bin/windows/base/old/4.2.2/R-4.2.2-win.exe',
+    ##   rtools: '40',
+    ##   rtools_url: 'https://cran.r-project.org/bin/windows/Rtools/rtools40-x86_64.exe'
     ## }
 
 ``` javascript
@@ -318,7 +357,7 @@ console.log(await rversions.resolve("4.2.2", "macos"));
     ##   nickname: 'Innocent and Trusting',
     ##   type: '4.2.2',
     ##   date: '2022-10-31T08:05:54.268400Z',
-    ##   URL: 'https://cloud.r-project.org/bin/macosx/base/R-4.2.2.pkg'
+    ##   url: 'https://cloud.r-project.org/bin/macosx/base/R-4.2.2.pkg'
     ## }
 
 ``` javascript
@@ -331,7 +370,7 @@ console.log(await rversions.resolve("4.2.2", "linux-ubuntu-22.04"));
     ##   nickname: 'Innocent and Trusting',
     ##   type: '4.2.2',
     ##   date: '2022-10-31T08:05:54.268400Z',
-    ##   URL: 'https://cdn.posit.co/r/ubuntu-2204/pkgs/r-4.2.2_1_amd64.deb'
+    ##   url: 'https://cdn.posit.co/r/ubuntu-2204/pkgs/r-4.2.2_1_amd64.deb'
     ## }
 
 ``` javascript
@@ -344,7 +383,7 @@ console.log(await rversions.resolve("4.2.2", "linux-ubuntu-22.04", "arm64"));
     ##   nickname: 'Innocent and Trusting',
     ##   type: '4.2.2',
     ##   date: '2022-10-31T08:05:54.268400Z',
-    ##   URL: 'https://github.com/r-hub/R/releases/download/v4.2.2/r-rstudio-ubuntu-2204-4.2.2_1_arm64.deb'
+    ##   url: 'https://github.com/r-hub/R/releases/download/v4.2.2/r-rstudio-ubuntu-2204-4.2.2_1_arm64.deb'
     ## }
 
 ### Minor R version
@@ -358,7 +397,7 @@ console.log(await rversions.resolve("4.1"));
     ##   version: '4.1.3',
     ##   nickname: 'One Push-Up',
     ##   type: '4.1',
-    ##   URL: 'https://cran.r-project.org/src/base/R-4/R-4.1.3.tar.gz',
+    ##   url: 'https://cran.r-project.org/src/base/R-4/R-4.1.3.tar.gz',
     ##   date: '2022-03-10T08:05:38.083503Z'
     ## }
 
@@ -371,8 +410,10 @@ console.log(await rversions.resolve("4.1", "win"));
     ##   version: '4.1.3',
     ##   nickname: 'One Push-Up',
     ##   type: '4.1',
-    ##   URL: 'https://cloud.r-project.org/bin/windows/base/old/4.1.3/R-4.1.3-win.exe',
-    ##   date: '2022-03-10T08:05:38.083503Z'
+    ##   url: 'https://cloud.r-project.org/bin/windows/base/old/4.1.3/R-4.1.3-win.exe',
+    ##   date: '2022-03-10T08:05:38.083503Z',
+    ##   rtools: '40',
+    ##   rtools_url: 'https://cran.r-project.org/bin/windows/Rtools/rtools40-x86_64.exe'
     ## }
 
 ``` javascript
@@ -384,7 +425,7 @@ console.log(await rversions.resolve("4.1", "macos"));
     ##   version: '4.1.3',
     ##   nickname: 'One Push-Up',
     ##   type: '4.1',
-    ##   URL: 'https://cloud.r-project.org/bin/macosx/base/R-4.1.3.pkg',
+    ##   url: 'https://cloud.r-project.org/bin/macosx/base/R-4.1.3.pkg',
     ##   date: '2022-03-10T08:05:38.083503Z'
     ## }
 
@@ -397,7 +438,7 @@ console.log(await rversions.resolve("4.1", "linux-ubuntu-22.04"));
     ##   version: '4.1.3',
     ##   nickname: Promise { 'One Push-Up' },
     ##   type: '4.1',
-    ##   URL: 'https://cdn.posit.co/r/ubuntu-2204/pkgs/r-4.1.3_1_amd64.deb',
+    ##   url: 'https://cdn.posit.co/r/ubuntu-2204/pkgs/r-4.1.3_1_amd64.deb',
     ##   date: '2022-03-10T08:05:38.083503Z'
     ## }
 
@@ -410,7 +451,7 @@ console.log(await rversions.resolve("4.1", "linux-ubuntu-22.04", "arm64"));
     ##   version: '4.1.3',
     ##   nickname: 'One Push-Up',
     ##   type: '4.1',
-    ##   URL: 'https://github.com/r-hub/R/releases/download/v4.1.3/r-rstudio-ubuntu-2204-4.1.3_1_arm64.deb',
+    ##   url: 'https://github.com/r-hub/R/releases/download/v4.1.3/r-rstudio-ubuntu-2204-4.1.3_1_arm64.deb',
     ##   date: '2022-03-10T08:05:38.083503Z'
     ## }
 
@@ -1100,6 +1141,130 @@ console.log(await rversions.r_minor('4.0'));
     ##   URL: 'https://cran.r-project.org/src/base/R-4/R-4.0.5.tar.gz',
     ##   nickname: 'Shake and Throw'
     ## }
+
+### Rtools versions
+
+``` javascript
+const rversions = require('rversions');
+console.log(await rversions.rtools_versions());
+```
+
+    ## [
+    ##   {
+    ##     version: '26',
+    ##     url: 'https://cran.r-project.org/bin/windows/Rtools/Rtools26.exe',
+    ##     first: '2.0.0',
+    ##     last: '2.6.2'
+    ##   },
+    ##   {
+    ##     version: '27',
+    ##     url: 'https://cran.r-project.org/bin/windows/Rtools/Rtools27.exe',
+    ##     first: '2.6.0',
+    ##     last: '2.7.2'
+    ##   },
+    ##   {
+    ##     version: '28',
+    ##     url: 'https://cran.r-project.org/bin/windows/Rtools/Rtools28.exe',
+    ##     first: '2.7.0',
+    ##     last: '2.8.1'
+    ##   },
+    ##   {
+    ##     version: '29',
+    ##     url: 'https://cran.r-project.org/bin/windows/Rtools/Rtools29.exe',
+    ##     first: '2.8.0',
+    ##     last: '2.9.2'
+    ##   },
+    ##   {
+    ##     version: '210',
+    ##     url: 'https://cran.r-project.org/bin/windows/Rtools/Rtools210.exe',
+    ##     first: '2.9.0',
+    ##     last: '2.10.1'
+    ##   },
+    ##   {
+    ##     version: '211',
+    ##     url: 'https://cran.r-project.org/bin/windows/Rtools/Rtools211.exe',
+    ##     first: '2.10.0',
+    ##     last: '2.11.1'
+    ##   },
+    ##   {
+    ##     version: '212',
+    ##     url: 'https://cran.r-project.org/bin/windows/Rtools/Rtools212.exe',
+    ##     first: '2.12.0',
+    ##     last: '2.12.2'
+    ##   },
+    ##   {
+    ##     version: '213',
+    ##     url: 'https://cran.r-project.org/bin/windows/Rtools/Rtools213.exe',
+    ##     first: '2.13.0',
+    ##     last: '2.13.2'
+    ##   },
+    ##   {
+    ##     version: '214',
+    ##     url: 'https://cran.r-project.org/bin/windows/Rtools/Rtools214.exe',
+    ##     first: '2.13.0',
+    ##     last: '2.14.2'
+    ##   },
+    ##   {
+    ##     version: '215',
+    ##     url: 'https://cran.r-project.org/bin/windows/Rtools/Rtools215.exe',
+    ##     first: '2.14.2',
+    ##     last: '2.15.1'
+    ##   },
+    ##   {
+    ##     version: '30',
+    ##     url: 'https://cran.r-project.org/bin/windows/Rtools/Rtools30.exe',
+    ##     first: '2.15.2',
+    ##     last: '3.0.3'
+    ##   },
+    ##   {
+    ##     version: '31',
+    ##     url: 'https://cran.r-project.org/bin/windows/Rtools/Rtools31.exe',
+    ##     first: '3.0.0',
+    ##     last: '3.1.3'
+    ##   },
+    ##   {
+    ##     version: '32',
+    ##     url: 'https://cran.r-project.org/bin/windows/Rtools/Rtools32.exe',
+    ##     first: '3.1.0',
+    ##     last: '3.2.5'
+    ##   },
+    ##   {
+    ##     version: '33',
+    ##     url: 'https://cran.r-project.org/bin/windows/Rtools/Rtools33.exe',
+    ##     first: '3.2.0',
+    ##     last: '3.3.3'
+    ##   },
+    ##   {
+    ##     version: '34',
+    ##     url: 'https://cran.r-project.org/bin/windows/Rtools/Rtools34.exe',
+    ##     first: '3.3.0',
+    ##     last: '3.6.3'
+    ##   },
+    ##   {
+    ##     version: '35',
+    ##     url: 'https://cran.r-project.org/bin/windows/Rtools/Rtools35.exe',
+    ##     first: '3.3.0',
+    ##     last: '3.6.3'
+    ##   },
+    ##   {
+    ##     version: '40',
+    ##     url: 'https://cran.r-project.org/bin/windows/Rtools/rtools40-x86_64.exe',
+    ##     first: '4.0.0',
+    ##     last: '4.2.100'
+    ##   },
+    ##   {
+    ##     version: '42',
+    ##     url: 'https://github.com/r-hub/rtools42/releases/download/latest/rtools42.exe',
+    ##     first: '4.2.0',
+    ##     last: '4.2.100'
+    ##   },
+    ##   {
+    ##     version: '43',
+    ##     url: 'https://github.com/r-hub/rtools43/releases/download/latest/rtools43.exe',
+    ##     first: '4.3.0',
+    ##     last: '100.0.0'
+    ##   }
+    ## ]
 
 ## Caching
 
