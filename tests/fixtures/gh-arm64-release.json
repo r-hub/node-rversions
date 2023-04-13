@@ -1,0 +1,2427 @@
+{
+    "data": {
+	"rateLimit": {
+	    "cost": 1,
+	    "remaining": 4998
+	},
+	"repository": {
+	    "releases": {
+		"nodes": [
+		    {
+			"id": "RE_kwDOHCN3gs4FunM6",
+			"name": "v4.2.3",
+			"createdAt": "2023-02-01T09:48:44Z",
+			"tagName": "v4.2.3",
+			"releaseAssets": {
+			    "nodes": [
+				{
+				    "id": "RA_kwDOHCN3gs4F9jFV",
+				    "name": "r-rstudio-ubuntu-2004-4.2.3_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.3/r-rstudio-ubuntu-2004-4.2.3_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4F9jF1",
+				    "name": "r-rstudio-opensuse-154-4.2.3-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.3/r-rstudio-opensuse-154-4.2.3-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4F9jKH",
+				    "name": "r-rstudio-debian-10-4.2.3_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.3/r-rstudio-debian-10-4.2.3_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4F9jN3",
+				    "name": "r-rstudio-ubuntu-1804-4.2.3_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.3/r-rstudio-ubuntu-1804-4.2.3_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4F9jPe",
+				    "name": "r-rstudio-centos-8-4.2.3-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.3/r-rstudio-centos-8-4.2.3-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4F9jV3",
+				    "name": "r-rstudio-ubuntu-2204-4.2.3_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.3/r-rstudio-ubuntu-2204-4.2.3_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4F9jX0",
+				    "name": "r-rstudio-centos-7-4.2.3-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.3/r-rstudio-centos-7-4.2.3-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4F9jnc",
+				    "name": "r-rstudio-debian-11-4.2.3_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.3/r-rstudio-debian-11-4.2.3_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4F9juI",
+				    "name": "r-rstudio-rhel-9-4.2.3-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.3/r-rstudio-rhel-9-4.2.3-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4F9j2d",
+				    "name": "r-rstudio-opensuse-153-4.2.3-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.3/r-rstudio-opensuse-153-4.2.3-1-1.aarch64.rpm"
+				}
+			    ]
+			}
+		    },
+		    {
+			"id": "RE_kwDOHCN3gs4FRmO-",
+			"name": "v4.2.2",
+			"createdAt": "2022-10-31T08:05:54Z",
+			"tagName": "v4.2.2",
+			"releaseAssets": {
+			    "nodes": [
+				{
+				    "id": "RA_kwDOHCN3gs4Fb7JA",
+				    "name": "r-rstudio-redhat-9-4.2.2-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.2/r-rstudio-redhat-9-4.2.2-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Fb7JH",
+				    "name": "r-rstudio-centos-8-4.2.2-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.2/r-rstudio-centos-8-4.2.2-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Fb7JV",
+				    "name": "r-rstudio-centos-7-4.2.2-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.2/r-rstudio-centos-7-4.2.2-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Fb7JY",
+				    "name": "r-rstudio-debian-11-4.2.2_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.2/r-rstudio-debian-11-4.2.2_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Fb7Jb",
+				    "name": "r-rstudio-debian-10-4.2.2_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.2/r-rstudio-debian-10-4.2.2_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Fb7Jd",
+				    "name": "r-rstudio-opensuse-153-4.2.2-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.2/r-rstudio-opensuse-153-4.2.2-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Fb7Ji",
+				    "name": "r-rstudio-opensuse-154-4.2.2-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.2/r-rstudio-opensuse-154-4.2.2-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Fb7Jm",
+				    "name": "r-rstudio-ubuntu-1804-4.2.2_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.2/r-rstudio-ubuntu-1804-4.2.2_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Fb7Jr",
+				    "name": "r-rstudio-ubuntu-2004-4.2.2_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.2/r-rstudio-ubuntu-2004-4.2.2_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Fb7Jy",
+				    "name": "r-rstudio-ubuntu-2204-4.2.2_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.2/r-rstudio-ubuntu-2204-4.2.2_1_arm64.deb"
+				}
+			    ]
+			}
+		    },
+		    {
+			"id": "RE_kwDOHCN3gs4EPrQw",
+			"name": "v4.2.1",
+			"createdAt": "2022-06-23T07:05:33Z",
+			"tagName": "v4.2.1",
+			"releaseAssets": {
+			    "nodes": [
+				{
+				    "id": "RA_kwDOHCN3gs4ENGOf",
+				    "name": "r-rstudio-debian-9-4.2.1_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.1/r-rstudio-debian-9-4.2.1_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4ENGOh",
+				    "name": "r-rstudio-debian-10-4.2.1_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.1/r-rstudio-debian-10-4.2.1_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4ENGOi",
+				    "name": "r-rstudio-debian-11-4.2.1_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.1/r-rstudio-debian-11-4.2.1_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4ENGOm",
+				    "name": "r-rstudio-ubuntu-1804-4.2.1_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.1/r-rstudio-ubuntu-1804-4.2.1_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4ENGOn",
+				    "name": "r-rstudio-ubuntu-2004-4.2.1_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.1/r-rstudio-ubuntu-2004-4.2.1_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4ENGOp",
+				    "name": "r-rstudio-ubuntu-2204-4.2.1_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.1/r-rstudio-ubuntu-2204-4.2.1_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4ERaFC",
+				    "name": "R-4.2.1.pkg",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.1/R-4.2.1.pkg"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4ERaFM",
+				    "name": "R-4.2.1-arm64.pkg",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.1/R-4.2.1-arm64.pkg"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4ERaFS",
+				    "name": "R-4.2.1-win.exe",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.1/R-4.2.1-win.exe"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Fb6Zw",
+				    "name": "r-rstudio-redhat-9-4.2.1-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.1/r-rstudio-redhat-9-4.2.1-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Fb6Z9",
+				    "name": "r-rstudio-centos-8-4.2.1-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.1/r-rstudio-centos-8-4.2.1-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Fb6aI",
+				    "name": "r-rstudio-centos-7-4.2.1-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.1/r-rstudio-centos-7-4.2.1-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Fb6aV",
+				    "name": "r-rstudio-opensuse-153-4.2.1-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.1/r-rstudio-opensuse-153-4.2.1-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Fb6aj",
+				    "name": "r-rstudio-opensuse-154-4.2.1-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.1/r-rstudio-opensuse-154-4.2.1-1-1.aarch64.rpm"
+				}
+			    ]
+			}
+		    },
+		    {
+			"id": "RE_kwDOHCN3gs4DuSA7",
+			"name": "Latest builds",
+			"createdAt": "2022-05-08T15:14:57Z",
+			"tagName": "vdevel",
+			"releaseAssets": {
+			    "nodes": [
+				{
+				    "id": "RA_kwDOHCN3gs4EnMVm",
+				    "name": "R-devel-arm64.pkg",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/vdevel/R-devel-arm64.pkg"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4EnMVn",
+				    "name": "R-devel.pkg",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/vdevel/R-devel.pkg"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4EnMVq",
+				    "name": "R-devel-win.exe",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/vdevel/R-devel-win.exe"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4GKrHB",
+				    "name": "r-rstudio-debian-10-devel_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/vdevel/r-rstudio-debian-10-devel_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4GKrJk",
+				    "name": "r-rstudio-debian-11-devel_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/vdevel/r-rstudio-debian-11-devel_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4GKrUh",
+				    "name": "r-rstudio-ubuntu-2004-devel_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/vdevel/r-rstudio-ubuntu-2004-devel_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4GKrX6",
+				    "name": "r-rstudio-ubuntu-2204-devel_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/vdevel/r-rstudio-ubuntu-2204-devel_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4GKrav",
+				    "name": "r-rstudio-opensuse-153-devel-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/vdevel/r-rstudio-opensuse-153-devel-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4GKr2g",
+				    "name": "r-rstudio-rhel-9-devel-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/vdevel/r-rstudio-rhel-9-devel-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4GKr2y",
+				    "name": "r-rstudio-centos-8-devel-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/vdevel/r-rstudio-centos-8-devel-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4GKsZ6",
+				    "name": "r-rstudio-ubuntu-1804-devel_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/vdevel/r-rstudio-ubuntu-1804-devel_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4GKtSW",
+				    "name": "r-rstudio-centos-7-devel-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/vdevel/r-rstudio-centos-7-devel-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4GKtpK",
+				    "name": "r-rstudio-opensuse-154-devel-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/vdevel/r-rstudio-opensuse-154-devel-1-1.aarch64.rpm"
+				}
+			    ]
+			}
+		    },
+		    {
+			"id": "RE_kwDOHCN3gs4DyPHp",
+			"name": "Latest builds",
+			"createdAt": "2022-05-06T05:26:10Z",
+			"tagName": "vnext",
+			"releaseAssets": {
+			    "nodes": [
+				{
+				    "id": "RA_kwDOHCN3gs4EnMYf",
+				    "name": "R-next-win.exe",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/vnext/R-next-win.exe"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4EnMYi",
+				    "name": "R-next-arm64.pkg",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/vnext/R-next-arm64.pkg"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4EnMYm",
+				    "name": "R-next.pkg",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/vnext/R-next.pkg"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4GKrIZ",
+				    "name": "r-rstudio-ubuntu-1804-next_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/vnext/r-rstudio-ubuntu-1804-next_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4GKrIw",
+				    "name": "r-rstudio-debian-10-next_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/vnext/r-rstudio-debian-10-next_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4GKrK7",
+				    "name": "r-rstudio-ubuntu-2004-next_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/vnext/r-rstudio-ubuntu-2004-next_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4GKrVI",
+				    "name": "r-rstudio-opensuse-153-next-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/vnext/r-rstudio-opensuse-153-next-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4GKrb2",
+				    "name": "r-rstudio-debian-11-next_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/vnext/r-rstudio-debian-11-next_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4GKrh0",
+				    "name": "r-rstudio-ubuntu-2204-next_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/vnext/r-rstudio-ubuntu-2204-next_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4GKrzv",
+				    "name": "r-rstudio-rhel-9-next-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/vnext/r-rstudio-rhel-9-next-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4GKr16",
+				    "name": "r-rstudio-centos-7-next-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/vnext/r-rstudio-centos-7-next-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4GKr2_",
+				    "name": "r-rstudio-centos-8-next-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/vnext/r-rstudio-centos-8-next-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4GKtrE",
+				    "name": "r-rstudio-opensuse-154-next-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/vnext/r-rstudio-opensuse-154-next-1-1.aarch64.rpm"
+				}
+			    ]
+			}
+		    },
+		    {
+			"id": "RE_kwDOHCN3gs4D9D5g",
+			"name": "v4.2.0",
+			"createdAt": "2022-04-22T07:05:41Z",
+			"tagName": "v4.2.0",
+			"releaseAssets": {
+			    "nodes": [
+				{
+				    "id": "RA_kwDOHCN3gs4D3nx-",
+				    "name": "R-4.2.0.pkg",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.0/R-4.2.0.pkg"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4D3nyE",
+				    "name": "R-4.2.0-arm64.pkg",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.0/R-4.2.0-arm64.pkg"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4D3nyG",
+				    "name": "R-4.2.0-win.exe",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.0/R-4.2.0-win.exe"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4D3nyX",
+				    "name": "r-rstudio-debian-11-4.2.0_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.0/r-rstudio-debian-11-4.2.0_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4D3nyc",
+				    "name": "r-rstudio-ubuntu-2204-4.2.0_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.0/r-rstudio-ubuntu-2204-4.2.0_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4D3nyd",
+				    "name": "r-rstudio-debian-9-4.2.0_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.0/r-rstudio-debian-9-4.2.0_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4D3nyh",
+				    "name": "r-rstudio-debian-10-4.2.0_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.0/r-rstudio-debian-10-4.2.0_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4D3nym",
+				    "name": "r-rstudio-ubuntu-2004-4.2.0_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.0/r-rstudio-ubuntu-2004-4.2.0_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4D3nyx",
+				    "name": "r-rstudio-ubuntu-1804-4.2.0_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.0/r-rstudio-ubuntu-1804-4.2.0_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Fb6ct",
+				    "name": "r-rstudio-redhat-9-4.2.0-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.0/r-rstudio-redhat-9-4.2.0-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Fb6c_",
+				    "name": "r-rstudio-centos-8-4.2.0-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.0/r-rstudio-centos-8-4.2.0-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Fb6dK",
+				    "name": "r-rstudio-centos-7-4.2.0-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.0/r-rstudio-centos-7-4.2.0-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Fb6dQ",
+				    "name": "r-rstudio-opensuse-153-4.2.0-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.0/r-rstudio-opensuse-153-4.2.0-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Fb6dT",
+				    "name": "r-rstudio-opensuse-154-4.2.0-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.2.0/r-rstudio-opensuse-154-4.2.0-1-1.aarch64.rpm"
+				}
+			    ]
+			}
+		    },
+		    {
+			"id": "RE_kwDOHCN3gs4DtlLd",
+			"name": "v4.1.3",
+			"createdAt": "2022-03-10T08:05:38Z",
+			"tagName": "v4.1.3",
+			"releaseAssets": {
+			    "nodes": [
+				{
+				    "id": "RA_kwDOHCN3gs4DlGdy",
+				    "name": "r-rstudio-ubuntu-1804-4.1.3_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.3/r-rstudio-ubuntu-1804-4.1.3_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlGd6",
+				    "name": "r-rstudio-ubuntu-2004-4.1.3_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.3/r-rstudio-ubuntu-2004-4.1.3_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlGwi",
+				    "name": "R-4.1.3-win.exe",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.3/R-4.1.3-win.exe"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlGwm",
+				    "name": "R-4.1.3.pkg",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.3/R-4.1.3.pkg"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlGwx",
+				    "name": "R-4.1.3-arm64.pkg",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.3/R-4.1.3-arm64.pkg"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUF9",
+				    "name": "r-rstudio-debian-9-4.1.3_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.3/r-rstudio-debian-9-4.1.3_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUGR",
+				    "name": "r-rstudio-debian-10-4.1.3_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.3/r-rstudio-debian-10-4.1.3_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUID",
+				    "name": "r-rstudio-ubuntu-2204-4.1.3_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.3/r-rstudio-ubuntu-2204-4.1.3_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DmJjJ",
+				    "name": "r-rstudio-debian-11-4.1.3_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.3/r-rstudio-debian-11-4.1.3_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Fb6eK",
+				    "name": "r-rstudio-redhat-9-4.1.3-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.3/r-rstudio-redhat-9-4.1.3-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Fb6eN",
+				    "name": "r-rstudio-centos-8-4.1.3-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.3/r-rstudio-centos-8-4.1.3-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Fb6eT",
+				    "name": "r-rstudio-centos-7-4.1.3-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.3/r-rstudio-centos-7-4.1.3-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Fb6eW",
+				    "name": "r-rstudio-opensuse-153-4.1.3-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.3/r-rstudio-opensuse-153-4.1.3-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Fb6eY",
+				    "name": "r-rstudio-opensuse-154-4.1.3-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.3/r-rstudio-opensuse-154-4.1.3-1-1.aarch64.rpm"
+				}
+			    ]
+			}
+		    },
+		    {
+			"id": "RE_kwDOHCN3gs4DtlYS",
+			"name": "v4.1.2",
+			"createdAt": "2021-11-01T08:05:12Z",
+			"tagName": "v4.1.2",
+			"releaseAssets": {
+			    "nodes": [
+				{
+				    "id": "RA_kwDOHCN3gs4DlJZi",
+				    "name": "r-rstudio-ubuntu-1804-4.1.2_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.2/r-rstudio-ubuntu-1804-4.1.2_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlJZs",
+				    "name": "r-rstudio-ubuntu-2004-4.1.2_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.2/r-rstudio-ubuntu-2004-4.1.2_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUI0",
+				    "name": "r-rstudio-debian-9-4.1.2_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.2/r-rstudio-debian-9-4.1.2_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUI2",
+				    "name": "r-rstudio-debian-10-4.1.2_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.2/r-rstudio-debian-10-4.1.2_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUI9",
+				    "name": "r-rstudio-ubuntu-2204-4.1.2_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.2/r-rstudio-ubuntu-2204-4.1.2_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlU9j",
+				    "name": "R-4.1.2-arm64.pkg",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.2/R-4.1.2-arm64.pkg"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlU93",
+				    "name": "R-4.1.2.pkg",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.2/R-4.1.2.pkg"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlU99",
+				    "name": "R-4.1.2-win.exe",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.2/R-4.1.2-win.exe"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DmJj1",
+				    "name": "r-rstudio-debian-11-4.1.2_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.2/r-rstudio-debian-11-4.1.2_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQLp",
+				    "name": "r-rstudio-redhat-9-4.1.2-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.2/r-rstudio-redhat-9-4.1.2-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQLu",
+				    "name": "r-rstudio-centos-8-4.1.2-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.2/r-rstudio-centos-8-4.1.2-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQL0",
+				    "name": "r-rstudio-centos-7-4.1.2-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.2/r-rstudio-centos-7-4.1.2-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQL_",
+				    "name": "r-rstudio-opensuse-153-4.1.2-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.2/r-rstudio-opensuse-153-4.1.2-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQMM",
+				    "name": "r-rstudio-opensuse-154-4.1.2-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.2/r-rstudio-opensuse-154-4.1.2-1-1.aarch64.rpm"
+				}
+			    ]
+			}
+		    },
+		    {
+			"id": "MDc6UmVsZWFzZTYyMjgzNjE1",
+			"name": "v4.1.1",
+			"createdAt": "2021-08-10T07:05:06Z",
+			"tagName": "v4.1.1",
+			"releaseAssets": {
+			    "nodes": [
+				{
+				    "id": "RA_kwDOHCN3gs4DlJaP",
+				    "name": "r-rstudio-ubuntu-1804-4.1.1_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.1/r-rstudio-ubuntu-1804-4.1.1_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlJaQ",
+				    "name": "r-rstudio-ubuntu-2004-4.1.1_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.1/r-rstudio-ubuntu-2004-4.1.1_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUJp",
+				    "name": "r-rstudio-debian-9-4.1.1_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.1/r-rstudio-debian-9-4.1.1_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUJv",
+				    "name": "r-rstudio-debian-10-4.1.1_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.1/r-rstudio-debian-10-4.1.1_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUJ7",
+				    "name": "r-rstudio-ubuntu-2204-4.1.1_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.1/r-rstudio-ubuntu-2204-4.1.1_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlU8t",
+				    "name": "R-4.1.1-arm64.pkg",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.1/R-4.1.1-arm64.pkg"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlU86",
+				    "name": "R-4.1.1.pkg",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.1/R-4.1.1.pkg"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlU8-",
+				    "name": "R-4.1.1-win.exe",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.1/R-4.1.1-win.exe"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DmJmD",
+				    "name": "r-rstudio-debian-11-4.1.1_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.1/r-rstudio-debian-11-4.1.1_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQNo",
+				    "name": "r-rstudio-redhat-9-4.1.1-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.1/r-rstudio-redhat-9-4.1.1-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQNr",
+				    "name": "r-rstudio-centos-8-4.1.1-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.1/r-rstudio-centos-8-4.1.1-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQNz",
+				    "name": "r-rstudio-centos-7-4.1.1-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.1/r-rstudio-centos-7-4.1.1-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQN_",
+				    "name": "r-rstudio-opensuse-153-4.1.1-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.1/r-rstudio-opensuse-153-4.1.1-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQOF",
+				    "name": "r-rstudio-opensuse-154-4.1.1-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.1/r-rstudio-opensuse-154-4.1.1-1-1.aarch64.rpm"
+				}
+			    ]
+			}
+		    },
+		    {
+			"id": "MDc6UmVsZWFzZTYyMjgzNjE2",
+			"name": "v4.1.0",
+			"createdAt": "2021-05-18T07:05:22Z",
+			"tagName": "v4.1.0",
+			"releaseAssets": {
+			    "nodes": [
+				{
+				    "id": "RA_kwDOHCN3gs4DlJaY",
+				    "name": "r-rstudio-ubuntu-1804-4.1.0_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.0/r-rstudio-ubuntu-1804-4.1.0_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlJab",
+				    "name": "r-rstudio-ubuntu-2004-4.1.0_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.0/r-rstudio-ubuntu-2004-4.1.0_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlULD",
+				    "name": "r-rstudio-debian-9-4.1.0_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.0/r-rstudio-debian-9-4.1.0_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlULG",
+				    "name": "r-rstudio-debian-10-4.1.0_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.0/r-rstudio-debian-10-4.1.0_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlULO",
+				    "name": "r-rstudio-ubuntu-2204-4.1.0_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.0/r-rstudio-ubuntu-2204-4.1.0_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlU7w",
+				    "name": "R-4.1.0.pkg",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.0/R-4.1.0.pkg"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlU7-",
+				    "name": "R-4.1.0-arm64.pkg",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.0/R-4.1.0-arm64.pkg"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlU8G",
+				    "name": "R-4.1.0-win.exe",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.0/R-4.1.0-win.exe"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DmJm3",
+				    "name": "r-rstudio-debian-11-4.1.0_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.0/r-rstudio-debian-11-4.1.0_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQPJ",
+				    "name": "r-rstudio-redhat-9-4.1.0-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.0/r-rstudio-redhat-9-4.1.0-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQPU",
+				    "name": "r-rstudio-centos-8-4.1.0-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.0/r-rstudio-centos-8-4.1.0-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQPa",
+				    "name": "r-rstudio-centos-7-4.1.0-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.0/r-rstudio-centos-7-4.1.0-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQPi",
+				    "name": "r-rstudio-opensuse-153-4.1.0-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.0/r-rstudio-opensuse-153-4.1.0-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQPm",
+				    "name": "r-rstudio-opensuse-154-4.1.0-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.1.0/r-rstudio-opensuse-154-4.1.0-1-1.aarch64.rpm"
+				}
+			    ]
+			}
+		    },
+		    {
+			"id": "MDc6UmVsZWFzZTYyMjgzNjIw",
+			"name": "v4.0.5",
+			"createdAt": "2021-03-31T07:05:15Z",
+			"tagName": "v4.0.5",
+			"releaseAssets": {
+			    "nodes": [
+				{
+				    "id": "RA_kwDOHCN3gs4DlJan",
+				    "name": "r-rstudio-ubuntu-1804-4.0.5_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.5/r-rstudio-ubuntu-1804-4.0.5_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlJao",
+				    "name": "r-rstudio-ubuntu-2004-4.0.5_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.5/r-rstudio-ubuntu-2004-4.0.5_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlULk",
+				    "name": "r-rstudio-debian-9-4.0.5_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.5/r-rstudio-debian-9-4.0.5_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlULz",
+				    "name": "r-rstudio-debian-10-4.0.5_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.5/r-rstudio-debian-10-4.0.5_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUL5",
+				    "name": "r-rstudio-ubuntu-2204-4.0.5_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.5/r-rstudio-ubuntu-2204-4.0.5_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlU7b",
+				    "name": "R-4.0.5.pkg",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.5/R-4.0.5.pkg"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlU7d",
+				    "name": "R-4.0.5-win.exe",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.5/R-4.0.5-win.exe"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DmJng",
+				    "name": "r-rstudio-debian-11-4.0.5_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.5/r-rstudio-debian-11-4.0.5_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Fb6gP",
+				    "name": "r-rstudio-redhat-9-4.0.5-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.5/r-rstudio-redhat-9-4.0.5-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Fb6gs",
+				    "name": "r-rstudio-centos-8-4.0.5-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.5/r-rstudio-centos-8-4.0.5-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Fb6g8",
+				    "name": "r-rstudio-centos-7-4.0.5-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.5/r-rstudio-centos-7-4.0.5-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Fb6ha",
+				    "name": "r-rstudio-opensuse-154-4.0.5-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.5/r-rstudio-opensuse-154-4.0.5-1-1.aarch64.rpm"
+				}
+			    ]
+			}
+		    },
+		    {
+			"id": "MDc6UmVsZWFzZTYyMjgzNjI2",
+			"name": "v4.0.4",
+			"createdAt": "2021-02-15T08:05:13Z",
+			"tagName": "v4.0.4",
+			"releaseAssets": {
+			    "nodes": [
+				{
+				    "id": "RA_kwDOHCN3gs4DlJax",
+				    "name": "r-rstudio-ubuntu-1804-4.0.4_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.4/r-rstudio-ubuntu-1804-4.0.4_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlJa0",
+				    "name": "r-rstudio-ubuntu-2004-4.0.4_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.4/r-rstudio-ubuntu-2004-4.0.4_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUPV",
+				    "name": "r-rstudio-debian-9-4.0.4_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.4/r-rstudio-debian-9-4.0.4_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUPc",
+				    "name": "r-rstudio-debian-10-4.0.4_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.4/r-rstudio-debian-10-4.0.4_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUPi",
+				    "name": "r-rstudio-ubuntu-2204-4.0.4_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.4/r-rstudio-ubuntu-2204-4.0.4_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlU7M",
+				    "name": "R-4.0.4.pkg",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.4/R-4.0.4.pkg"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlU7N",
+				    "name": "R-4.0.4-win.exe",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.4/R-4.0.4-win.exe"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DmJn8",
+				    "name": "r-rstudio-debian-11-4.0.4_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.4/r-rstudio-debian-11-4.0.4_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQPw",
+				    "name": "r-rstudio-redhat-9-4.0.4-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.4/r-rstudio-redhat-9-4.0.4-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQP0",
+				    "name": "r-rstudio-centos-8-4.0.4-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.4/r-rstudio-centos-8-4.0.4-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQP6",
+				    "name": "r-rstudio-centos-7-4.0.4-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.4/r-rstudio-centos-7-4.0.4-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQP8",
+				    "name": "r-rstudio-opensuse-153-4.0.4-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.4/r-rstudio-opensuse-153-4.0.4-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQP_",
+				    "name": "r-rstudio-opensuse-154-4.0.4-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.4/r-rstudio-opensuse-154-4.0.4-1-1.aarch64.rpm"
+				}
+			    ]
+			}
+		    },
+		    {
+			"id": "MDc6UmVsZWFzZTYyMjgzNjI3",
+			"name": "v4.0.3",
+			"createdAt": "2020-10-10T07:05:24Z",
+			"tagName": "v4.0.3",
+			"releaseAssets": {
+			    "nodes": [
+				{
+				    "id": "RA_kwDOHCN3gs4DlJbB",
+				    "name": "r-rstudio-ubuntu-1804-4.0.3_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.3/r-rstudio-ubuntu-1804-4.0.3_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlJbI",
+				    "name": "r-rstudio-ubuntu-2004-4.0.3_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.3/r-rstudio-ubuntu-2004-4.0.3_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUQK",
+				    "name": "r-rstudio-debian-9-4.0.3_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.3/r-rstudio-debian-9-4.0.3_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUQR",
+				    "name": "r-rstudio-debian-10-4.0.3_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.3/r-rstudio-debian-10-4.0.3_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUQT",
+				    "name": "r-rstudio-ubuntu-2204-4.0.3_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.3/r-rstudio-ubuntu-2204-4.0.3_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlU64",
+				    "name": "R-4.0.3.pkg",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.3/R-4.0.3.pkg"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlU66",
+				    "name": "R-4.0.3-win.exe",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.3/R-4.0.3-win.exe"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DmJoa",
+				    "name": "r-rstudio-debian-11-4.0.3_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.3/r-rstudio-debian-11-4.0.3_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQQS",
+				    "name": "r-rstudio-redhat-9-4.0.3-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.3/r-rstudio-redhat-9-4.0.3-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQQa",
+				    "name": "r-rstudio-centos-8-4.0.3-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.3/r-rstudio-centos-8-4.0.3-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQQg",
+				    "name": "r-rstudio-centos-7-4.0.3-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.3/r-rstudio-centos-7-4.0.3-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQQi",
+				    "name": "r-rstudio-opensuse-153-4.0.3-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.3/r-rstudio-opensuse-153-4.0.3-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQQr",
+				    "name": "r-rstudio-opensuse-154-4.0.3-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.3/r-rstudio-opensuse-154-4.0.3-1-1.aarch64.rpm"
+				}
+			    ]
+			}
+		    },
+		    {
+			"id": "MDc6UmVsZWFzZTYyMjgzNjMx",
+			"name": "v4.0.2",
+			"createdAt": "2020-06-22T07:05:19Z",
+			"tagName": "v4.0.2",
+			"releaseAssets": {
+			    "nodes": [
+				{
+				    "id": "RA_kwDOHCN3gs4DlJbU",
+				    "name": "r-rstudio-ubuntu-1804-4.0.2_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.2/r-rstudio-ubuntu-1804-4.0.2_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlJbX",
+				    "name": "r-rstudio-ubuntu-2004-4.0.2_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.2/r-rstudio-ubuntu-2004-4.0.2_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUQ1",
+				    "name": "r-rstudio-debian-9-4.0.2_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.2/r-rstudio-debian-9-4.0.2_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUQ7",
+				    "name": "r-rstudio-debian-10-4.0.2_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.2/r-rstudio-debian-10-4.0.2_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlURC",
+				    "name": "r-rstudio-ubuntu-2204-4.0.2_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.2/r-rstudio-ubuntu-2204-4.0.2_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlU6G",
+				    "name": "R-4.0.2.pkg",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.2/R-4.0.2.pkg"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlU6Q",
+				    "name": "R-4.0.2-win.exe",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.2/R-4.0.2-win.exe"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DmJpG",
+				    "name": "r-rstudio-debian-11-4.0.2_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.2/r-rstudio-debian-11-4.0.2_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQSO",
+				    "name": "r-rstudio-redhat-9-4.0.2-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.2/r-rstudio-redhat-9-4.0.2-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQSj",
+				    "name": "r-rstudio-centos-8-4.0.2-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.2/r-rstudio-centos-8-4.0.2-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQSq",
+				    "name": "r-rstudio-centos-7-4.0.2-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.2/r-rstudio-centos-7-4.0.2-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQSy",
+				    "name": "r-rstudio-opensuse-153-4.0.2-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.2/r-rstudio-opensuse-153-4.0.2-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQS9",
+				    "name": "r-rstudio-opensuse-154-4.0.2-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.2/r-rstudio-opensuse-154-4.0.2-1-1.aarch64.rpm"
+				}
+			    ]
+			}
+		    },
+		    {
+			"id": "MDc6UmVsZWFzZTYyMjgzNjM1",
+			"name": "v4.0.1",
+			"createdAt": "2020-06-06T07:05:16Z",
+			"tagName": "v4.0.1",
+			"releaseAssets": {
+			    "nodes": [
+				{
+				    "id": "RA_kwDOHCN3gs4DlJb2",
+				    "name": "r-rstudio-ubuntu-1804-4.0.1_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.1/r-rstudio-ubuntu-1804-4.0.1_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlJb6",
+				    "name": "r-rstudio-ubuntu-2004-4.0.1_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.1/r-rstudio-ubuntu-2004-4.0.1_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlURk",
+				    "name": "r-rstudio-debian-9-4.0.1_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.1/r-rstudio-debian-9-4.0.1_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlURq",
+				    "name": "r-rstudio-debian-10-4.0.1_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.1/r-rstudio-debian-10-4.0.1_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlURw",
+				    "name": "r-rstudio-ubuntu-2204-4.0.1_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.1/r-rstudio-ubuntu-2204-4.0.1_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlU5S",
+				    "name": "R-4.0.1.pkg",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.1/R-4.0.1.pkg"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlU5Z",
+				    "name": "R-4.0.1-win.exe",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.1/R-4.0.1-win.exe"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DmJpa",
+				    "name": "r-rstudio-debian-11-4.0.1_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.1/r-rstudio-debian-11-4.0.1_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQTD",
+				    "name": "r-rstudio-redhat-9-4.0.1-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.1/r-rstudio-redhat-9-4.0.1-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQTI",
+				    "name": "r-rstudio-centos-8-4.0.1-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.1/r-rstudio-centos-8-4.0.1-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQTO",
+				    "name": "r-rstudio-centos-7-4.0.1-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.1/r-rstudio-centos-7-4.0.1-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQTQ",
+				    "name": "r-rstudio-opensuse-153-4.0.1-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.1/r-rstudio-opensuse-153-4.0.1-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQTV",
+				    "name": "r-rstudio-opensuse-154-4.0.1-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.1/r-rstudio-opensuse-154-4.0.1-1-1.aarch64.rpm"
+				}
+			    ]
+			}
+		    },
+		    {
+			"id": "MDc6UmVsZWFzZTYyMjgzNjM4",
+			"name": "v4.0.0",
+			"createdAt": "2020-04-24T07:05:34Z",
+			"tagName": "v4.0.0",
+			"releaseAssets": {
+			    "nodes": [
+				{
+				    "id": "RA_kwDOHCN3gs4DlJcH",
+				    "name": "r-rstudio-ubuntu-1804-4.0.0_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.0/r-rstudio-ubuntu-1804-4.0.0_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlJcJ",
+				    "name": "r-rstudio-ubuntu-2004-4.0.0_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.0/r-rstudio-ubuntu-2004-4.0.0_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUS6",
+				    "name": "r-rstudio-debian-9-4.0.0_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.0/r-rstudio-debian-9-4.0.0_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUS9",
+				    "name": "r-rstudio-debian-10-4.0.0_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.0/r-rstudio-debian-10-4.0.0_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUTE",
+				    "name": "r-rstudio-ubuntu-2204-4.0.0_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.0/r-rstudio-ubuntu-2204-4.0.0_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlU4i",
+				    "name": "R-4.0.0.pkg",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.0/R-4.0.0.pkg"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlU4t",
+				    "name": "R-4.0.0-win.exe",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.0/R-4.0.0-win.exe"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DmJpx",
+				    "name": "r-rstudio-debian-11-4.0.0_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.0/r-rstudio-debian-11-4.0.0_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQTv",
+				    "name": "r-rstudio-redhat-9-4.0.0-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.0/r-rstudio-redhat-9-4.0.0-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQTy",
+				    "name": "r-rstudio-centos-8-4.0.0-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.0/r-rstudio-centos-8-4.0.0-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQT4",
+				    "name": "r-rstudio-centos-7-4.0.0-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.0/r-rstudio-centos-7-4.0.0-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQUB",
+				    "name": "r-rstudio-opensuse-153-4.0.0-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.0/r-rstudio-opensuse-153-4.0.0-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQUD",
+				    "name": "r-rstudio-opensuse-154-4.0.0-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.0.0/r-rstudio-opensuse-154-4.0.0-1-1.aarch64.rpm"
+				}
+			    ]
+			}
+		    },
+		    {
+			"id": "MDc6UmVsZWFzZTYyMjgzNjQ4",
+			"name": "v3.6.3",
+			"createdAt": "2020-02-29T08:05:16Z",
+			"tagName": "v3.6.3",
+			"releaseAssets": {
+			    "nodes": [
+				{
+				    "id": "RA_kwDOHCN3gs4DlJcT",
+				    "name": "r-rstudio-ubuntu-1804-3.6.3_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.3/r-rstudio-ubuntu-1804-3.6.3_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlJcW",
+				    "name": "r-rstudio-ubuntu-2004-3.6.3_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.3/r-rstudio-ubuntu-2004-3.6.3_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUTe",
+				    "name": "r-rstudio-debian-9-3.6.3_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.3/r-rstudio-debian-9-3.6.3_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUTf",
+				    "name": "r-rstudio-debian-10-3.6.3_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.3/r-rstudio-debian-10-3.6.3_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUTl",
+				    "name": "r-rstudio-ubuntu-2204-3.6.3_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.3/r-rstudio-ubuntu-2204-3.6.3_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlU4M",
+				    "name": "R-3.6.3.pkg",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.3/R-3.6.3.pkg"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlU4S",
+				    "name": "R-3.6.3-win.exe",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.3/R-3.6.3-win.exe"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DmJqm",
+				    "name": "r-rstudio-debian-11-3.6.3_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.3/r-rstudio-debian-11-3.6.3_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Fb6v4",
+				    "name": "r-rstudio-redhat-9-3.6.3-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.3/r-rstudio-redhat-9-3.6.3-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Fb6wC",
+				    "name": "r-rstudio-centos-8-3.6.3-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.3/r-rstudio-centos-8-3.6.3-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Fb6wT",
+				    "name": "r-rstudio-centos-7-3.6.3-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.3/r-rstudio-centos-7-3.6.3-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Fb6wu",
+				    "name": "r-rstudio-opensuse-153-3.6.3-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.3/r-rstudio-opensuse-153-3.6.3-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Fb6w8",
+				    "name": "r-rstudio-opensuse-154-3.6.3-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.3/r-rstudio-opensuse-154-3.6.3-1-1.aarch64.rpm"
+				}
+			    ]
+			}
+		    },
+		    {
+			"id": "MDc6UmVsZWFzZTYyMjgzNjUx",
+			"name": "v3.6.2",
+			"createdAt": "2019-12-12T08:05:03Z",
+			"tagName": "v3.6.2",
+			"releaseAssets": {
+			    "nodes": [
+				{
+				    "id": "RA_kwDOHCN3gs4DlJck",
+				    "name": "r-rstudio-ubuntu-1804-3.6.2_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.2/r-rstudio-ubuntu-1804-3.6.2_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlJcm",
+				    "name": "r-rstudio-ubuntu-2004-3.6.2_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.2/r-rstudio-ubuntu-2004-3.6.2_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUUX",
+				    "name": "r-rstudio-debian-9-3.6.2_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.2/r-rstudio-debian-9-3.6.2_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUUf",
+				    "name": "r-rstudio-debian-10-3.6.2_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.2/r-rstudio-debian-10-3.6.2_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUUh",
+				    "name": "r-rstudio-ubuntu-2204-3.6.2_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.2/r-rstudio-ubuntu-2204-3.6.2_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlU36",
+				    "name": "R-3.6.2.pkg",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.2/R-3.6.2.pkg"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlU3-",
+				    "name": "R-3.6.2-win.exe",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.2/R-3.6.2-win.exe"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DmJtM",
+				    "name": "r-rstudio-debian-11-3.6.2_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.2/r-rstudio-debian-11-3.6.2_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQVv",
+				    "name": "r-rstudio-redhat-9-3.6.2-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.2/r-rstudio-redhat-9-3.6.2-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQV1",
+				    "name": "r-rstudio-centos-8-3.6.2-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.2/r-rstudio-centos-8-3.6.2-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQV7",
+				    "name": "r-rstudio-centos-7-3.6.2-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.2/r-rstudio-centos-7-3.6.2-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQWA",
+				    "name": "r-rstudio-opensuse-153-3.6.2-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.2/r-rstudio-opensuse-153-3.6.2-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQWD",
+				    "name": "r-rstudio-opensuse-154-3.6.2-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.2/r-rstudio-opensuse-154-3.6.2-1-1.aarch64.rpm"
+				}
+			    ]
+			}
+		    },
+		    {
+			"id": "MDc6UmVsZWFzZTYyMjgzNjU1",
+			"name": "v3.6.1",
+			"createdAt": "2019-07-05T07:05:03Z",
+			"tagName": "v3.6.1",
+			"releaseAssets": {
+			    "nodes": [
+				{
+				    "id": "RA_kwDOHCN3gs4DlJc-",
+				    "name": "r-rstudio-ubuntu-1804-3.6.1_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.1/r-rstudio-ubuntu-1804-3.6.1_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlJdB",
+				    "name": "r-rstudio-ubuntu-2004-3.6.1_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.1/r-rstudio-ubuntu-2004-3.6.1_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUU_",
+				    "name": "r-rstudio-debian-9-3.6.1_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.1/r-rstudio-debian-9-3.6.1_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUVB",
+				    "name": "r-rstudio-debian-10-3.6.1_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.1/r-rstudio-debian-10-3.6.1_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUVN",
+				    "name": "r-rstudio-ubuntu-2204-3.6.1_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.1/r-rstudio-ubuntu-2204-3.6.1_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlU3g",
+				    "name": "R-3.6.1.pkg",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.1/R-3.6.1.pkg"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlU3l",
+				    "name": "R-3.6.1-win.exe",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.1/R-3.6.1-win.exe"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DmJtn",
+				    "name": "r-rstudio-debian-11-3.6.1_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.1/r-rstudio-debian-11-3.6.1_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQWQ",
+				    "name": "r-rstudio-redhat-9-3.6.1-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.1/r-rstudio-redhat-9-3.6.1-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQWa",
+				    "name": "r-rstudio-centos-8-3.6.1-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.1/r-rstudio-centos-8-3.6.1-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQWi",
+				    "name": "r-rstudio-centos-7-3.6.1-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.1/r-rstudio-centos-7-3.6.1-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQWt",
+				    "name": "r-rstudio-opensuse-153-3.6.1-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.1/r-rstudio-opensuse-153-3.6.1-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQW9",
+				    "name": "r-rstudio-opensuse-154-3.6.1-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.1/r-rstudio-opensuse-154-3.6.1-1-1.aarch64.rpm"
+				}
+			    ]
+			}
+		    },
+		    {
+			"id": "MDc6UmVsZWFzZTYyMjgzNjU4",
+			"name": "v3.6.0",
+			"createdAt": "2019-04-26T07:05:03Z",
+			"tagName": "v3.6.0",
+			"releaseAssets": {
+			    "nodes": [
+				{
+				    "id": "RA_kwDOHCN3gs4DlJdR",
+				    "name": "r-rstudio-ubuntu-1804-3.6.0_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.0/r-rstudio-ubuntu-1804-3.6.0_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlJdS",
+				    "name": "r-rstudio-ubuntu-2004-3.6.0_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.0/r-rstudio-ubuntu-2004-3.6.0_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUVr",
+				    "name": "r-rstudio-debian-9-3.6.0_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.0/r-rstudio-debian-9-3.6.0_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUVu",
+				    "name": "r-rstudio-debian-10-3.6.0_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.0/r-rstudio-debian-10-3.6.0_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUVv",
+				    "name": "r-rstudio-ubuntu-2204-3.6.0_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.0/r-rstudio-ubuntu-2204-3.6.0_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlU2o",
+				    "name": "R-3.6.0.pkg",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.0/R-3.6.0.pkg"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlU2y",
+				    "name": "R-3.6.0-win.exe",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.0/R-3.6.0-win.exe"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DmJuG",
+				    "name": "r-rstudio-debian-11-3.6.0_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.0/r-rstudio-debian-11-3.6.0_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQXY",
+				    "name": "r-rstudio-redhat-9-3.6.0-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.0/r-rstudio-redhat-9-3.6.0-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQXd",
+				    "name": "r-rstudio-centos-8-3.6.0-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.0/r-rstudio-centos-8-3.6.0-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQXg",
+				    "name": "r-rstudio-centos-7-3.6.0-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.0/r-rstudio-centos-7-3.6.0-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQXj",
+				    "name": "r-rstudio-opensuse-153-3.6.0-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.0/r-rstudio-opensuse-153-3.6.0-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQXv",
+				    "name": "r-rstudio-opensuse-154-3.6.0-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.0/r-rstudio-opensuse-154-3.6.0-1-1.aarch64.rpm"
+				}
+			    ]
+			}
+		    },
+		    {
+			"id": "MDc6UmVsZWFzZTYyMjgzNjYz",
+			"name": "v3.5.3",
+			"createdAt": "2019-03-11T08:04:49Z",
+			"tagName": "v3.5.3",
+			"releaseAssets": {
+			    "nodes": [
+				{
+				    "id": "RA_kwDOHCN3gs4DlJdb",
+				    "name": "r-rstudio-ubuntu-1804-3.5.3_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.3/r-rstudio-ubuntu-1804-3.5.3_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlJdd",
+				    "name": "r-rstudio-ubuntu-2004-3.5.3_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.3/r-rstudio-ubuntu-2004-3.5.3_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUWJ",
+				    "name": "r-rstudio-debian-9-3.5.3_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.3/r-rstudio-debian-9-3.5.3_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUWL",
+				    "name": "r-rstudio-debian-10-3.5.3_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.3/r-rstudio-debian-10-3.5.3_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUWO",
+				    "name": "r-rstudio-ubuntu-2204-3.5.3_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.3/r-rstudio-ubuntu-2204-3.5.3_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlU2T",
+				    "name": "R-3.5.3.pkg",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.3/R-3.5.3.pkg"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlU2W",
+				    "name": "R-3.5.3-win.exe",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.3/R-3.5.3-win.exe"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DmJug",
+				    "name": "r-rstudio-debian-11-3.5.3_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.3/r-rstudio-debian-11-3.5.3_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Fb7Nz",
+				    "name": "r-rstudio-redhat-9-3.5.3-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.3/r-rstudio-redhat-9-3.5.3-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Fb7N7",
+				    "name": "r-rstudio-centos-8-3.5.3-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.3/r-rstudio-centos-8-3.5.3-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Fb7OD",
+				    "name": "r-rstudio-centos-7-3.5.3-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.3/r-rstudio-centos-7-3.5.3-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Fb7OI",
+				    "name": "r-rstudio-opensuse-153-3.5.3-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.3/r-rstudio-opensuse-153-3.5.3-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Fb7OP",
+				    "name": "r-rstudio-opensuse-154-3.5.3-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.3/r-rstudio-opensuse-154-3.5.3-1-1.aarch64.rpm"
+				}
+			    ]
+			}
+		    },
+		    {
+			"id": "MDc6UmVsZWFzZTYyMjgzNjY3",
+			"name": "v3.5.2",
+			"createdAt": "2018-12-20T08:04:40Z",
+			"tagName": "v3.5.2",
+			"releaseAssets": {
+			    "nodes": [
+				{
+				    "id": "RA_kwDOHCN3gs4DlJjU",
+				    "name": "r-rstudio-ubuntu-2004-3.5.2_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.2/r-rstudio-ubuntu-2004-3.5.2_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlJja",
+				    "name": "r-rstudio-ubuntu-1804-3.5.2_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.2/r-rstudio-ubuntu-1804-3.5.2_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUWs",
+				    "name": "r-rstudio-debian-9-3.5.2_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.2/r-rstudio-debian-9-3.5.2_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUWy",
+				    "name": "r-rstudio-debian-10-3.5.2_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.2/r-rstudio-debian-10-3.5.2_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUW_",
+				    "name": "r-rstudio-ubuntu-2204-3.5.2_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.2/r-rstudio-ubuntu-2204-3.5.2_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlU10",
+				    "name": "R-3.5.2.pkg",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.2/R-3.5.2.pkg"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlU18",
+				    "name": "R-3.5.2-win.exe",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.2/R-3.5.2-win.exe"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DmJu3",
+				    "name": "r-rstudio-debian-11-3.5.2_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.2/r-rstudio-debian-11-3.5.2_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQY-",
+				    "name": "r-rstudio-redhat-9-3.5.2-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.2/r-rstudio-redhat-9-3.5.2-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQZD",
+				    "name": "r-rstudio-centos-8-3.5.2-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.2/r-rstudio-centos-8-3.5.2-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQZQ",
+				    "name": "r-rstudio-centos-7-3.5.2-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.2/r-rstudio-centos-7-3.5.2-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQZW",
+				    "name": "r-rstudio-opensuse-153-3.5.2-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.2/r-rstudio-opensuse-153-3.5.2-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQZa",
+				    "name": "r-rstudio-opensuse-154-3.5.2-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.2/r-rstudio-opensuse-154-3.5.2-1-1.aarch64.rpm"
+				}
+			    ]
+			}
+		    },
+		    {
+			"id": "MDc6UmVsZWFzZTYyMjgzNjY5",
+			"name": "v3.5.1",
+			"createdAt": "2018-07-02T07:04:31Z",
+			"tagName": "v3.5.1",
+			"releaseAssets": {
+			    "nodes": [
+				{
+				    "id": "RA_kwDOHCN3gs4DlJjq",
+				    "name": "r-rstudio-ubuntu-2004-3.5.1_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.1/r-rstudio-ubuntu-2004-3.5.1_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlJjs",
+				    "name": "r-rstudio-ubuntu-1804-3.5.1_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.1/r-rstudio-ubuntu-1804-3.5.1_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUXh",
+				    "name": "r-rstudio-debian-9-3.5.1_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.1/r-rstudio-debian-9-3.5.1_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUXl",
+				    "name": "r-rstudio-debian-10-3.5.1_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.1/r-rstudio-debian-10-3.5.1_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUXm",
+				    "name": "r-rstudio-ubuntu-2204-3.5.1_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.1/r-rstudio-ubuntu-2204-3.5.1_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlU1g",
+				    "name": "R-3.5.1.pkg",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.1/R-3.5.1.pkg"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlU1j",
+				    "name": "R-3.5.1-win.exe",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.1/R-3.5.1-win.exe"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DmJvN",
+				    "name": "r-rstudio-debian-11-3.5.1_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.1/r-rstudio-debian-11-3.5.1_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQZh",
+				    "name": "r-rstudio-redhat-9-3.5.1-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.1/r-rstudio-redhat-9-3.5.1-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQZp",
+				    "name": "r-rstudio-centos-8-3.5.1-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.1/r-rstudio-centos-8-3.5.1-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQZu",
+				    "name": "r-rstudio-centos-7-3.5.1-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.1/r-rstudio-centos-7-3.5.1-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQZz",
+				    "name": "r-rstudio-opensuse-153-3.5.1-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.1/r-rstudio-opensuse-153-3.5.1-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQZ5",
+				    "name": "r-rstudio-opensuse-154-3.5.1-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.1/r-rstudio-opensuse-154-3.5.1-1-1.aarch64.rpm"
+				}
+			    ]
+			}
+		    },
+		    {
+			"id": "MDc6UmVsZWFzZTYyMjgzNjcy",
+			"name": "v3.5.0",
+			"createdAt": "2018-04-23T07:04:38Z",
+			"tagName": "v3.5.0",
+			"releaseAssets": {
+			    "nodes": [
+				{
+				    "id": "RA_kwDOHCN3gs4DlJpM",
+				    "name": "r-rstudio-ubuntu-2004-3.5.0_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.0/r-rstudio-ubuntu-2004-3.5.0_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlJpQ",
+				    "name": "r-rstudio-ubuntu-1804-3.5.0_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.0/r-rstudio-ubuntu-1804-3.5.0_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUYh",
+				    "name": "r-rstudio-debian-9-3.5.0_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.0/r-rstudio-debian-9-3.5.0_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUYm",
+				    "name": "r-rstudio-debian-10-3.5.0_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.0/r-rstudio-debian-10-3.5.0_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUYq",
+				    "name": "r-rstudio-ubuntu-2204-3.5.0_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.0/r-rstudio-ubuntu-2204-3.5.0_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlU1X",
+				    "name": "R-3.5.0.pkg",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.0/R-3.5.0.pkg"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlU1Y",
+				    "name": "R-3.5.0-win.exe",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.0/R-3.5.0-win.exe"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DmJwb",
+				    "name": "r-rstudio-debian-11-3.5.0_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.0/r-rstudio-debian-11-3.5.0_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQad",
+				    "name": "r-rstudio-redhat-9-3.5.0-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.0/r-rstudio-redhat-9-3.5.0-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQaj",
+				    "name": "r-rstudio-centos-8-3.5.0-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.0/r-rstudio-centos-8-3.5.0-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQap",
+				    "name": "r-rstudio-centos-7-3.5.0-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.0/r-rstudio-centos-7-3.5.0-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQa0",
+				    "name": "r-rstudio-opensuse-153-3.5.0-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.0/r-rstudio-opensuse-153-3.5.0-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQa2",
+				    "name": "r-rstudio-opensuse-154-3.5.0-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.5.0/r-rstudio-opensuse-154-3.5.0-1-1.aarch64.rpm"
+				}
+			    ]
+			}
+		    },
+		    {
+			"id": "MDc6UmVsZWFzZTYyMjgzNjg4",
+			"name": "v3.4.4",
+			"createdAt": "2018-03-15T08:04:27Z",
+			"tagName": "v3.4.4",
+			"releaseAssets": {
+			    "nodes": [
+				{
+				    "id": "RA_kwDOHCN3gs4DlKK8",
+				    "name": "r-rstudio-ubuntu-2004-3.4.4_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.4/r-rstudio-ubuntu-2004-3.4.4_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlKK-",
+				    "name": "r-rstudio-ubuntu-1804-3.4.4_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.4/r-rstudio-ubuntu-1804-3.4.4_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUZf",
+				    "name": "r-rstudio-debian-9-3.4.4_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.4/r-rstudio-debian-9-3.4.4_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUZj",
+				    "name": "r-rstudio-debian-10-3.4.4_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.4/r-rstudio-debian-10-3.4.4_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUZl",
+				    "name": "r-rstudio-ubuntu-2204-3.4.4_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.4/r-rstudio-ubuntu-2204-3.4.4_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlU0R",
+				    "name": "R-3.4.4.pkg",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.4/R-3.4.4.pkg"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlU0X",
+				    "name": "R-3.4.4-win.exe",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.4/R-3.4.4-win.exe"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DmJwn",
+				    "name": "r-rstudio-debian-11-3.4.4_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.4/r-rstudio-debian-11-3.4.4_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQb3",
+				    "name": "r-rstudio-redhat-9-3.4.4-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.4/r-rstudio-redhat-9-3.4.4-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQb9",
+				    "name": "r-rstudio-centos-8-3.4.4-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.4/r-rstudio-centos-8-3.4.4-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQcB",
+				    "name": "r-rstudio-centos-7-3.4.4-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.4/r-rstudio-centos-7-3.4.4-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQcO",
+				    "name": "r-rstudio-opensuse-153-3.4.4-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.4/r-rstudio-opensuse-153-3.4.4-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQcU",
+				    "name": "r-rstudio-opensuse-154-3.4.4-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.4/r-rstudio-opensuse-154-3.4.4-1-1.aarch64.rpm"
+				}
+			    ]
+			}
+		    },
+		    {
+			"id": "MDc6UmVsZWFzZTYyMjgzNjkz",
+			"name": "v3.4.3",
+			"createdAt": "2017-11-30T08:05:05Z",
+			"tagName": "v3.4.3",
+			"releaseAssets": {
+			    "nodes": [
+				{
+				    "id": "RA_kwDOHCN3gs4DlKLt",
+				    "name": "r-rstudio-ubuntu-2004-3.4.3_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.3/r-rstudio-ubuntu-2004-3.4.3_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlKLu",
+				    "name": "r-rstudio-ubuntu-1804-3.4.3_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.3/r-rstudio-ubuntu-1804-3.4.3_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUaH",
+				    "name": "r-rstudio-debian-9-3.4.3_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.3/r-rstudio-debian-9-3.4.3_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUaM",
+				    "name": "r-rstudio-debian-10-3.4.3_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.3/r-rstudio-debian-10-3.4.3_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUaP",
+				    "name": "r-rstudio-ubuntu-2204-3.4.3_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.3/r-rstudio-ubuntu-2204-3.4.3_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUz5",
+				    "name": "R-3.4.3.pkg",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.3/R-3.4.3.pkg"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUz-",
+				    "name": "R-3.4.3-win.exe",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.3/R-3.4.3-win.exe"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DmJwv",
+				    "name": "r-rstudio-debian-11-3.4.3_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.3/r-rstudio-debian-11-3.4.3_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQcq",
+				    "name": "r-rstudio-redhat-9-3.4.3-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.3/r-rstudio-redhat-9-3.4.3-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQc4",
+				    "name": "r-rstudio-centos-8-3.4.3-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.3/r-rstudio-centos-8-3.4.3-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQdG",
+				    "name": "r-rstudio-centos-7-3.4.3-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.3/r-rstudio-centos-7-3.4.3-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQhm",
+				    "name": "r-rstudio-opensuse-154-3.4.3-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.3/r-rstudio-opensuse-154-3.4.3-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQhz",
+				    "name": "r-rstudio-opensuse-153-3.4.3-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.3/r-rstudio-opensuse-153-3.4.3-1-1.aarch64.rpm"
+				}
+			    ]
+			}
+		    },
+		    {
+			"id": "MDc6UmVsZWFzZTYyMjgzNjk1",
+			"name": "v3.4.2",
+			"createdAt": "2017-09-28T07:04:35Z",
+			"tagName": "v3.4.2",
+			"releaseAssets": {
+			    "nodes": [
+				{
+				    "id": "RA_kwDOHCN3gs4DlKLy",
+				    "name": "r-rstudio-ubuntu-1804-3.4.2_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.2/r-rstudio-ubuntu-1804-3.4.2_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlKL0",
+				    "name": "r-rstudio-ubuntu-2004-3.4.2_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.2/r-rstudio-ubuntu-2004-3.4.2_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUxK",
+				    "name": "r-rstudio-debian-9-3.4.2_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.2/r-rstudio-debian-9-3.4.2_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUxY",
+				    "name": "r-rstudio-debian-10-3.4.2_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.2/r-rstudio-debian-10-3.4.2_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUxh",
+				    "name": "r-rstudio-ubuntu-2204-3.4.2_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.2/r-rstudio-ubuntu-2204-3.4.2_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUxi",
+				    "name": "R-3.4.2-win.exe",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.2/R-3.4.2-win.exe"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUxk",
+				    "name": "R-3.4.2.pkg",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.2/R-3.4.2.pkg"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DmJxE",
+				    "name": "r-rstudio-debian-11-3.4.2_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.2/r-rstudio-debian-11-3.4.2_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQpQ",
+				    "name": "r-rstudio-redhat-9-3.4.2-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.2/r-rstudio-redhat-9-3.4.2-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQpb",
+				    "name": "r-rstudio-centos-8-3.4.2-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.2/r-rstudio-centos-8-3.4.2-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQpn",
+				    "name": "r-rstudio-centos-7-3.4.2-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.2/r-rstudio-centos-7-3.4.2-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQp0",
+				    "name": "r-rstudio-opensuse-153-3.4.2-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.2/r-rstudio-opensuse-153-3.4.2-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQqH",
+				    "name": "r-rstudio-opensuse-154-3.4.2-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.2/r-rstudio-opensuse-154-3.4.2-1-1.aarch64.rpm"
+				}
+			    ]
+			}
+		    },
+		    {
+			"id": "MDc6UmVsZWFzZTYyMjgzNjk2",
+			"name": "v3.4.1",
+			"createdAt": "2017-06-30T07:04:11Z",
+			"tagName": "v3.4.1",
+			"releaseAssets": {
+			    "nodes": [
+				{
+				    "id": "RA_kwDOHCN3gs4DlKL8",
+				    "name": "r-rstudio-ubuntu-2004-3.4.1_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.1/r-rstudio-ubuntu-2004-3.4.1_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlKMB",
+				    "name": "r-rstudio-ubuntu-1804-3.4.1_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.1/r-rstudio-ubuntu-1804-3.4.1_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUyW",
+				    "name": "r-rstudio-debian-9-3.4.1_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.1/r-rstudio-debian-9-3.4.1_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUya",
+				    "name": "r-rstudio-debian-10-3.4.1_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.1/r-rstudio-debian-10-3.4.1_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUyb",
+				    "name": "R-3.4.1.pkg",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.1/R-3.4.1.pkg"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUyf",
+				    "name": "r-rstudio-ubuntu-2204-3.4.1_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.1/r-rstudio-ubuntu-2204-3.4.1_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUyj",
+				    "name": "R-3.4.1-win.exe",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.1/R-3.4.1-win.exe"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DmJxR",
+				    "name": "r-rstudio-debian-11-3.4.1_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.1/r-rstudio-debian-11-3.4.1_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQtK",
+				    "name": "r-rstudio-redhat-9-3.4.1-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.1/r-rstudio-redhat-9-3.4.1-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQtg",
+				    "name": "r-rstudio-centos-8-3.4.1-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.1/r-rstudio-centos-8-3.4.1-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQt3",
+				    "name": "r-rstudio-centos-7-3.4.1-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.1/r-rstudio-centos-7-3.4.1-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQuQ",
+				    "name": "r-rstudio-opensuse-153-3.4.1-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.1/r-rstudio-opensuse-153-3.4.1-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQub",
+				    "name": "r-rstudio-opensuse-154-3.4.1-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.1/r-rstudio-opensuse-154-3.4.1-1-1.aarch64.rpm"
+				}
+			    ]
+			}
+		    },
+		    {
+			"id": "MDc6UmVsZWFzZTYyMjgzNzAw",
+			"name": "v3.4.0",
+			"createdAt": "2017-04-21T07:14:45Z",
+			"tagName": "v3.4.0",
+			"releaseAssets": {
+			    "nodes": [
+				{
+				    "id": "RA_kwDOHCN3gs4DlKMT",
+				    "name": "r-rstudio-ubuntu-2004-3.4.0_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.0/r-rstudio-ubuntu-2004-3.4.0_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlKMU",
+				    "name": "r-rstudio-ubuntu-1804-3.4.0_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.0/r-rstudio-ubuntu-1804-3.4.0_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUzM",
+				    "name": "r-rstudio-debian-9-3.4.0_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.0/r-rstudio-debian-9-3.4.0_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUzP",
+				    "name": "r-rstudio-debian-10-3.4.0_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.0/r-rstudio-debian-10-3.4.0_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUzX",
+				    "name": "R-3.4.0.pkg",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.0/R-3.4.0.pkg"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUzZ",
+				    "name": "R-3.4.0-win.exe",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.0/R-3.4.0-win.exe"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DlUzd",
+				    "name": "r-rstudio-ubuntu-2204-3.4.0_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.0/r-rstudio-ubuntu-2204-3.4.0_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DmJxU",
+				    "name": "r-rstudio-debian-11-3.4.0_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.0/r-rstudio-debian-11-3.4.0_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQua",
+				    "name": "r-rstudio-redhat-9-3.4.0-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.0/r-rstudio-redhat-9-3.4.0-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQu4",
+				    "name": "r-rstudio-centos-8-3.4.0-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.0/r-rstudio-centos-8-3.4.0-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQvQ",
+				    "name": "r-rstudio-centos-7-3.4.0-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.0/r-rstudio-centos-7-3.4.0-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQvl",
+				    "name": "r-rstudio-opensuse-153-3.4.0-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.0/r-rstudio-opensuse-153-3.4.0-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQwL",
+				    "name": "r-rstudio-opensuse-154-3.4.0-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.4.0/r-rstudio-opensuse-154-3.4.0-1-1.aarch64.rpm"
+				}
+			    ]
+			}
+		    },
+		    {
+			"id": "MDc6UmVsZWFzZTYyMjgzNzA0",
+			"name": "v3.3.3",
+			"createdAt": "2017-03-06T08:16:31Z",
+			"tagName": "v3.3.3",
+			"releaseAssets": {
+			    "nodes": [
+				{
+				    "id": "RA_kwDOHCN3gs4Dl6o-",
+				    "name": "r-rstudio-debian-9-3.3.3_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.3.3/r-rstudio-debian-9-3.3.3_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Dl6pC",
+				    "name": "r-rstudio-debian-10-3.3.3_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.3.3/r-rstudio-debian-10-3.3.3_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Dl6pH",
+				    "name": "R-3.3.3.pkg",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.3.3/R-3.3.3.pkg"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Dl6pO",
+				    "name": "r-rstudio-ubuntu-1804-3.3.3_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.3.3/r-rstudio-ubuntu-1804-3.3.3_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Dl6pV",
+				    "name": "r-rstudio-ubuntu-2004-3.3.3_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.3.3/r-rstudio-ubuntu-2004-3.3.3_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Dl6pb",
+				    "name": "r-rstudio-ubuntu-2204-3.3.3_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.3.3/r-rstudio-ubuntu-2204-3.3.3_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4Dl6pi",
+				    "name": "R-3.3.3-win.exe",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.3.3/R-3.3.3-win.exe"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4DmJxu",
+				    "name": "r-rstudio-debian-11-3.3.3_1_arm64.deb",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.3.3/r-rstudio-debian-11-3.3.3_1_arm64.deb"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQvm",
+				    "name": "r-rstudio-redhat-9-3.3.3-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.3.3/r-rstudio-redhat-9-3.3.3-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQwM",
+				    "name": "r-rstudio-centos-8-3.3.3-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.3.3/r-rstudio-centos-8-3.3.3-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQwn",
+				    "name": "r-rstudio-centos-7-3.3.3-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.3.3/r-rstudio-centos-7-3.3.3-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQw2",
+				    "name": "r-rstudio-opensuse-153-3.3.3-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.3.3/r-rstudio-opensuse-153-3.3.3-1-1.aarch64.rpm"
+				},
+				{
+				    "id": "RA_kwDOHCN3gs4FcQxB",
+				    "name": "r-rstudio-opensuse-154-3.3.3-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.3.3/r-rstudio-opensuse-154-3.3.3-1-1.aarch64.rpm"
+				}
+			    ]
+			}
+		    },
+		    {
+			"id": "MDc6UmVsZWFzZTYyMjgzNzA3",
+			"name": "Latest builds",
+			"createdAt": "2016-10-31T08:13:15Z",
+			"tagName": "v3.3.2",
+			"releaseAssets": {
+			    "nodes": [
+				{
+				    "id": "RA_kwDOHCN3gs4GKalr",
+				    "name": "r-rstudio-centos-7-3.3.2-1-1.aarch64.rpm",
+				    "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.3.2/r-rstudio-centos-7-3.3.2-1-1.aarch64.rpm"
+				}
+			    ]
+			}
+		    },
+		    {
+			"id": "MDc6UmVsZWFzZTYyMjgzNzEy",
+			"name": "v3.3.1",
+			"createdAt": "2016-06-21T07:21:38Z",
+			"tagName": "v3.3.1",
+			"releaseAssets": {
+			    "nodes": []
+			}
+		    },
+		    {
+			"id": "MDc6UmVsZWFzZTYyMjgzNzE1",
+			"name": "v3.3.0",
+			"createdAt": "2016-05-03T07:13:28Z",
+			"tagName": "v3.3.0",
+			"releaseAssets": {
+			    "nodes": []
+			}
+		    },
+		    {
+			"id": "MDc6UmVsZWFzZTYyMjgzNzI4",
+			"name": "v3.2.5",
+			"createdAt": "2016-04-14T15:59:38Z",
+			"tagName": "v3.2.5",
+			"releaseAssets": {
+			    "nodes": []
+			}
+		    },
+		    {
+			"id": "MDc6UmVsZWFzZTYyMjgzNzMw",
+			"name": "v3.2.4-1",
+			"createdAt": "2016-03-16T18:42:10Z",
+			"tagName": "v3.2.4-1",
+			"releaseAssets": {
+			    "nodes": []
+			}
+		    },
+		    {
+			"id": "MDc6UmVsZWFzZTYyMjgzNzMx",
+			"name": "v3.2.4",
+			"createdAt": "2016-03-10T08:15:45Z",
+			"tagName": "v3.2.4",
+			"releaseAssets": {
+			    "nodes": []
+			}
+		    },
+		    {
+			"id": "MDc6UmVsZWFzZTYyMjgzNzM0",
+			"name": "v3.2.3",
+			"createdAt": "2015-12-10T08:13:08Z",
+			"tagName": "v3.2.3",
+			"releaseAssets": {
+			    "nodes": []
+			}
+		    },
+		    {
+			"id": "MDc6UmVsZWFzZTYyMjgzNzM4",
+			"name": "v3.2.2",
+			"createdAt": "2015-08-14T07:13:18Z",
+			"tagName": "v3.2.2",
+			"releaseAssets": {
+			    "nodes": []
+			}
+		    },
+		    {
+			"id": "MDc6UmVsZWFzZTYyMjgzNzQ0",
+			"name": "v3.2.1",
+			"createdAt": "2015-06-18T07:15:04Z",
+			"tagName": "v3.2.1",
+			"releaseAssets": {
+			    "nodes": []
+			}
+		    },
+		    {
+			"id": "MDc6UmVsZWFzZTYyMjgzNzQ2",
+			"name": "v3.2.0",
+			"createdAt": "2015-04-16T07:13:33Z",
+			"tagName": "v3.2.0",
+			"releaseAssets": {
+			    "nodes": []
+			}
+		    },
+		    {
+			"id": "MDc6UmVsZWFzZTYyMjgzNzUy",
+			"name": "v3.1.3",
+			"createdAt": "2015-03-09T08:12:20Z",
+			"tagName": "v3.1.3",
+			"releaseAssets": {
+			    "nodes": []
+			}
+		    },
+		    {
+			"id": "MDc6UmVsZWFzZTYyMjgzNzU1",
+			"name": "v3.1.2",
+			"createdAt": "2014-10-31T08:11:32Z",
+			"tagName": "v3.1.2",
+			"releaseAssets": {
+			    "nodes": []
+			}
+		    },
+		    {
+			"id": "MDc6UmVsZWFzZTYyMjgzNzU4",
+			"name": "v3.1.1",
+			"createdAt": "2014-07-10T07:11:09Z",
+			"tagName": "v3.1.1",
+			"releaseAssets": {
+			    "nodes": []
+			}
+		    },
+		    {
+			"id": "MDc6UmVsZWFzZTYyMjgzNzYw",
+			"name": "v3.1.0",
+			"createdAt": "2014-04-10T07:11:10Z",
+			"tagName": "v3.1.0",
+			"releaseAssets": {
+			    "nodes": []
+			}
+		    },
+		    {
+			"id": "MDc6UmVsZWFzZTYyMjgzNzY0",
+			"name": "v3.0.3",
+			"createdAt": "2014-03-06T08:12:33Z",
+			"tagName": "v3.0.3",
+			"releaseAssets": {
+			    "nodes": []
+			}
+		    },
+		    {
+			"id": "MDc6UmVsZWFzZTYyMjgzNzY5",
+			"name": "v3.0.2",
+			"createdAt": "2013-09-25T07:11:09Z",
+			"tagName": "v3.0.2",
+			"releaseAssets": {
+			    "nodes": []
+			}
+		    },
+		    {
+			"id": "MDc6UmVsZWFzZTYyMjgzNzcz",
+			"name": "v3.0.1",
+			"createdAt": "2013-05-16T07:11:33Z",
+			"tagName": "v3.0.1",
+			"releaseAssets": {
+			    "nodes": []
+			}
+		    },
+		    {
+			"id": "MDc6UmVsZWFzZTYyMjgzNzc4",
+			"name": "v3.0.0",
+			"createdAt": "2013-04-03T07:12:36Z",
+			"tagName": "v3.0.0",
+			"releaseAssets": {
+			    "nodes": []
+			}
+		    }
+		]
+	    }
+	}
+    }
+}

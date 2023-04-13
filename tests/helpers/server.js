@@ -76,6 +76,22 @@ async function srv() {
         srv.head('/patched-macos', async(req, res) => {
             res.status(404).end();
         });
+
+        process.env.NODE_RVERSIONS_LINUX_BUILDS_AMD64 = srv.url + '/versions.json';
+        srv.get('/versions.json', async(req, res) => {
+            const vers = await readFile('tests/fixtures/versions.json', 'utf8');
+            res.send(vers);
+        });
+
+        process.env.NODE_RVERSIONS_GITHUB_API_URL = srv.url + '/gh';
+        srv.post('/gh/graphql', async(req, res) => {
+            const ans = await readFile('tests/fixtures/gh-arm64-release.json', 'utf8');
+            res.set('content-type', 'application/json; charset=utf-8');
+            res.set('x-github-media-type', 'github.v4; format=json');
+            res.set('server', 'GitHub.com');
+            res.set('date', Date());
+            res.send(ans);
+        });
     }
 }
 
