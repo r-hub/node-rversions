@@ -1,6 +1,10 @@
 
 # development version
 
+* New `resolve()` to resolve anything, including Linux builds from
+  https://github.com/rstudio/r-builds and
+  https://github.com/r-hub/R/releases (#18, #21, #22, #25).
+
 # 1.6.0
 
 * New `r_minor()` to resolve the latest version without a minor branch (#21).

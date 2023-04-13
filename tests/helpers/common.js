@@ -98,7 +98,7 @@ function run(dummy = '') {
             const result = await me.r_devel();
             t.deepEqual(
                 Object.keys(result).sort(),
-                ['date', 'nickname', 'version']
+                ['URL', 'date', 'nickname', 'version']
             )
             t.true(/^[0-9]+\.[0-9]+\.[0-9]+$/.test(result.version));
             t.pass()
@@ -160,6 +160,7 @@ function run(dummy = '') {
             t.deepEqual(
                 result,
                 {
+                    'URL': 'https://cran.r-project.org/src/base/R-3/R-3.6.3.tar.gz',
                     'version': '3.6.3',
                     'date': '2020-02-29T08:05:16.744223Z',
                     'nickname': 'Holding the Windsock'
