@@ -48,7 +48,7 @@ async function srv() {
         process.env.NODE_RVERSIONS_DEVEL = srv.url + '/devel';
         process.env.NODE_RVERSIONS_DEVEL_NICK = srv.url + '/devel-nick';
         srv.get('/devel', async (req, res) => {
-            res.send('4.0.0 Under development (unstable)\n');
+            res.send('4.4.0 Under development (unstable)\n');
         });
         srv.get('/devel-nick', async (req, res) => {
             res.send('Unsuffered Consequences\n');
@@ -69,7 +69,8 @@ async function srv() {
         });
 
         process.env.NODE_RVERSIONS_PATCHED_WIN = srv.url + '/patched-win';
-        process.env.NODE_RVERSIONS_PATCHED_MACOS_X86_64= srv.url + '/patched-macos';
+        process.env.NODE_RVERSIONS_PATCHED_MACOS_X86_64 = srv.url + '/patched-macos';
+        process.env.NODE_RVERSIONS_PATCHED_MACOS_ARM64 = srv.url + '/patched-macos';
         srv.head('/patched-win', async(req, res) => {
             res.status(200).end();
         });
@@ -90,6 +91,13 @@ async function srv() {
             res.set('x-github-media-type', 'github.v4; format=json');
             res.set('server', 'GitHub.com');
             res.set('date', Date());
+            res.send(ans);
+        });
+
+        process.env.NODE_RVERSIONS_DEVEL_WIN = srv.url + '/rdevel.html';
+        srv.get('/rdevel.html', async(req, res) => {
+            const ans = await readFile('tests/fixtures/rdevel.html', 'utf8');
+            res.set('content-type', 'text/html; charset=utf-8');
             res.send(ans);
         });
     }
