@@ -1,5 +1,5 @@
 
-# development version
+# 2.0.0
 
 * New `resolve()` to resolve anything, including Linux builds from
   https://github.com/rstudio/r-builds and
