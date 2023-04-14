@@ -120,7 +120,7 @@ console.log(await rversions.resolve("next"));
     ## {
     ##   version: '4.3.0',
     ##   nickname: 'Already Tomorrow',
-    ##   type: 'beta',
+    ##   type: 'RC',
     ##   url: 'https://cran.r-project.org/src/base-prerelease/R-latest.tar.gz',
     ##   date: null
     ## }
@@ -134,7 +134,7 @@ console.log(await rversions.resolve("next", "win"));
     ##   version: '4.3.0',
     ##   nickname: 'Already Tomorrow',
     ##   type: 'next',
-    ##   url: 'https://cran.r-project.org/bin/windows/base/R-4.3.0beta-win.exe',
+    ##   url: 'https://cran.r-project.org/bin/windows/base/R-4.3.0rc-win.exe',
     ##   date: null,
     ##   rtools: '43',
     ##   rtools_url: 'https://github.com/r-hub/rtools43/releases/download/latest/rtools43.exe'
@@ -287,7 +287,7 @@ console.log(await rversions.resolve("oldrel/1", "macos"));
     ##   version: '4.1.3',
     ##   nickname: 'One Push-Up',
     ##   type: 'oldrel/1',
-    ##   url: undefined,
+    ##   url: 'https://cloud.r-project.org/bin/macosx/base/R-4.1.3.pkg',
     ##   date: '2022-03-10T08:05:38.083503Z'
     ## }
 
@@ -1095,7 +1095,7 @@ console.log(await rversions.r_next());
     ##   version: '4.3.0',
     ##   date: null,
     ##   nickname: 'Already Tomorrow',
-    ##   type: 'beta',
+    ##   type: 'RC',
     ##   URL: 'https://cran.r-project.org/src/base-prerelease/R-latest.tar.gz'
     ## }
 
@@ -1108,8 +1108,8 @@ console.log(await rversions.r_next_win());
     ##   version: '4.3.0',
     ##   date: null,
     ##   nickname: 'Already Tomorrow',
-    ##   type: 'beta',
-    ##   URL: 'https://cran.r-project.org/bin/windows/base/R-4.3.0beta-win.exe'
+    ##   type: 'RC',
+    ##   URL: 'https://cran.r-project.org/bin/windows/base/R-4.3.0rc-win.exe'
     ## }
 
 For macOS set the second argument (`arch`) to `x86_64` (default) or
@@ -1124,7 +1124,7 @@ console.log(await rversions.r_next_macos());
     ##   version: '4.3.0',
     ##   date: null,
     ##   nickname: 'Already Tomorrow',
-    ##   type: 'beta',
+    ##   type: 'RC',
     ##   URL: 'https://mac.r-project.org/big-sur/last-success/R-4.3-branch-x86_64.pkg'
     ## }
 
