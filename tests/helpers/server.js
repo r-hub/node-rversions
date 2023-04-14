@@ -38,7 +38,7 @@ async function srv() {
         srv.head('/dl/:os/:ver', async (req, res) => {
             const os = req.params.os;
             const ver = req.params.ver;
-            if (os === "macos" && ver === "3.6.3") {
+            if (os === "macos" && ver === "4.2.3") {
                 res.status(404).end();
             } else {
                 res.send();
