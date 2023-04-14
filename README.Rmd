@@ -290,6 +290,10 @@ console.log(await rversions.rtools_versions());
 All queries are cached for five minutes by default. If you don't want to
 use the cached value, then set the (first) cache argument to `false`.
 
+You can adjust the default caching time limit by setting the
+`R_VERSIONS_CACHE_LIMIT` environment variable in milliseconds. E.g. the
+default five minutes is 5 * 60 * 1000 = 300000.
+
 ## License
 
 ISC @ R Consortium

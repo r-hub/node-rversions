@@ -1,4 +1,9 @@
 
+# Development version
+
+* Adjust default cache time limit via the `R_VERSIONS_CACHE_LIMIT`
+  environment variable.
+
 # 2.0.0
 
 * New `resolve()` to resolve anything, including Linux builds from
