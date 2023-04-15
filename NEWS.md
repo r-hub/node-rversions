@@ -1,5 +1,5 @@
 
-# 2.0.1
+# 2.1.0
 
 * Adjust default cache time limit via the `R_VERSIONS_CACHE_LIMIT`
   environment variable.
