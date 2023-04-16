@@ -4,6 +4,8 @@ const srv = require('./helpers/server');
 
 let me, mycache, linux_builds_amd64, linux_builds_arm64;
 
+const mock = process.env.NODE_RVERSIONS_NOMOCK ? "-mock" : "";
+
 test.before(async () => {
     await srv();
     me = require('..');
@@ -47,7 +49,7 @@ test('linux_builds_arm64', async t => {
     t.true(tags2.indexOf('vdevel') >= 0);
 });
 
-test('macos', async t => {
+test('macos' + mock, async t => {
     mycache.del('r_devel_macos_x86_64');
     mycache.del('r_devel_macos_arm64');
 
@@ -115,7 +117,7 @@ test('macos', async t => {
     t.snapshot(xver2);
 });
 
-test('win', async t => {
+test('win' + mock, async t => {
     const devel = await me.resolve('devel', 'win', undefined, false);
     t.snapshot(devel);
 
@@ -158,7 +160,7 @@ test('win', async t => {
     }, { message: "Invalid version specification: 'foobar'." });
 });
 
-test('linux', async t => {
+test('linux' + mock, async t => {
     const devel = await me.resolve('devel', 'linux-ubuntu-22.04');
     t.snapshot(devel);
 
@@ -226,7 +228,7 @@ test('linux', async t => {
     }, { message: 'Unknown Linux distro: \'linux-foobar\'.' });
 })
 
-test('no-os', async t => {
+test('no-os' + mock, async t => {
     const devel = await me.resolve('devel', undefined, undefined, false);
     t.snapshot(devel);
 
