@@ -24,3 +24,4 @@ jobs:
       - run: npm test
         env:
           NODE_RVERSIONS_NOMOCK: 1
+          GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
