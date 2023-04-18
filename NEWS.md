@@ -1,4 +1,8 @@
 
+# 2.1.1
+
+* Fix dummy server, to be able to test `rtools_versions()`.
+
 # 2.1.0
 
 * Adjust default cache time limit via the `R_VERSIONS_CACHE_LIMIT`
