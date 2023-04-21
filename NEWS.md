@@ -1,4 +1,9 @@
 
+# 2.1.2
+
+* R-next now falls back to RC from patched if patched is not
+  available yet, but RC is (#32).
+
 # 2.1.1
 
 * Fix dummy server, to be able to test `rtools_versions()`.
