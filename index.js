@@ -1,6 +1,7 @@
 
 if (!process.env.NODE_RVERSIONS_DUMMY) {
 
+    const available         = require('./lib/available');
     const resolve           = require('./lib/resolve');
     const r_versions        = require('./lib/r-versions');
     const r_release         = require('./lib/r-release');
@@ -22,6 +23,7 @@ if (!process.env.NODE_RVERSIONS_DUMMY) {
     }
 
     module.exports = {
+        available:         available,
         resolve:           resolve,
         r_versions:        r_versions,
         r_release:         r_release,
@@ -44,6 +46,7 @@ if (!process.env.NODE_RVERSIONS_DUMMY) {
     const dummy = require('./lib/dummy');
 
     module.exports = {
+        available:         dummy.available,
         resolve:           dummy.resolve,
         r_versions:        dummy.r_versions,
         r_release:         dummy.r_release,

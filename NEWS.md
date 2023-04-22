@@ -1,4 +1,8 @@
 
+# 2.2.0
+
+* New `available()` function to list available versions.
+
 # 2.1.2
 
 * R-next now falls back to RC from patched if patched is not
