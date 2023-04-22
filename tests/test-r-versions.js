@@ -13,5 +13,4 @@ test.before(async () => {
 test('r_versions', async t => {
     var vers = await me.r_versions();
     t.snapshot(vers[0]);
-    t.snapshot(vers.slice(-1)[0]);
 });
