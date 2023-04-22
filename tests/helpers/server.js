@@ -32,7 +32,9 @@ async function srv() {
         });
         
         process.env.NODE_RVERSIONS_MACOS_X86_64 = srv.url + '/dl/macos/%s';
+        process.env.NODE_RVERSIONS_MACOS2_X86_64 = srv.url + '/dl/macos/%s';
         process.env.NODE_RVERSIONS_MACOS_ARM64 = srv.url + '/dl/macos/%s';
+        process.env.NODE_RVERSIONS_MACOS2_ARM64 = srv.url + '/dl/macos/%s';
         process.env.NODE_RVERSIONS_TARBALL = srv.url + '/dl/tarball/%s';
         process.env.NODE_RVERSIONS_WIN = srv.url + '/dl/win/%s';
         srv.head('/dl/:os/:ver', async (req, res) => {

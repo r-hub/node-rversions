@@ -3,6 +3,8 @@
 
 * New `available()` function to list available versions.
 
+* Fix for new x86_65 macOS installer location.
+
 # 2.1.2
 
 * R-next now falls back to RC from patched if patched is not
