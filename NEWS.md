@@ -1,4 +1,9 @@
 
+# 2.2.2
+
+* Fix caching mistake for macOS/Windows. The macOS result was saved
+  in the Windows cache.
+
 # 2.2.1
 
 * `resolve()` now returns a `nexttype` entry for `next` versions.
