@@ -1,4 +1,12 @@
 
+# 2.2.1
+
+* `resolve()` now returns a `nexttype` entry for `next` versions.
+
+* `available()` now returns version numbers for `next` and `devel`
+  versions on Linux. It also sets `type` to `patched`, `alpha`, `beta`
+  or `RC` for `next` versions.
+
 # 2.2.0
 
 * New `available()` function to list available versions.
