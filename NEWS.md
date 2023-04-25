@@ -1,4 +1,9 @@
 
+# 2.2.3
+
+* Fix Windows download URLs. CRAN has moved some versions to another
+  server.
+
 # 2.2.2
 
 * Fix caching mistake for macOS/Windows. The macOS result was saved
