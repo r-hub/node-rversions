@@ -1,4 +1,8 @@
 
+# 2.2.5
+
+* Fix macOS download URLs.
+
 # 2.2.4
 
 * Fix macOS download URLs. CRAN has moved some versions to another
