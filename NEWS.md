@@ -1,4 +1,8 @@
 
+# 2.26
+
+* Fix macOS x86_64 download URL, moved to new directory.
+
 # 2.2.5
 
 * Fix macOS download URLs.
