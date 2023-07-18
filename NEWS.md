@@ -1,4 +1,8 @@
 
+# 2.2.7
+
+* Add support for Debian 12.
+
 # 2.2.6
 
 * Fix macOS x86_64 download URL, moved to new directory.
