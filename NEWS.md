@@ -1,4 +1,8 @@
 
+# 2.2.8
+
+* Fix available aarch64 Linux versions.
+
 # 2.2.7
 
 * Add support for Debian 12.
