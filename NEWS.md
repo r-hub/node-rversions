@@ -1,4 +1,8 @@
 
+# 2.3.2
+
+* Fix dummy object for testing.
+
 # 2.3.1
 
 * Improve the format of the Linux distro list.

@@ -63,6 +63,6 @@ if (!process.env.NODE_RVERSIONS_DUMMY) {
         r_next_macos:      dummy.r_next_macos,
         r_minor:           dummy.r_minor,
 	rtools_versions:   dummy.rtools_versions,
-        linux_distos:      require('./lib/list-linux-distros')
+        linux_distros:     dummy.linux_distros
     };
 }
