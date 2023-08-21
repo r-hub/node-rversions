@@ -1,5 +1,5 @@
 
-# 2.3.0 (unreleased)
+# 2.3.0
 
 * `list_linux_distros()` function to return the list of supported Linux
   distros.
