@@ -1,4 +1,9 @@
 
+# 2.3.0 (unreleased)
+
+* `list_linux_distros()` function to return the list of supported Linux
+  distros.
+
 # 2.2.8
 
 * Fix available aarch64 Linux versions.

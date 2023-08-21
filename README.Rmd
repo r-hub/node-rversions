@@ -25,7 +25,7 @@ knitr::opts_chunk$set(engine.opts = list(node = "--input-type=module"))
 $ npm install rversions
 ```
 
-## Usage (new API)
+## Usage
 
 ### R-devel
 
@@ -55,6 +55,9 @@ console.log(await rversions.resolve("devel", "linux-ubuntu-22.04", "arm64"));
 ```
 
 ### R-next
+
+This can be an alpha, beta, RC or pre-release if a release process is
+currently happenning. Otherwise it is the current patched version.
 
 ```{node}
 const rversions = await import('./index.js');
@@ -189,100 +192,25 @@ const rversions = await import('./index.js');
 console.log(await rversions.resolve("4.1", "linux-ubuntu-22.04", "arm64"));
 ```
 
-## Usage (old API)
-
-### The current R-release version (release)
-
-```{node}
-const rversions = await import('./index.js');
-console.log(await rversions.r_release());
-```
-
-```{node}
-const rversions = await import('./index.js');
-console.log(await rversions.r_release_macos());
-```
-
-```{node}
-const rversions = await import('./index.js');
-console.log(await rversions.r_release_win());
-```
-
-```{node}
-const rversions = await import('./index.js');
-console.log(await rversions.r_release_tarball());
-```
-
-### The latest release of the previous minor version (oldrel)
-
-```{node}
-const rversions = await import('./index.js');
-console.log(await rversions.r_oldrel());
-```
-
-```{node}
-const rversions = await import('./index.js');
-console.log(await rversions.r_oldrel(2));
-```
-
-### All R releases
+## All R releases
 
 ```{node}
 const rversions = await import('./index.js');
 console.log(await rversions.r_versions());
 ```
 
-### The (current) version number of R-devel
-
-```{node}
-const rversions = await import('./index.js');
-console.log(await rversions.r_devel());
-```
-
-```{node}
-const rversions = await import('./index.js');
-console.log(await rversions.r_devel_macos());
-```
-
-```{node}
-const rversions = await import('./index.js');
-console.log(await rversions.r_devel_win());
-```
-
-### The next version of R
-
-This can be an alpha, beta, RC or pre-release if a release process is
-currently happenning. Otherwise it is the current patched version.
-
-```{node}
-const rversions = await import('./index.js');
-console.log(await rversions.r_next());
-```
-
-```{node}
-const rversions = await import('./index.js');
-console.log(await rversions.r_next_win());
-```
-
-For macOS set the second argument (`arch`) to `x86_64` (default) or `arm64`.
-
-```{node}
-const rversions = await import('./index.js');
-console.log(await rversions.r_next_macos());
-```
-
-### The latest version within a minor branch
-
-```{node}
-const rversions = await import('./index.js');
-console.log(await rversions.r_minor('4.0'));
-```
-
-### Rtools versions
+## Rtools versions
 
 ```{node}
 const rversions = await import('./index.js');
 console.log(await rversions.rtools_versions());
+```
+
+## Supported Linux distros for R builds
+
+```{node}
+const rversions = await import('./index.js');
+console.log(await rversions.linux_distros());
 ```
 
 ## Caching

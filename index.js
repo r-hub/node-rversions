@@ -17,6 +17,7 @@ if (!process.env.NODE_RVERSIONS_DUMMY) {
     const r_next_macos      = require('./lib/r-next-macos');
     const r_minor           = require('./lib/r-minor');
     const rtools_versions   = require('./lib/rtools').rtools_versions;
+    const linux_distros     = require('./lib/list-linux-distros');
 
     function get_rtools_versions() {
         return rtools_versions;
@@ -38,7 +39,8 @@ if (!process.env.NODE_RVERSIONS_DUMMY) {
         r_next_win:        r_next_win,
         r_next_macos:      r_next_macos,
         r_minor:           r_minor,
-        rtools_versions:   get_rtools_versions
+        rtools_versions:   get_rtools_versions,
+        linux_distros:     linux_distros
     };
 
 } else {
@@ -60,6 +62,7 @@ if (!process.env.NODE_RVERSIONS_DUMMY) {
         r_next_win:        dummy.r_next_win,
         r_next_macos:      dummy.r_next_macos,
         r_minor:           dummy.r_minor,
-	rtools_versions:   dummy.rtools_versions
+	rtools_versions:   dummy.rtools_versions,
+        linux_distos:      require('./lib/list-linux-distros')
     };
 }
