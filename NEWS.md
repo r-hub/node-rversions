@@ -1,4 +1,8 @@
 
+# 2.3.1
+
+* Improve the format of the Linux distro list.
+
 # 2.3.0
 
 * `list_linux_distros()` function to return the list of supported Linux
