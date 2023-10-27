@@ -1,4 +1,8 @@
 
+# 2.3.3
+
+* Prefer using https://cran.rstudio.com URLs, instead of https://*.r-project.org.
+
 # 2.3.2
 
 * Fix dummy object for testing.
