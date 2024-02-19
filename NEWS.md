@@ -1,4 +1,8 @@
 
+# 2.3.4
+
+* Add support for OpenSUSE Leap 15.5.
+
 # 2.3.3
 
 * Prefer using https://cran.rstudio.com URLs, instead of https://*.r-project.org.

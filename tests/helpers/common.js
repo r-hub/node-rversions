@@ -33,7 +33,7 @@ function run(dummy = '') {
             const result = await me.r_release();
             t.deepEqual(
                 Object.keys(result).sort(),
-                ['date', 'nickname', 'version']
+                ['date', 'nickname', 'semver', 'version']
             );
             t.true(/^[0-9]+\.[0-9]+\.[0-9]+$/.test(result.version));
             Date.parse(result.date);
@@ -56,7 +56,7 @@ function run(dummy = '') {
             const result = await me.r_release_macos();
             t.deepEqual(
                 Object.keys(result).sort(),
-                ['URL', 'date', 'nickname', 'version']
+                ['URL', 'date', 'nickname', 'semver', 'version']
             )
             t.true(/^[0-9]+\.[0-9]+\.[0-9]+$/.test(result.version));
             Date.parse(result.date);
@@ -70,7 +70,7 @@ function run(dummy = '') {
             const result = await me.r_release_tarball();
             t.deepEqual(
                 Object.keys(result).sort(),
-                ['URL', 'date', 'nickname', 'version']
+                ['URL', 'date', 'nickname', 'semver', 'version']
             )
             t.true(/^[0-9]+\.[0-9]+\.[0-9]+$/.test(result.version));
             Date.parse(result.date);
@@ -84,7 +84,7 @@ function run(dummy = '') {
             const result = await me.r_release_win();
             t.deepEqual(
                 Object.keys(result).sort(),
-                ['URL', 'date', 'nickname', 'version']
+                ['URL', 'date', 'nickname', 'semver', 'version']
             )
             t.true(/^[0-9]+\.[0-9]+\.[0-9]+$/.test(result.version));
             Date.parse(result.date);
@@ -160,9 +160,10 @@ function run(dummy = '') {
             t.deepEqual(
                 result,
                 {
-                    'URL': 'https://cran.r-project.org/src/base/R-3/R-3.6.3.tar.gz',
+                    'URL': 'https://cran.rstudio.com/src/base/R-3/R-3.6.3.tar.gz',
                     'version': '3.6.3',
                     'date': '2020-02-29T08:05:16.744223Z',
+		    'semver': '3.6.3',
                     'nickname': 'Holding the Windsock'
                 }
             );
