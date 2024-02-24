@@ -1,4 +1,8 @@
 
+# 2.3.5
+
+* Add support for Fedora 39.
+
 # 2.3.4
 
 * Add support for OpenSUSE Leap 15.5.
