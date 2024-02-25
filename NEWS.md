@@ -1,4 +1,8 @@
 
+# 2.3.6
+
+* Add support for retired distros for which we have binaries.
+
 # 2.3.5
 
 * Add support for Fedora 39.
