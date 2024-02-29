@@ -1,4 +1,8 @@
 
+# 2.3.7
+
+* Work around invalid version numbers in the r-builds version list.
+
 # 2.3.6
 
 * Add support for retired distros for which we have binaries.
