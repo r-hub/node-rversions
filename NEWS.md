@@ -1,4 +1,8 @@
 
+# 2.3.8
+
+* Update CRAN download URLs for older R versions.
+
 # 2.3.7
 
 * Work around invalid version numbers in the r-builds version list.
