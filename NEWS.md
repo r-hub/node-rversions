@@ -1,4 +1,8 @@
 
+# 2.3.9
+
+* Support Rtools44, R 4.4.0 and later now requires Rtools44.
+
 # 2.3.8
 
 * Update CRAN download URLs for older R versions.
