@@ -1,4 +1,8 @@
 
+# 2.3.10
+
+* Support Ubuntu 24.04.
+
 # 2.3.9
 
 * Support Rtools44, R 4.4.0 and later now requires Rtools44.
