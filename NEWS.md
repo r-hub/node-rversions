@@ -1,4 +1,8 @@
 
+# 2.3.11
+
+* *Correctly* support Ubuntu 24.04.
+
 # 2.3.10
 
 * Support Ubuntu 24.04.
