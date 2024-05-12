@@ -1,4 +1,8 @@
 
+# 2.3.12
+
+* Retire openSUSE 15.4 for EOL.
+
 # 2.3.11
 
 * *Correctly* support Ubuntu 24.04.
