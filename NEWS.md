@@ -1,3 +1,10 @@
+# 2.4.14
+
+* Fix Fedora 40 resolve bug.
+
+# 2.3.13
+
+* Retire Fedora 39, add Fedora 40.
 
 # 2.3.12
 
