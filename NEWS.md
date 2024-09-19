@@ -1,3 +1,7 @@
+# 2.4.15
+
+* Add OpenSUSE 15.6.
+
 # 2.4.14
 
 * Fix Fedora 40 resolve bug.
