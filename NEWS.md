@@ -1,3 +1,7 @@
+# 2.4.16
+
+* Add Fedora 41.
+
 # 2.4.15
 
 * Add OpenSUSE 15.6.
