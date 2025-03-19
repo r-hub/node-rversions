@@ -1,3 +1,7 @@
+# 2.4.17
+
+* Add support for Rtools45, used for R 4.5.0 and later.
+
 # 2.4.16
 
 * Add Fedora 41.
