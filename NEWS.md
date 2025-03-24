@@ -1,3 +1,8 @@
+# 2.4.18
+
+* R 4.2.x is mapped to using Rtools42 now, because some
+  packages do not work with Rtools40.
+
 # 2.4.17
 
 * Add support for Rtools45, used for R 4.5.0 and later.
