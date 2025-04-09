@@ -1,3 +1,8 @@
+# 2.4.19
+
+* Linux distro data now contains the distro specific part
+  of the URL of the PPM binary package repo, if any.
+
 # 2.4.18
 
 * R 4.2.x is mapped to using Rtools42 now, because some
