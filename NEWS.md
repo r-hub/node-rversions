@@ -1,3 +1,8 @@
+# 2.4.20
+
+* Resolving for a Linux OS also returns whether PPM has binary pcakages
+  for that distro, and in which folder the binaries are located on PPM.
+
 # 2.4.19
 
 * Linux distro data now contains the distro specific part
