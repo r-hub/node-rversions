@@ -1,3 +1,7 @@
+# 2.4.21
+
+* Add support for Fedora 42.
+
 # 2.4.20
 
 * Resolving for a Linux OS also returns whether PPM has binary pcakages

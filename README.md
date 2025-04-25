@@ -6,20 +6,20 @@
 
 > Past and present R versions
 
-- [Install](#install)
-- [Usage](#usage)
-  - [R-devel](#r-devel)
-  - [R-next](#r-next)
-  - [R-release](#r-release)
-  - [R-oldrel](#r-oldrel)
-  - [Specific R version](#specific-r-version)
-  - [Minor R version](#minor-r-version)
-- [All R releases](#all-r-releases)
-- [Rtools versions](#rtools-versions)
-- [Supported Linux distros for R
-  builds](#supported-linux-distros-for-r-builds)
-- [Caching](#caching)
-- [License](#license)
+-   [Install](#install)
+-   [Usage](#usage)
+    -   [R-devel](#r-devel)
+    -   [R-next](#r-next)
+    -   [R-release](#r-release)
+    -   [R-oldrel](#r-oldrel)
+    -   [Specific R version](#specific-r-version)
+    -   [Minor R version](#minor-r-version)
+-   [All R releases](#all-r-releases)
+-   [Rtools versions](#rtools-versions)
+-   [Supported Linux distros for R
+    builds](#supported-linux-distros-for-r-builds)
+-   [Caching](#caching)
+-   [License](#license)
 
 ## Install
 
@@ -80,7 +80,9 @@ console.log(await rversions.resolve("devel", "linux-ubuntu-22.04"));
     ##   nickname: 'Unsuffered Consequences',
     ##   type: 'devel',
     ##   url: 'https://cdn.posit.co/r/ubuntu-2204/pkgs/r-devel_1_amd64.deb',
-    ##   date: null
+    ##   date: null,
+    ##   'ppm-binaries': true,
+    ##   'ppm-binary-url': 'jammy'
     ## }
 
 ``` javascript
@@ -93,7 +95,9 @@ console.log(await rversions.resolve("devel", "linux-ubuntu-22.04", "arm64"));
     ##   nickname: 'Unsuffered Consequences',
     ##   type: 'devel',
     ##   url: 'https://github.com/r-hub/R/releases/download/vdevel/r-rstudio-ubuntu-2204-devel_1_arm64.deb',
-    ##   date: null
+    ##   date: null,
+    ##   'ppm-binaries': false,
+    ##   'ppm-binary-url': null
     ## }
 
 ### R-next
@@ -108,8 +112,8 @@ console.log(await rversions.resolve("next"));
 
     ## {
     ##   version: '4.5.0',
-    ##   nickname: null,
-    ##   type: 'alpha',
+    ##   nickname: 'How About a Twenty-Six',
+    ##   type: 'patched',
     ##   url: 'https://cran.rstudio.com/src/base-prerelease/R-latest.tar.gz',
     ##   date: null
     ## }
@@ -121,10 +125,10 @@ console.log(await rversions.resolve("next", "win"));
 
     ## {
     ##   version: '4.5.0',
-    ##   nickname: null,
+    ##   nickname: 'How About a Twenty-Six',
     ##   type: 'next',
-    ##   nexttype: 'alpha',
-    ##   url: 'https://cran.rstudio.com/bin/windows/base/R-4.5.0alpha-win.exe',
+    ##   nexttype: 'patched',
+    ##   url: 'https://cran.rstudio.com/bin/windows/base/R-4.5.0patched-win.exe',
     ##   date: null,
     ##   rtools: '45',
     ##   rtools_url: 'https://github.com/r-hub/rtools45/releases/download/latest/rtools45.exe'
@@ -137,9 +141,9 @@ console.log(await rversions.resolve("next", "macos"));
 
     ## {
     ##   version: '4.5.0',
-    ##   nickname: null,
+    ##   nickname: 'How About a Twenty-Six',
     ##   type: 'next',
-    ##   nexttype: 'alpha',
+    ##   nexttype: 'patched',
     ##   url: 'https://mac.r-project.org/big-sur/last-success/R-4.5-branch-x86_64.pkg',
     ##   date: null
     ## }
@@ -151,11 +155,13 @@ console.log(await rversions.resolve("next", "linux-ubuntu-22.04"));
 
     ## {
     ##   version: '4.5.0',
-    ##   nickname: null,
+    ##   nickname: 'How About a Twenty-Six',
     ##   type: 'next',
-    ##   nexttype: 'alpha',
+    ##   nexttype: 'patched',
     ##   url: 'https://cdn.posit.co/r/ubuntu-2204/pkgs/r-next_1_amd64.deb',
-    ##   date: null
+    ##   date: null,
+    ##   'ppm-binaries': true,
+    ##   'ppm-binary-url': 'jammy'
     ## }
 
 ``` javascript
@@ -165,11 +171,13 @@ console.log(await rversions.resolve("next", "linux-ubuntu-22.04", "arm64"));
 
     ## {
     ##   version: '4.5.0',
-    ##   nickname: null,
+    ##   nickname: 'How About a Twenty-Six',
     ##   type: 'next',
-    ##   nexttype: 'alpha',
+    ##   nexttype: 'patched',
     ##   url: 'https://github.com/r-hub/R/releases/download/vnext/r-rstudio-ubuntu-2204-next_1_arm64.deb',
-    ##   date: null
+    ##   date: null,
+    ##   'ppm-binaries': false,
+    ##   'ppm-binary-url': null
     ## }
 
 ### R-release
@@ -180,11 +188,11 @@ console.log(await rversions.resolve("release"));
 ```
 
     ## {
-    ##   version: '4.4.3',
-    ##   nickname: 'Trophy Case',
+    ##   version: '4.5.0',
+    ##   nickname: 'How About a Twenty-Six',
     ##   type: 'release',
-    ##   url: 'https://cran.rstudio.com/src/base/R-4/R-4.4.3.tar.gz',
-    ##   date: '2025-02-28T08:08:59.188927Z'
+    ##   url: 'https://cran.rstudio.com/src/base/R-4/R-4.5.0.tar.gz',
+    ##   date: '2025-04-11T08:51:39.256539Z'
     ## }
 
 ``` javascript
@@ -193,13 +201,13 @@ console.log(await rversions.resolve("release", "win"));
 ```
 
     ## {
-    ##   version: '4.4.3',
-    ##   nickname: 'Trophy Case',
+    ##   version: '4.5.0',
+    ##   nickname: 'How About a Twenty-Six',
     ##   type: 'release',
-    ##   url: 'https://cran.rstudio.com/bin/windows/base/R-4.4.3-win.exe',
-    ##   date: '2025-02-28T08:08:59.188927Z',
-    ##   rtools: '44',
-    ##   rtools_url: 'https://github.com/r-hub/rtools44/releases/download/latest/rtools44.exe'
+    ##   url: 'https://cran.rstudio.com/bin/windows/base/R-4.5.0-win.exe',
+    ##   date: '2025-04-11T08:51:39.256539Z',
+    ##   rtools: '45',
+    ##   rtools_url: 'https://github.com/r-hub/rtools45/releases/download/latest/rtools45.exe'
     ## }
 
 ``` javascript
@@ -208,11 +216,11 @@ console.log(await rversions.resolve("release", "macos"));
 ```
 
     ## {
-    ##   version: '4.4.3',
-    ##   nickname: 'Trophy Case',
+    ##   version: '4.5.0',
+    ##   nickname: 'How About a Twenty-Six',
     ##   type: 'release',
-    ##   url: 'https://cran.rstudio.com/bin/macosx/big-sur-x86_64/base/R-4.4.3-x86_64.pkg',
-    ##   date: '2025-02-28T08:08:59.188927Z'
+    ##   url: 'https://cran.rstudio.com/bin/macosx/big-sur-x86_64/base/R-4.5.0-x86_64.pkg',
+    ##   date: '2025-04-11T08:51:39.256539Z'
     ## }
 
 ``` javascript
@@ -221,11 +229,13 @@ console.log(await rversions.resolve("release", "linux-ubuntu-22.04"));
 ```
 
     ## {
-    ##   version: '4.4.3',
-    ##   nickname: 'Trophy Case',
+    ##   version: '4.5.0',
+    ##   nickname: 'How About a Twenty-Six',
     ##   type: 'release',
-    ##   url: 'https://cdn.posit.co/r/ubuntu-2204/pkgs/r-4.4.3_1_amd64.deb',
-    ##   date: '2025-02-28T08:08:59.188927Z'
+    ##   url: 'https://cdn.posit.co/r/ubuntu-2204/pkgs/r-4.5.0_1_amd64.deb',
+    ##   date: '2025-04-11T08:51:39.256539Z',
+    ##   'ppm-binaries': true,
+    ##   'ppm-binary-url': 'jammy'
     ## }
 
 ``` javascript
@@ -234,11 +244,13 @@ console.log(await rversions.resolve("release", "linux-ubuntu-22.04", "arm64"));
 ```
 
     ## {
-    ##   version: '4.4.3',
-    ##   nickname: 'Trophy Case',
+    ##   version: '4.5.0',
+    ##   nickname: 'How About a Twenty-Six',
     ##   type: 'release',
-    ##   url: 'https://github.com/r-hub/R/releases/download/v4.4.3/r-rstudio-ubuntu-2204-4.4.3_1_arm64.deb',
-    ##   date: '2025-02-28T08:08:59.188927Z'
+    ##   url: 'https://github.com/r-hub/R/releases/download/v4.5.0/r-rstudio-ubuntu-2204-4.5.0_1_arm64.deb',
+    ##   date: '2025-04-11T08:51:39.256539Z',
+    ##   'ppm-binaries': false,
+    ##   'ppm-binary-url': null
     ## }
 
 ### R-oldrel
@@ -249,11 +261,11 @@ console.log(await rversions.resolve("oldrel/1"));
 ```
 
     ## {
-    ##   version: '4.3.3',
-    ##   nickname: 'Angel Food Cake',
+    ##   version: '4.4.3',
+    ##   nickname: 'Trophy Case',
     ##   type: 'oldrel/1',
-    ##   url: 'https://cran.rstudio.com/src/base/R-4/R-4.3.3.tar.gz',
-    ##   date: '2024-02-29T08:07:53.267099Z'
+    ##   url: 'https://cran.rstudio.com/src/base/R-4/R-4.4.3.tar.gz',
+    ##   date: '2025-02-28T08:08:59.188927Z'
     ## }
 
 ``` javascript
@@ -262,13 +274,13 @@ console.log(await rversions.resolve("oldrel/1", "win"));
 ```
 
     ## {
-    ##   version: '4.3.3',
-    ##   nickname: 'Angel Food Cake',
+    ##   version: '4.4.3',
+    ##   nickname: 'Trophy Case',
     ##   type: 'oldrel/1',
-    ##   url: 'https://cran.rstudio.com/bin/windows/base/old/4.3.3/R-4.3.3-win.exe',
-    ##   date: '2024-02-29T08:07:53.267099Z',
-    ##   rtools: '43',
-    ##   rtools_url: 'https://github.com/r-hub/rtools43/releases/download/latest/rtools43.exe'
+    ##   url: 'https://cran.rstudio.com/bin/windows/base/old/4.4.3/R-4.4.3-win.exe',
+    ##   date: '2025-02-28T08:08:59.188927Z',
+    ##   rtools: '44',
+    ##   rtools_url: 'https://github.com/r-hub/rtools44/releases/download/latest/rtools44.exe'
     ## }
 
 ``` javascript
@@ -277,11 +289,11 @@ console.log(await rversions.resolve("oldrel/1", "macos"));
 ```
 
     ## {
-    ##   version: '4.3.3',
-    ##   nickname: 'Angel Food Cake',
+    ##   version: '4.4.3',
+    ##   nickname: 'Trophy Case',
     ##   type: 'oldrel/1',
-    ##   url: 'https://cran.rstudio.com/bin/macosx/big-sur-x86_64/base/R-4.3.3-x86_64.pkg',
-    ##   date: '2024-02-29T08:07:53.267099Z'
+    ##   url: 'https://cran.rstudio.com/bin/macosx/big-sur-x86_64/base/R-4.4.3-x86_64.pkg',
+    ##   date: '2025-02-28T08:08:59.188927Z'
     ## }
 
 ``` javascript
@@ -290,11 +302,13 @@ console.log(await rversions.resolve("oldrel/1", "linux-ubuntu-22.04"));
 ```
 
     ## {
-    ##   version: '4.3.3',
-    ##   nickname: 'Angel Food Cake',
+    ##   version: '4.4.3',
+    ##   nickname: 'Trophy Case',
     ##   type: 'oldrel/1',
-    ##   url: 'https://cdn.posit.co/r/ubuntu-2204/pkgs/r-4.3.3_1_amd64.deb',
-    ##   date: '2024-02-29T08:07:53.267099Z'
+    ##   url: 'https://cdn.posit.co/r/ubuntu-2204/pkgs/r-4.4.3_1_amd64.deb',
+    ##   date: '2025-02-28T08:08:59.188927Z',
+    ##   'ppm-binaries': true,
+    ##   'ppm-binary-url': 'jammy'
     ## }
 
 ``` javascript
@@ -303,11 +317,13 @@ console.log(await rversions.resolve("oldrel/1", "linux-ubuntu-22.04", "arm64"));
 ```
 
     ## {
-    ##   version: '4.3.3',
-    ##   nickname: 'Angel Food Cake',
+    ##   version: '4.4.3',
+    ##   nickname: 'Trophy Case',
     ##   type: 'oldrel/1',
-    ##   url: 'https://github.com/r-hub/R/releases/download/v4.3.3/r-rstudio-ubuntu-2204-4.3.3_1_arm64.deb',
-    ##   date: '2024-02-29T08:07:53.267099Z'
+    ##   url: 'https://github.com/r-hub/R/releases/download/v4.4.3/r-rstudio-ubuntu-2204-4.4.3_1_arm64.deb',
+    ##   date: '2025-02-28T08:08:59.188927Z',
+    ##   'ppm-binaries': false,
+    ##   'ppm-binary-url': null
     ## }
 
 ### Specific R version
@@ -336,8 +352,8 @@ console.log(await rversions.resolve("4.2.2", "win"));
     ##   type: '4.2.2',
     ##   date: '2022-10-31T08:05:54.268400Z',
     ##   url: 'https://cran.rstudio.com/bin/windows/base/old/4.2.2/R-4.2.2-win.exe',
-    ##   rtools: '40',
-    ##   rtools_url: 'https://cran.rstudio.com/bin/windows/Rtools/rtools40-x86_64.exe'
+    ##   rtools: '42',
+    ##   rtools_url: 'https://github.com/r-hub/rtools42/releases/download/latest/rtools42.exe'
     ## }
 
 ``` javascript
@@ -363,7 +379,9 @@ console.log(await rversions.resolve("4.2.2", "linux-ubuntu-22.04"));
     ##   nickname: 'Innocent and Trusting',
     ##   type: '4.2.2',
     ##   date: '2022-10-31T08:05:54.268400Z',
-    ##   url: 'https://cdn.posit.co/r/ubuntu-2204/pkgs/r-4.2.2_1_amd64.deb'
+    ##   url: 'https://cdn.posit.co/r/ubuntu-2204/pkgs/r-4.2.2_1_amd64.deb',
+    ##   'ppm-binaries': true,
+    ##   'ppm-binary-url': 'jammy'
     ## }
 
 ``` javascript
@@ -376,7 +394,9 @@ console.log(await rversions.resolve("4.2.2", "linux-ubuntu-22.04", "arm64"));
     ##   nickname: 'Innocent and Trusting',
     ##   type: '4.2.2',
     ##   date: '2022-10-31T08:05:54.268400Z',
-    ##   url: 'https://github.com/r-hub/R/releases/download/v4.2.2/r-rstudio-ubuntu-2204-4.2.2_1_arm64.deb'
+    ##   url: 'https://github.com/r-hub/R/releases/download/v4.2.2/r-rstudio-ubuntu-2204-4.2.2_1_arm64.deb',
+    ##   'ppm-binaries': false,
+    ##   'ppm-binary-url': null
     ## }
 
 ### Minor R version
@@ -432,7 +452,9 @@ console.log(await rversions.resolve("4.1", "linux-ubuntu-22.04"));
     ##   nickname: Promise { 'One Push-Up' },
     ##   type: '4.1',
     ##   url: 'https://cdn.posit.co/r/ubuntu-2204/pkgs/r-4.1.3_1_amd64.deb',
-    ##   date: '2022-03-10T08:05:38.083503Z'
+    ##   date: '2022-03-10T08:05:38.083503Z',
+    ##   'ppm-binaries': true,
+    ##   'ppm-binary-url': 'jammy'
     ## }
 
 ``` javascript
@@ -445,7 +467,9 @@ console.log(await rversions.resolve("4.1", "linux-ubuntu-22.04", "arm64"));
     ##   nickname: 'One Push-Up',
     ##   type: '4.1',
     ##   url: 'https://github.com/r-hub/R/releases/download/v4.1.3/r-rstudio-ubuntu-2204-4.1.3_1_arm64.deb',
-    ##   date: '2022-03-10T08:05:38.083503Z'
+    ##   date: '2022-03-10T08:05:38.083503Z',
+    ##   'ppm-binaries': false,
+    ##   'ppm-binary-url': null
     ## }
 
 ## All R releases
@@ -1056,7 +1080,7 @@ console.log(await rversions.r_versions());
     ##     semver: '3.3.0',
     ##     nickname: 'Supposedly Educational'
     ##   },
-    ##   ... 38 more items
+    ##   ... 39 more items
     ## ]
 
 ## Rtools versions
@@ -1213,6 +1237,7 @@ console.log(await rversions.linux_distros());
     ##     docker: 'ubuntu:16.04',
     ##     eol: '2021-04-30',
     ##     'ppm-binaries': true,
+    ##     'ppm-binary-url': 'xenial',
     ##     retired: true,
     ##     'last-build': '4.1.2'
     ##   },
@@ -1226,6 +1251,7 @@ console.log(await rversions.linux_distros());
     ##     docker: 'ubuntu:18.04',
     ##     eol: '2023-05-31',
     ##     'ppm-binaries': true,
+    ##     'ppm-binary-url': 'bionic',
     ##     retired: true,
     ##     'last-build': '4.3.1'
     ##   },
@@ -1239,6 +1265,7 @@ console.log(await rversions.linux_distros());
     ##     docker: 'ubuntu:20.04',
     ##     eol: '2025-05-31',
     ##     'ppm-binaries': true,
+    ##     'ppm-binary-url': 'focal',
     ##     retired: false,
     ##     'last-build': null
     ##   },
@@ -1252,6 +1279,7 @@ console.log(await rversions.linux_distros());
     ##     docker: 'ubuntu:22.04',
     ##     eol: '2027-04-31',
     ##     'ppm-binaries': true,
+    ##     'ppm-binary-url': 'jammy',
     ##     retired: false,
     ##     'last-build': null
     ##   },
@@ -1265,6 +1293,7 @@ console.log(await rversions.linux_distros());
     ##     docker: 'ubuntu:24.04',
     ##     eol: '2034-04-31',
     ##     'ppm-binaries': true,
+    ##     'ppm-binary-url': 'noble',
     ##     retired: false,
     ##     'last-build': null
     ##   },
@@ -1278,6 +1307,7 @@ console.log(await rversions.linux_distros());
     ##     docker: 'debian:9',
     ##     eol: '2022-06-30',
     ##     'ppm-binaries': false,
+    ##     'ppm-binary-url': null,
     ##     retired: true,
     ##     'last-build': '4.2.1'
     ##   },
@@ -1291,6 +1321,7 @@ console.log(await rversions.linux_distros());
     ##     docker: 'debian:10',
     ##     eol: '2024-06-30',
     ##     'ppm-binaries': false,
+    ##     'ppm-binary-url': null,
     ##     retired: false,
     ##     'last-build': null
     ##   },
@@ -1303,7 +1334,8 @@ console.log(await rversions.linux_distros());
     ##     codename: 'bullseye',
     ##     docker: 'debian:11',
     ##     eol: 'N/A',
-    ##     'ppm-binaries': false,
+    ##     'ppm-binaries': true,
+    ##     'ppm-binary-url': 'bullseye',
     ##     retired: false,
     ##     'last-build': null
     ##   },
@@ -1316,7 +1348,8 @@ console.log(await rversions.linux_distros());
     ##     codename: 'bookworm',
     ##     docker: 'debian:12',
     ##     eol: 'N/A',
-    ##     'ppm-binaries': false,
+    ##     'ppm-binaries': true,
+    ##     'ppm-binary-url': 'bookworm',
     ##     retired: false,
     ##     'last-build': null
     ##   },
@@ -1329,6 +1362,7 @@ console.log(await rversions.linux_distros());
     ##     docker: 'opensuse:42.3',
     ##     eol: '2019-07-01',
     ##     'ppm-binaries': true,
+    ##     'ppm-binary-url': 'opensuse42',
     ##     retired: true,
     ##     'last-build': '4.2.1'
     ##   },
@@ -1348,6 +1382,7 @@ console.log(await rversions.linux_distros());
     ##     docker: 'opensuse/leap:15.1',
     ##     eol: '2021-02-01',
     ##     'ppm-binaries': true,
+    ##     'ppm-binary-url': 'opensuse15',
     ##     retired: true,
     ##     'last-build': '4.1.2'
     ##   },
@@ -1360,6 +1395,7 @@ console.log(await rversions.linux_distros());
     ##     docker: 'opensuse/leap:15.2',
     ##     eol: '2022-01-04',
     ##     'ppm-binaries': true,
+    ##     'ppm-binary-url': 'opensuse152',
     ##     retired: true,
     ##     'last-build': '4.1.3'
     ##   },
@@ -1372,6 +1408,7 @@ console.log(await rversions.linux_distros());
     ##     docker: 'opensuse/leap:15.3',
     ##     eol: '2022-12-31',
     ##     'ppm-binaries': true,
+    ##     'ppm-binary-url': 'opensuse153',
     ##     returned: true,
     ##     'last-build': '4.3.1'
     ##   },
@@ -1384,6 +1421,7 @@ console.log(await rversions.linux_distros());
     ##     docker: 'opensuse/leap:15.4',
     ##     eol: '2023-12-31',
     ##     'ppm-binaries': true,
+    ##     'ppm-binary-url': 'opensuse154',
     ##     retired: true,
     ##     'last-build': '4.4.0'
     ##   },
@@ -1396,6 +1434,7 @@ console.log(await rversions.linux_distros());
     ##     docker: 'opensuse/leap:15.5',
     ##     eol: '2024-12-31',
     ##     'ppm-binaries': true,
+    ##     'ppm-binary-url': 'opensuse155',
     ##     retired: false,
     ##     'last-build': null
     ##   },
@@ -1408,6 +1447,7 @@ console.log(await rversions.linux_distros());
     ##     docker: 'opensuse/leap:15.6',
     ##     eol: '2025-12-31',
     ##     'ppm-binaries': true,
+    ##     'ppm-binary-url': 'opensuse156',
     ##     retired: false,
     ##     'last-build': null
     ##   },
@@ -1419,7 +1459,8 @@ console.log(await rversions.linux_distros());
     ##     version: '6',
     ##     docker: 'centos:6',
     ##     eol: '2020‑11‑30',
-    ##     'ppm-binaries': true,
+    ##     'ppm-binaries': false,
+    ##     'ppm-binary-url': null,
     ##     retired: true,
     ##     'last-build': '4.0.4'
     ##   },
@@ -1432,6 +1473,7 @@ console.log(await rversions.linux_distros());
     ##     docker: 'centos:7',
     ##     eol: '2024‑06‑30',
     ##     'ppm-binaries': true,
+    ##     'ppm-binary-url': 'centos7',
     ##     retired: false,
     ##     'last-build': null
     ##   },
@@ -1444,6 +1486,7 @@ console.log(await rversions.linux_distros());
     ##     docker: 'centos:8',
     ##     eol: '2024‑05‑31',
     ##     'ppm-binaries': true,
+    ##     'ppm-binary-url': 'centos8',
     ##     retired: false,
     ##     'last-build': null
     ##   },
@@ -1456,6 +1499,7 @@ console.log(await rversions.linux_distros());
     ##     docker: 'N/A',
     ##     eol: '2032-05-31',
     ##     'ppm-binaries': true,
+    ##     'ppm-binary-url': 'rhel9',
     ##     retired: false,
     ##     'last-build': null
     ##   },
@@ -1468,6 +1512,7 @@ console.log(await rversions.linux_distros());
     ##     docker: 'fedora:37',
     ##     eol: '2023-11-14',
     ##     'ppm-binaries': false,
+    ##     'ppm-binary-url': null,
     ##     retired: true,
     ##     'last-build': '4.3.2'
     ##   },
@@ -1480,6 +1525,7 @@ console.log(await rversions.linux_distros());
     ##     docker: 'fedora:38',
     ##     eol: '2024-05-14',
     ##     'ppm-binaries': false,
+    ##     'ppm-binary-url': null,
     ##     retired: true,
     ##     'last-build': '4.4.2'
     ##   },
@@ -1492,6 +1538,7 @@ console.log(await rversions.linux_distros());
     ##     docker: 'fedora:39',
     ##     eol: '2024-11-12',
     ##     'ppm-binaries': false,
+    ##     'ppm-binary-url': null,
     ##     retired: false,
     ##     'last-build': null
     ##   },
@@ -1504,6 +1551,7 @@ console.log(await rversions.linux_distros());
     ##     docker: 'fedora:40',
     ##     eol: '2025-05-13',
     ##     'ppm-binaries': false,
+    ##     'ppm-binary-url': null,
     ##     retired: false,
     ##     'last-build': null
     ##   },
@@ -1516,6 +1564,20 @@ console.log(await rversions.linux_distros());
     ##     docker: 'fedora:41',
     ##     eol: '2025-11-26',
     ##     'ppm-binaries': false,
+    ##     'ppm-binary-url': null,
+    ##     retired: false,
+    ##     'last-build': null
+    ##   },
+    ##   {
+    ##     id: 'fedora-42',
+    ##     aliases: [],
+    ##     name: 'Fedora Linux',
+    ##     url: 'https://fedoraproject.org/',
+    ##     version: '42',
+    ##     docker: 'fedora:42',
+    ##     eol: '2026-05-13',
+    ##     'ppm-binaries': false,
+    ##     'ppm-binary-url': null,
     ##     retired: false,
     ##     'last-build': null
     ##   },
