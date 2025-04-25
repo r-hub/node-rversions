@@ -2,6 +2,8 @@
 
 * Add support for Fedora 42.
 
+* Retire Debian 10 and Debian 11.
+
 # 2.4.20
 
 * Resolving for a Linux OS also returns whether PPM has binary pcakages

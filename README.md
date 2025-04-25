@@ -1322,8 +1322,8 @@ console.log(await rversions.linux_distros());
     ##     eol: '2024-06-30',
     ##     'ppm-binaries': false,
     ##     'ppm-binary-url': null,
-    ##     retired: false,
-    ##     'last-build': null
+    ##     retired: true,
+    ##     'last-build': '4.4.3'
     ##   },
     ##   {
     ##     id: 'debian-11',
@@ -1333,11 +1333,11 @@ console.log(await rversions.linux_distros());
     ##     version: '11',
     ##     codename: 'bullseye',
     ##     docker: 'debian:11',
-    ##     eol: 'N/A',
+    ##     eol: '2024-08-14',
     ##     'ppm-binaries': true,
     ##     'ppm-binary-url': 'bullseye',
-    ##     retired: false,
-    ##     'last-build': null
+    ##     retired: true,
+    ##     'last-build': '4.5.0'
     ##   },
     ##   {
     ##     id: 'debian-12',
