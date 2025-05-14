@@ -1355,11 +1355,11 @@ console.log(await rversions.linux_distros());
     ##   },
     ##   {
     ##     id: 'opensuse-42',
-    ##     alisess: [ 'opensuse-42', 'opensuse-42.3' ],
+    ##     aliases: [ 'opensuse-42', 'opensuse-42.3' ],
     ##     name: 'openSUSE Leap',
     ##     url: 'https://www.opensuse.org/',
     ##     version: '42.3',
-    ##     docker: 'opensuse:42.3',
+    ##     docker: 'opensuse/archive:42.3',
     ##     eol: '2019-07-01',
     ##     'ppm-binaries': true,
     ##     'ppm-binary-url': 'opensuse42',
@@ -1368,7 +1368,7 @@ console.log(await rversions.linux_distros());
     ##   },
     ##   {
     ##     id: 'opensuse-15',
-    ##     alisess: [
+    ##     aliases: [
     ##       'opensuse-15',
     ##       'opensuse-leap-15',
     ##       'opensuse-15.0',
@@ -1388,7 +1388,7 @@ console.log(await rversions.linux_distros());
     ##   },
     ##   {
     ##     id: 'opensuse-152',
-    ##     alisess: [ 'opensuse-15.2', 'opensuse-leap-15.2' ],
+    ##     aliases: [ 'opensuse-15.2', 'opensuse-leap-15.2' ],
     ##     name: 'openSUSE Leap',
     ##     url: 'https://www.opensuse.org/',
     ##     version: '15.2',
@@ -1401,7 +1401,7 @@ console.log(await rversions.linux_distros());
     ##   },
     ##   {
     ##     id: 'opensuse-153',
-    ##     alisess: [ 'opensuse-15.3', 'opensuse-leap-15.3' ],
+    ##     aliases: [ 'opensuse-15.3', 'opensuse-leap-15.3' ],
     ##     name: 'openSUSE Leap',
     ##     url: 'https://www.opensuse.org/',
     ##     version: '15.3',
@@ -1414,7 +1414,7 @@ console.log(await rversions.linux_distros());
     ##   },
     ##   {
     ##     id: 'opensuse-154',
-    ##     alisess: [ 'opensuse-15.4', 'opensuse-leap-15.4' ],
+    ##     aliases: [ 'opensuse-15.4', 'opensuse-leap-15.4' ],
     ##     name: 'openSUSE Leap',
     ##     url: 'https://www.opensuse.org/',
     ##     version: '15.4',
@@ -1427,7 +1427,7 @@ console.log(await rversions.linux_distros());
     ##   },
     ##   {
     ##     id: 'opensuse-155',
-    ##     alisess: [ 'opensuse-15.5', 'opensuse-leap-15.5' ],
+    ##     aliases: [ 'opensuse-15.5', 'opensuse-leap-15.5' ],
     ##     name: 'openSUSE Leap',
     ##     url: 'https://www.opensuse.org/',
     ##     version: '15.5',
@@ -1440,7 +1440,7 @@ console.log(await rversions.linux_distros());
     ##   },
     ##   {
     ##     id: 'opensuse-156',
-    ##     alisess: [ 'opensuse-15.6', 'opensuse-leap-15.6' ],
+    ##     aliases: [ 'opensuse-15.6', 'opensuse-leap-15.6' ],
     ##     name: 'openSUSE Leap',
     ##     url: 'https://www.opensuse.org/',
     ##     version: '15.6',
@@ -1496,7 +1496,7 @@ console.log(await rversions.linux_distros());
     ##     name: 'Red Hat Enterprise Linux',
     ##     url: 'https://www.redhat.com/',
     ##     version: '9',
-    ##     docker: 'N/A',
+    ##     docker: 'redhat/ubi9',
     ##     eol: '2032-05-31',
     ##     'ppm-binaries': true,
     ##     'ppm-binary-url': 'rhel9',
@@ -1658,7 +1658,7 @@ console.log(await rversions.linux_distros());
     ##     name: 'Red Hat Enterprise Linux',
     ##     url: 'https://www.redhat.com/',
     ##     version: '7',
-    ##     docker: 'N/A',
+    ##     docker: 'registry.access.redhat.com/ubi7/ubi',
     ##     eol: '2024‑06‑30'
     ##   },
     ##   {
@@ -1668,7 +1668,7 @@ console.log(await rversions.linux_distros());
     ##     name: 'Red Hat Enterprise Linux',
     ##     url: 'https://www.redhat.com/',
     ##     version: '8',
-    ##     docker: 'N/A',
+    ##     docker: 'redhat/ubi8',
     ##     eol: '2029‑05‑31'
     ##   },
     ##   {

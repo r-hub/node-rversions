@@ -1,3 +1,8 @@
+# 2.4.22
+
+* Fix typos in the list of Linux platforms, add missing
+  Docker container image names.
+
 # 2.4.21
 
 * Add support for Fedora 42.
