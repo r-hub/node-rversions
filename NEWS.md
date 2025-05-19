@@ -1,42 +1,48 @@
-# 2.4.22
+# 2.3.23
+
+* Fix resolution of minor versions, e.g. '4.4' for x86_64 Linux
+  builds. Now it does not depend on the order of the versions
+  in Posit's `versions.json` file (#34).
+
+# 2.3.22
 
 * Fix typos in the list of Linux platforms, add missing
   Docker container image names.
 
-# 2.4.21
+# 2.3.21
 
 * Add support for Fedora 42.
 
 * Retire Debian 10 and Debian 11.
 
-# 2.4.20
+# 2.3.20
 
 * Resolving for a Linux OS also returns whether PPM has binary pcakages
   for that distro, and in which folder the binaries are located on PPM.
 
-# 2.4.19
+# 2.3.19
 
 * Linux distro data now contains the distro specific part
   of the URL of the PPM binary package repo, if any.
 
-# 2.4.18
+# 2.3.18
 
 * R 4.2.x is mapped to using Rtools42 now, because some
   packages do not work with Rtools40.
 
-# 2.4.17
+# 2.3.17
 
 * Add support for Rtools45, used for R 4.5.0 and later.
 
-# 2.4.16
+# 2.3.16
 
 * Add Fedora 41.
 
-# 2.4.15
+# 2.3.15
 
 * Add OpenSUSE 15.6.
 
-# 2.4.14
+# 2.3.14
 
 * Fix Fedora 40 resolve bug.
 
