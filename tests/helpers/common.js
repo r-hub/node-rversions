@@ -111,7 +111,7 @@ function run(dummy = '') {
             const result = await me.r_next();
             t.deepEqual(
                 Object.keys(result).sort(),
-                ['URL', 'date', 'nickname', 'type', 'version']
+                ['URL', 'date', 'nickname', 'semver', 'type', 'version']
             )
             t.true(/^[0-9]+\.[0-9]+\.[0-9]+$/.test(result.version));
             t.pass()
@@ -127,7 +127,7 @@ function run(dummy = '') {
             const result = await me.r_next_win();
             t.deepEqual(
                 Object.keys(result).sort(),
-                ['URL', 'date', 'nickname', 'type', 'version']
+                ['URL', 'date', 'nickname', 'semver', 'type', 'version']
             )
             t.true(/^[0-9]+\.[0-9]+\.[0-9]+$/.test(result.version));
             t.pass()
@@ -143,7 +143,7 @@ function run(dummy = '') {
             const result = await me.r_next_macos();
             t.deepEqual(
                 Object.keys(result).sort(),
-                ['URL', 'date', 'nickname', 'type', 'version']
+                ['URL', 'date', 'nickname', 'semver', 'type', 'version']
             )
             t.true(/^[0-9]+\.[0-9]+\.[0-9]+$/.test(result.version));
             t.pass()
