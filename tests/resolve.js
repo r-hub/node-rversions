@@ -55,43 +55,63 @@ function run() {
         mycache.del('r_devel_macos_x86_64');
         mycache.del('r_devel_macos_arm64');
 
+        // 1
         const devel = await me.resolve('devel', 'macos', 'x86_64', false);
         t.snapshot(devel);
 
+        // 2
         const devel2 = await me.resolve('devel', 'macos', undefined);
         t.snapshot(devel2);
 
+        // 3
         const devel_arm64 = await me.resolve('devel', 'macos', 'arm64');
         t.snapshot(devel_arm64);
 
+        // 4
         var next = await me.resolve('next', 'macos');
         next.url = next.url.replace(/:[0-9]+\//, ":<port>/");
         t.snapshot(next);
 
+        // 5
         var next2 = await me.resolve('next', 'macos', 'arm64');
         next2.url = next2.url.replace(/:[0-9]+\//, ":<port>/");
         t.snapshot(next2);
 
+        // 6
         var rel = await me.resolve('release', 'macos');
         rel.url = rel.url.replace(/:[0-9]+\//, ":<port>/");
         t.snapshot(rel);
 
+        // 7
         var rel2 = await me.resolve('release', 'macos', 'arm64');
         rel2.url = rel2.url.replace(/:[0-9]+\//, ":<port>/");
         t.snapshot(rel2);
 
+        // 8
         var oldrel = await me.resolve('oldrel', 'macos');
         t.snapshot(oldrel);
 
+        // 9
+        var oldrel = await me.resolve('oldrel', 'macos', 'arm64');
+        t.snapshot(oldrel);
+
+        // 10
         var oldrel2 = await me.resolve('oldrel/2', 'macos');
         t.snapshot(oldrel2);
 
+        // 11
+        var oldrel2 = await me.resolve('oldrel/2', 'macos', 'arm64');
+        t.snapshot(oldrel2);
+
+        // 12
         var xver = await me.resolve('3.3.3', 'macos');
         t.snapshot(xver);
 
+        // 13
         var minor = await me.resolve('3.4', 'macos');
         t.snapshot(minor);
 
+        // 14
         var v325 = await me.resolve('3.2.5', 'macos');
         t.snapshot(v325);
 
@@ -115,37 +135,47 @@ function run() {
             await me.resolve('foobar', 'macos');
         }, { message: "Invalid version specification: 'foobar'." });
 
+        // 15
         var xver2 = await me.resolve('4.1.2', 'macos', 'arm64');
         t.snapshot(xver2);
     });
 
     test('win' + mock, async t => {
+        // 1
         const devel = await me.resolve('devel', 'win', undefined, false);
         t.snapshot(devel);
 
+        // 2
         const devel2 = await me.resolve('devel', 'win');
         t.snapshot(devel2);
 
+        // 3
         const next = await me.resolve('next', 'win');
         next.url = next.url.replace(/:[0-9]+\//, ":<port>/");
         t.snapshot(next);
 
+        // 4
         const rel = await me.resolve('release', 'win');
         rel.url = rel.url.replace(/:[0-9]+\//, ":<port>/");
         t.snapshot(rel);
 
+        // 5
         const oldrel = await me.resolve('oldrel', 'win');
         t.snapshot(oldrel);
 
+        // 6
         const oldrel2 = await me.resolve('oldrel/2', 'win');
         t.snapshot(oldrel2);
 
+        // 7
         const ver = await me.resolve('3.3.3', 'win');
         t.snapshot(ver);
 
+        // 8
         const ver2 = await me.resolve('4.1.2', 'win');
         t.snapshot(ver2);
 
+        // 9
         var minor = await me.resolve('3.4', 'win');
         t.snapshot(minor);
 
