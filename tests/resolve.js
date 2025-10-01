@@ -11,7 +11,7 @@ function run() {
     test.before(async () => {
         await srv();
         me = require('..');
-        linux_builds_amd64 = require('../lib/linux-builds-amd64');
+        linux_builds_amd64 = require('../lib/linux-builds-posit');
         linux_builds_arm64 = require('../lib/linux-builds-arm64');
         mycache = require('../lib/cache');
     });
