@@ -2,10 +2,9 @@
 const test = require('ava');
 const srv = require('./helpers/server');
 
-let me, mycache, linux_builds_amd64, linux_builds_arm64;
+let me, mycache, linux_builds_amd64, linux_builds_arm64, amd64, arm64;
 
-const mock = process.env.NODE_RVERSIONS_NOMOCK ? "-mock" : "";
-
+const mock = process.env.NODE_RVERSIONS_NOMOCK ? "" : "-mock";
 
 function run() {
     test.before(async () => {
@@ -13,42 +12,34 @@ function run() {
         me = require('..');
         linux_builds_amd64 = require('../lib/linux-builds-posit');
         linux_builds_arm64 = require('../lib/linux-builds-arm64');
+        amd64 = await linux_builds_amd64();
+        arm64 = await linux_builds_arm64();
         mycache = require('../lib/cache');
     });
 
     test('linux_builds_amd64', async t => {
-        mycache.del('linux_builds_amd64');
-        t.is(mycache.get('linux_builds_amd64'), undefined);
-        const vers = await linux_builds_amd64(false);
+        // at the beginning it is already cached from test.before
         t.true(mycache.get('linux_builds_amd64').indexOf('devel') >= 0);
+        const vers = await linux_builds_amd64();
         t.true(vers.indexOf('devel') >= 0);
         t.true(vers.indexOf('next') >= 0);
         t.true(vers.indexOf('4.2.3') >= 0);
-        const vers2 = await linux_builds_amd64();
-        t.true(vers2.indexOf('devel') >= 0);
-        t.true(vers2.indexOf('next') >= 0);
-        t.true(vers2.indexOf('4.2.3') >= 0);
-        t.true(mycache.get('linux_builds_amd64').indexOf('devel') >= 0);
-        t.true(mycache.get('linux_builds_amd64').indexOf('next') >= 0);
-        t.true(mycache.get('linux_builds_amd64').indexOf('4.2.3') >= 0);
+
+        // if not set, then undefined
+        mycache.del('linux_builds_amd64');
+        t.is(mycache.get('linux_builds_amd64'), undefined);
+        mycache.set('linux_builds_amd64', amd64);
     })
 
     test('linux_builds_arm64', async t => {
-        mycache.del('linux_builds_arm64');
-        const vers = await linux_builds_arm64(false);
+        // at the beginning it is already cached from test.before
+        const vers = mycache.get("linux_builds_arm64");
         const tags = vers.repository.releases.nodes.map(x => {
             return x.tagName;
         });
         t.true(tags.indexOf('v4.2.3') >= 0);
         t.true(tags.indexOf('vnext') >= 0);
         t.true(tags.indexOf('vdevel') >= 0);
-        const vers2 = await linux_builds_arm64();
-        const tags2 = vers2.repository.releases.nodes.map(x => {
-            return x.tagName;
-        });
-        t.true(tags2.indexOf('v4.2.3') >= 0);
-        t.true(tags2.indexOf('vnext') >= 0);
-        t.true(tags2.indexOf('vdevel') >= 0);
     });
 
     test('macos' + mock, async t => {
@@ -140,6 +131,120 @@ function run() {
         t.snapshot(xver2);
     });
 
+    async function test_all(t, os, arch) {
+        const devel = await me.resolve('devel', os, arch);
+        t.snapshot(devel, 'devel ' + os + ' ' + arch);
+
+        const next = await me.resolve('next', os, arch);
+        t.snapshot(next, 'next ' + os + ' ' + arch);
+
+        const rel = await me.resolve('release', os, arch);
+        t.snapshot(rel, 'release ' + os + ' ' + arch);
+
+        const oldrel = await me.resolve('oldrel', os, arch);
+        t.snapshot(oldrel, 'oldrel ' + os + ' ' + arch);
+
+        const oldrel2 = await me.resolve('oldrel/2', os, arch);
+        t.snapshot(oldrel2, 'oldrel/2 ' + os + ' ' + arch);
+
+        const xver = await me.resolve('4.2.2', os, arch);
+        t.snapshot(xver, '4.2.2 ' + os + ' ' + arch);
+
+        var minor = await me.resolve('3.4', os, arch);
+        t.snapshot(minor, '3.4 ' + os + ' ' + arch);
+    }
+
+    test('ubuntu-16.04' + mock, async t => {
+        await test_all(t, 'linux-ubuntu-16.04', 'amd64');
+        await t.throwsAsync(async() => {
+            await me.resolve('release', 'linux-ubuntu-16.04', 'arm64');
+        }, { message: "No R builds available for ubuntu-1604 aarch64." });
+    })
+
+    test('ubuntu-18.04' + mock, async t => {
+        await test_all(t, 'linux-ubuntu-18.04', 'amd64');
+        await test_all(t, 'linux-ubuntu-18.04', 'arm64');
+    })
+
+    test('ubuntu-20.04' + mock, async t => {
+        await test_all(t, 'linux-ubuntu-20.04', 'amd64');
+        await test_all(t, 'linux-ubuntu-20.04', 'arm64');
+    })
+
+    test('ubuntu-22.04' + mock, async t => {
+        await test_all(t, 'linux-ubuntu-22.04', 'amd64');
+        await test_all(t, 'linux-ubuntu-22.04', 'arm64');
+    })
+
+    test('ubuntu-24.04' + mock, async t => {
+        await test_all(t, 'linux-ubuntu-24.04', 'amd64');
+        await test_all(t, 'linux-ubuntu-24.04', 'arm64');
+    })
+
+    test('debian-9' + mock, async t => {
+        await test_all(t, 'linux-debian-9', 'amd64');
+        await test_all(t, 'linux-debian-9', 'arm64');
+    })
+
+    test('debian-10' + mock, async t => {
+        await test_all(t, 'linux-debian-10', 'amd64');
+        await test_all(t, 'linux-debian-10', 'arm64');
+    })
+
+    test('debian-11' + mock, async t => {
+        await test_all(t, 'linux-debian-11', 'amd64');
+        await test_all(t, 'linux-debian-11', 'arm64');
+    })
+
+    test('debian-12' + mock, async t => {
+        await test_all(t, 'linux-debian-12', 'amd64');
+        await test_all(t, 'linux-debian-12', 'arm64');
+    })
+
+    // TODO: opensuse-42
+    // TODO: opensuse-15
+    // TODO: opensuse-152
+    // TODO: opensuse-153
+    // TODO: opensuse-154
+    // TODO: opensuse-155
+
+    test('opensuse-156' + mock, async t => {
+        await test_all(t, 'linux-opensuse-156', 'amd64');
+        await test_all(t, 'linux-opensuse-156', 'arm64');
+    })
+
+    // TODO: centos-6
+
+    test('centos-7' + mock, async t => {
+        await test_all(t, 'linux-centos-7', 'amd64');
+        await test_all(t, 'linux-centos-7', 'arm64');
+    })
+
+    test('centos-8' + mock, async t => {
+        await test_all(t, 'linux-centos-8', 'amd64');
+        await test_all(t, 'linux-centos-8', 'arm64');
+    })
+
+    test('rhel-9' + mock, async t => {
+        await test_all(t, 'linux-rhel-9', 'amd64');
+        await test_all(t, 'linux-rhel-9', 'arm64');
+    })
+
+    // TODO: fedora-37
+    // TODO: fedora-38
+    // TODO: fedora-39
+    // TODO: fedora-40
+
+    test('fedora-41' + mock, async t => {
+        await test_all(t, 'linux-fedora-41', 'amd64');
+        await test_all(t, 'linux-fedora-41', 'arm64');
+    })
+
+    test('fedora-42' + mock, async t => {
+        await test_all(t, 'linux-fedora-42', 'amd64');
+        await test_all(t, 'linux-fedora-42', 'arm64');
+    })
+
     test('win' + mock, async t => {
         // 1
         const devel = await me.resolve('devel', 'win', undefined, false);
@@ -193,45 +298,59 @@ function run() {
     });
 
     test('linux' + mock, async t => {
+        // 1
         const devel = await me.resolve('devel', 'linux-ubuntu-22.04');
         t.snapshot(devel);
 
+        // 2
         const devel2 = await me.resolve('devel', 'linux-ubuntu-22.04', 'arm64');
         t.snapshot(devel2);
 
+        // 3
         const next = await me.resolve('next', 'linux-ubuntu-22.04');
         t.snapshot(next);
 
+        // 4
         const next2 = await me.resolve('next', 'linux-ubuntu-22.04', 'arm64');
         t.snapshot(next2);
 
+        // 5
         const rel = await me.resolve('release', 'linux-ubuntu-22.04');
         t.snapshot(rel);
 
+        // 6
         const rel2 = await me.resolve('release', 'linux-ubuntu-22.04', 'arm64');
         t.snapshot(rel2);
 
+        // 7
         const oldrel = await me.resolve('oldrel', 'linux-ubuntu-22.04');
         t.snapshot(oldrel);
 
+        // 8
         const oldrel2 = await me.resolve('oldrel/2', 'linux-ubuntu-22.04');
         t.snapshot(oldrel2);
 
+        // 9
         const oldrel3 = await me.resolve('oldrel', 'linux-ubuntu-22.04', 'arm64');
         t.snapshot(oldrel3);
 
+        // 10
         const oldrel4 = await me.resolve('oldrel/2', 'linux-ubuntu-22.04', 'arm64');
         t.snapshot(oldrel4);
 
+        // 11
         const xver = await me.resolve('4.2.2', 'linux-ubuntu-22.04');
         t.snapshot(xver);
 
+        // 12
         const xver2 = await me.resolve('4.2.2', 'linux-ubuntu-22.04', 'arm64');
         t.snapshot(xver2);
 
+        // 13
         var minor = await me.resolve('3.4', 'linux-ubuntu-22.04');
         t.snapshot(minor);
 
+        // 14
         var minor2 = await me.resolve('3.4', 'linux-ubuntu-22.04', 'arm64');
         t.snapshot(minor2);
 
