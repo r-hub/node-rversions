@@ -152,6 +152,10 @@ function run() {
 
         var minor = await me.resolve('3.4', os, arch);
         t.snapshot(minor, '3.4 ' + os + ' ' + arch);
+
+        var avail = await me.available(os, arch);
+        avail = avail.slice(0, 3).concat(avail.slice(-3));
+        t.snapshot(avail, 'available ' + os + ' ' + arch);
     }
 
     test('ubuntu-16.04' + mock, async t => {
@@ -228,6 +232,11 @@ function run() {
     test('rhel-9' + mock, async t => {
         await test_all(t, 'linux-rhel-9', 'amd64');
         await test_all(t, 'linux-rhel-9', 'arm64');
+    })
+
+    test('rhel-10' + mock, async t => {
+        await test_all(t, 'linux-rhel-10', 'amd64');
+        await test_all(t, 'linux-rhel-10', 'arm64');
     })
 
     // TODO: fedora-37
