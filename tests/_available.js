@@ -62,6 +62,39 @@ function run() {
             await available_os_mac('foobar');
         }, { message: "Unknown macos arch :'foobar'."});
     });
+
+    test('available-os-win' + mock, async t => {
+        const available_os_win = require('../lib/available-os-win');
+        let res = await available_os_win();
+        res = res.slice(0, 3).concat(res.slice(-3));
+        t.snapshot(res);
+    });
+
+    test('available' + mock, async t => {
+        const available_no_os = require('../lib/available-no-os');
+        let res = await me.available();
+        let res2 = await available_no_os();
+        t.deepEqual(res, res2);
+
+        const available_os_linux = require('../lib/available-os-linux');
+        let linux = await me.available('linux-ubuntu-22.04');
+        let linux2 = await available_os_linux('linux-ubuntu-22.04');
+        t.deepEqual(linux, linux2);
+
+        const available_os_mac = require('../lib/available-os-mac');
+        let mac = await me.available('macos');
+        let mac2 = await available_os_mac();
+        t.deepEqual(mac, mac2);
+
+        const available_os_win = require('../lib/available-os-win');
+        let win = await me.available('windows');
+        let win2 = await available_os_win();
+        t.deepEqual(win, win2);
+
+        await t.throwsAsync(async() => {
+            await me.available('foobar');
+        }, { message: "Unknown OS: 'foobar'."});
+    });
 }
 
 module.exports = run;
