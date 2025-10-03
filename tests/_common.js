@@ -1,14 +1,14 @@
 
 const test = require('ava');
-const srv = require('./server');
+const srv = require('./helpers/server');
 
 let me, mycache, get_nick;
 
 test.before(async () => {
     await srv();
-    me = require('../..');
-    get_nick = require('../../lib/get-nick');
-    mycache = require('../../lib/cache');
+    me = require('..');
+    get_nick = require('../lib/get-nick');
+    mycache = require('../lib/cache');
 });
 
 function run(dummy = '') {

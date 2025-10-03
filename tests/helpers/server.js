@@ -8,15 +8,15 @@ async function srv() {
         const {promisify} = require('util');
         const fs = require('fs');
         const readFile = promisify(fs.readFile);
-        
+
         srv = await createTestServer();
-        
+
         process.env.NODE_RVERSIONS_SVN = srv.url + '/tags';
         srv.propfind('/tags', async (req, res) => {
             const xml = await readFile('tests/fixtures/tags.txt', 'utf8');
             res.send(xml);
         });
-        
+
         process.env.NODE_RVERSIONS_NICK = srv.url + '/nick/R-%s';
         srv.get('/nick/:ver', async (req, res) => {
             const ver = req.params.ver;
@@ -30,7 +30,7 @@ async function srv() {
                 res.send('This is ' + req.params.ver);
             }
         });
-        
+
         process.env.NODE_RVERSIONS_MACOS_X86_64 = srv.url + '/dl/macos/%s';
         process.env.NODE_RVERSIONS_MACOS2_X86_64 = srv.url + '/dl/macos/%s';
         process.env.NODE_RVERSIONS_MACOS_ARM64 = srv.url + '/dl/macos/%s';

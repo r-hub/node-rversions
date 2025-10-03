@@ -1,25 +1,30 @@
 
 const test = require('ava');
 const srv = require('./helpers/server');
+const load_fixtures = require('./helpers/load-fixtures');
 
-let me, mycache, linux_builds_amd64, linux_builds_arm64, amd64, arm64;
+let me, mycache;
 
 const mock = process.env.NODE_RVERSIONS_NOMOCK ? "" : "-mock";
 
 function run() {
     test.before(async () => {
+        // mock server
         await srv();
-        me = require('..');
-        linux_builds_amd64 = require('../lib/linux-builds-posit');
-        linux_builds_arm64 = require('../lib/linux-builds-arm64');
-        amd64 = await linux_builds_amd64();
-        arm64 = await linux_builds_arm64();
+
+        // avoid multiple GH queries, get the data once and store it
         mycache = require('../lib/cache');
+        let fixtures = await load_fixtures(mycache);
+
+        // tested module
+        me = require('..');
     });
 
     test('linux_builds_amd64', async t => {
+        let linux_builds_amd64 = require('../lib/linux-builds-posit');
         // at the beginning it is already cached from test.before
-        t.true(mycache.get('linux_builds_amd64').indexOf('devel') >= 0);
+        let amd64 = mycache.get('linux_builds_amd64');
+        t.true(amd64.indexOf('devel') >= 0);
         const vers = await linux_builds_amd64();
         t.true(vers.indexOf('devel') >= 0);
         t.true(vers.indexOf('next') >= 0);
@@ -426,6 +431,19 @@ function run() {
             await me.resolve('foobar');
         }, { message: "Invalid version specification: 'foobar'." });
     });
+
+    test('available-os-linux' + mock, async t => {
+        const available_os_linux = require('../lib/available-os-linux');
+        await t.throwsAsync(async() => {
+            await available_os_linux('linux-ubuntu-22.04', 'foobar');
+        }, { message: "Unsupported Linux arch: 'foobar'."});
+        await t.throwsAsync(async() => {
+            await available_os_linux('linux-foobar', 'amd64');
+        }, { message: "Unknown Linux distro: 'linux-foobar'."});
+        // default arch is amd64
+        let res = await available_os_linux('linux-ubuntu-24.04');
+        t.true(res[0].url.indexOf('amd64') >= 0);
+    })
 }
 
 test('dummy-resolve', t => {

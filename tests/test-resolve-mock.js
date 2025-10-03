@@ -1,7 +1,7 @@
 const test = require('ava');
 
 if (!process.env.NODE_RVERSIONS_NOMOCK) {
-  var run = require('./resolve.js');
+  var run = require('./_resolve.js');
   run();
 }
 
