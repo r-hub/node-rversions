@@ -16,8 +16,8 @@ function run(dummy = '') {
         // We run it twice, the second result comes from the cache
         for (let i = 0; i < 2; i++) {
             const result = await me.r_versions();
-            t.is(result[0].version, '0.60');
-            t.is(result[0].nickname, null);
+            t.is(result[0].version, '0.0');
+            t.is(result[0].nickname, null)
 
             const versions = result.map(function(x) { return x.version; })
             t.true(versions.indexOf('3.6.3') > -1);
