@@ -1,14 +1,14 @@
 
 const test = require('ava');
-const srv = require('./server');
+const srv = require('./helpers/server');
 
 let me, mycache, get_nick;
 
 test.before(async () => {
     await srv();
-    me = require('../..');
-    get_nick = require('../../lib/get-nick');
-    mycache = require('../../lib/cache');
+    me = require('..');
+    get_nick = require('../lib/get-nick');
+    mycache = require('../lib/cache');
 });
 
 function run(dummy = '') {
@@ -16,8 +16,8 @@ function run(dummy = '') {
         // We run it twice, the second result comes from the cache
         for (let i = 0; i < 2; i++) {
             const result = await me.r_versions();
-            t.is(result[0].version, '0.60');
-            t.is(result[0].nickname, null);
+            t.is(result[0].version, '0.0');
+            t.is(result[0].nickname, null)
 
             const versions = result.map(function(x) { return x.version; })
             t.true(versions.indexOf('3.6.3') > -1);
@@ -111,7 +111,7 @@ function run(dummy = '') {
             const result = await me.r_next();
             t.deepEqual(
                 Object.keys(result).sort(),
-                ['URL', 'date', 'nickname', 'type', 'version']
+                ['URL', 'date', 'nickname', 'semver', 'type', 'version']
             )
             t.true(/^[0-9]+\.[0-9]+\.[0-9]+$/.test(result.version));
             t.pass()
@@ -127,7 +127,7 @@ function run(dummy = '') {
             const result = await me.r_next_win();
             t.deepEqual(
                 Object.keys(result).sort(),
-                ['URL', 'date', 'nickname', 'type', 'version']
+                ['URL', 'date', 'nickname', 'semver', 'type', 'version']
             )
             t.true(/^[0-9]+\.[0-9]+\.[0-9]+$/.test(result.version));
             t.pass()
@@ -143,7 +143,7 @@ function run(dummy = '') {
             const result = await me.r_next_macos();
             t.deepEqual(
                 Object.keys(result).sort(),
-                ['URL', 'date', 'nickname', 'type', 'version']
+                ['URL', 'date', 'nickname', 'semver', 'type', 'version']
             )
             t.true(/^[0-9]+\.[0-9]+\.[0-9]+$/.test(result.version));
             t.pass()

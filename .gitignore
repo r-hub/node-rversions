@@ -1,0 +1,5 @@
+/data.json
+/data-mock.json
+/.nyc_output
+node_modules
+/README.html
