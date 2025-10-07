@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/r-hub/node-rversions#readme",
   "dependencies": {
-    "@octokit/graphql": "^5.0.5",
+    "@octokit/graphql": "^9.0.2",
     "@xmldom/xmldom": "^0.7.0",
     "got": "^11.8.6",
     "lodash": "^4.17.20",
