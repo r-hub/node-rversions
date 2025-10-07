@@ -17,10 +17,13 @@ if (!process.env.NODE_RVERSIONS_DUMMY) {
     const r_next_macos      = require('./lib/r-next-macos');
     const r_minor           = require('./lib/r-minor');
     const rtools_versions   = require('./lib/rtools').rtools_versions;
+    const rtools_aarch64    = require('./lib/rtools').rtools_versions_aarch64;
     const linux_distros     = require('./lib/list-linux-distros');
 
-    function get_rtools_versions() {
-        return rtools_versions;
+    function get_rtools_versions(arch = "x86_64") {
+        if (arch == "x86_64") return rtools_versions;
+        if (arch == "aarch64") return rtools_aarch64;
+        throw new Error("Unsupported Windows arch: '" + arch + "'.");
     }
 
     module.exports = {
