@@ -54,9 +54,9 @@ test('caching', async t => {
     await me.r_release_tarball();
     t.true(mycache.get('r_release_tarball') !== undefined);
 
-    t.is(mycache.get('r_release_win'), undefined);
+    t.is(mycache.get('r_release_win_x86_64'), undefined);
     await me.r_release_win();
-    t.true(mycache.get('r_release_win') !== undefined);
+    t.true(mycache.get('r_release_win_x86_64') !== undefined);
 
     t.is(mycache.get('r_devel'), undefined);
     await me.r_devel();
