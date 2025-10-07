@@ -1,3 +1,21 @@
+# 2.4.0
+
+* Retire OpenSUSE 15.6 & corresponding SUSE Linux Enterprise Server.
+
+* Retire Fedora 39 and 40.
+
+* aarch64 Linux URLs now point to Posit's builds, whenever possible.
+
+* Correct nickname when resolving minor R versions.
+
+* Support RHEL 10 (plus corresponding AlmaLinux and Rocky Linux).
+
+* Correctly report aarch64 PPM support.
+
+* List of R versions now includes historic R versions.
+
+* Support aarch64 Windows versions (@theAeon, #35).
+
 # 2.3.23
 
 * Fix resolution of minor versions, e.g. '4.4' for x86_64 Linux
