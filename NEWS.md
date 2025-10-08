@@ -1,3 +1,7 @@
+# 2.4.2
+
+* Support the `arm64` Windows arch as a synomym of `aarch64`.
+
 # 2.4.1
 
 * Fix date of historic version 0.0.
