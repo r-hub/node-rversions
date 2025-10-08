@@ -1,3 +1,15 @@
+# 2.4.1
+
+* Fix date of historic version 0.0.
+
+* Fix download urls in available win aarch64 versions.
+
+* Support listing rtools versions for aarch64 windows.
+
+* Fix non-ascii characters in Linux platform list.
+
+* Allow aarch64 as arch for macos.
+
 # 2.4.0
 
 * Retire OpenSUSE 15.6 & corresponding SUSE Linux Enterprise Server.
