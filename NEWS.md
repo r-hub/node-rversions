@@ -1,3 +1,7 @@
+# 2.4.3
+
+* Fix Docker image names of Rocky Linux in the list of distros.
+
 # 2.4.2
 
 * Support the `arm64` Windows arch as a synomym of `aarch64`.
