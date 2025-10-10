@@ -1,0 +1,19 @@
+Package: noderversions
+Version: 1.0.0
+License: MIT
+Imports:
+    cli,
+    curl,
+    gh,
+    glue,
+    parsedate,
+    pkgload,
+    rvest
+Suggests:
+    uncovr,
+    testthat (>= 3.0.0),
+    webfakes,
+    withr
+Remotes:
+    gaborcsardi/uncovr
+Config/testthat/edition: 3

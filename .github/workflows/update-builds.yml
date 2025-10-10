@@ -1,0 +1,40 @@
+
+name: update-builds.yml
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 19 * * *'
+
+permissions: read-all
+
+jobs:
+  win-aarch64:
+    runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/${{ github.repository }}:latest
+      credentials:
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+    - name: Update
+      run: Rscript index.R update-win-aarch64
+      working-directory: /app
+      env:
+        R_APP_WORKSPACE: ${{ github.workspace }}
+        R_APP_TEMP: ${{ runner.temp }}
+
+  # this is so that GHA does not stop the scheduled run
+  log:
+    needs: [win-aarch64]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+    - name: Create log file
+      run: |
+        echo "### Last updated at $(date)." > index.md
+    - name: Deploy to GitHub pages 🚀
+      uses: JamesIves/github-pages-deploy-action@v4.6.8
+      with:
+        clean: false
+        branch: gh-pages
+        folder: .

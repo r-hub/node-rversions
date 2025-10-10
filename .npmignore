@@ -1,0 +1,9 @@
+/Dockerfile
+/DESCRIPTION
+/R
+/tests/testthat
+/tests/testthat.R
+/.github
+/.dev
+/.Rbuildignore
+/index.R
