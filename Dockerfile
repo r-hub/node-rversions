@@ -43,15 +43,6 @@ RUN if [ -d tests ]; then \
       R -q -e 'uncovr::test()'; \
     fi
 
-ARG GITHUB_SHA
-ARG GITHUB_REPOSITORY
-ARG GITHUB_REF_NAME
-RUN --mount=type=secret,id=CODECOV_TOKEN \
-    if [ -d tests ] && [ -f /run/secrets/CODECOV_TOKEN ]; then \
-      apt-get update && apt-get install -y git && \
-      R -q -e 'uncovr::codecov()';\
-    fi
-
 # -------------------------------------------------------------------------
 # production stage, this is deployed. Has the extra stuff only needed
 # for deployment
