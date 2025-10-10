@@ -2,8 +2,14 @@ name: Main CI
 on:
   push:
     branches: [main, master]
+    paths-ignore:
+      - "R/**"
+      - "tests/testthat/**"
   pull_request:
     branches: [main, master]
+    paths-ignore:
+      - "R/**"
+      - "tests/testthat/**"
   workflow_dispatch:
 
 jobs:
