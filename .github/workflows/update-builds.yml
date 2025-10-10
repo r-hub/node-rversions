@@ -20,6 +20,7 @@ jobs:
       run: Rscript index.R update-win-aarch64
       working-directory: /app
       env:
+        GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
         R_APP_WORKSPACE: ${{ github.workspace }}
         R_APP_TEMP: ${{ runner.temp }}
 
