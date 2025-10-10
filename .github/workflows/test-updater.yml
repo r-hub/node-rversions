@@ -1,9 +1,18 @@
-name: deploy-builds.yaml
+name: test-updater.yaml
 on:
+  push:
+    branches: [main]
+    paths:
+      - "R/**"
+      - "tests/testthat/**"
+  pull_request:
+    paths:
+      - "R/**"
+      - "tests/testthat/**"
   workflow_dispatch:
 
 jobs:
-  deploy:
+  test:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
@@ -20,8 +29,8 @@ jobs:
       uses: docker/build-push-action@v6
       with:
         platforms: linux/amd64
-        push: true
-        target: prod
+        push: false
+        target: test
         tags: ghcr.io/${{ github.repository }}:latest
         secret-envs:
           CODECOV_TOKEN=CODECOV_TOKEN

@@ -1,5 +1,5 @@
 
-name: update-builds.yml
+name: updater.yml
 on:
   workflow_dispatch:
   schedule:
