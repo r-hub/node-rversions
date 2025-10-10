@@ -27,6 +27,10 @@ RUN R -q -e 'pak::pkg_install("deps::.", dependencies = TRUE)'; \
     apt-get clean && \
     rm -rf DESCRIPTION /tmp/*
 
+RUN apt-get update && \
+    apt-get install -y git && \
+    apt-get clean
+
 # -------------------------------------------------------------------------
 # This stage actually runs the tests + test coverage
 # -------------------------------------------------------------------------
