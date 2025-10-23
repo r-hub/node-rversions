@@ -5,9 +5,10 @@ update_win_aarch64 <- function() {
   tab <- rvest::html_table(page)[[1]]
   tab[["Last modified"]] <- parsedate::parse_iso_8601(tab[["Last modified"]])
   tab <- tab[order(tab[["Last modified"]], decreasing = TRUE), ]
-  patched <- tab[grepl("^R-patched", tab$Name), ]
+  nxt <- tab[grepl("^R-(patched|alpha|beta|rc)", tab$Name, ignore.case = TRUE), ]
   devel <- tab[grepl("^R-devel", tab$Name), ]
-  update_win_aarch64_file(patched$Name[1], "patched", "next")
+  nxt_nm <- tolower(sub("_.*$", "", sub("^R-", "", nxt$Name[1])))
+  update_win_aarch64_file(nxt$Name[1], nxt_nm, "next")
   update_win_aarch64_file(devel$Name[1], "devel", "devel")
 }
 
@@ -60,8 +61,9 @@ update_win_aarch64_file <- function(name, version, tag) {
     assets
   )
 
+  # if not devel, then add the tag ('-next') into the name.
   fn <- gsub("_", "-", name)
-  if (version == "patched") {
+  if (version != "devel") {
     fn <- sub("^R-", paste0("R-", tag, "-"), fn)
   }
   if (fn %in% vapply(assets, `[[`, "", "name")) {
