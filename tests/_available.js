@@ -66,7 +66,10 @@ function run() {
     test('available-os-win' + mock, async t => {
         const available_os_win = require('../lib/available-os-win');
         let res = await available_os_win();
-        res = res.slice(0, 3).concat(res.slice(-3));
+        res = res.slice(0, 3).concat(res.slice(-3)).map(v => {
+            v.url = v.url.replace(/:[0-9]+\//, ":<port>/")
+            return v;
+        });
         t.snapshot(res);
     });
 
