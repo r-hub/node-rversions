@@ -1,3 +1,7 @@
+# 2.4.4
+
+* Resolution of `next` versions works again now.
+
 # 2.4.3
 
 * Fix Docker image names of Rocky Linux in the list of distros.
