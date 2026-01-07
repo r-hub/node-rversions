@@ -1,3 +1,9 @@
+# 2.4.5
+
+* Add Fedora 43 support.
+
+* Add OpenSUSE 16.0, SLES 15 SP7 and SLES 16.0 support.
+
 # 2.4.4
 
 * Resolution of `next` versions works again now.
