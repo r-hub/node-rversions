@@ -1,3 +1,7 @@
+# 2.4.6
+
+* Add Debian 13 support.
+
 # 2.4.5
 
 * Add Fedora 43 support.
