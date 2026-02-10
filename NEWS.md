@@ -1,3 +1,7 @@
+# 2.4.7
+
+* Support Pop!_OS, aliased to Ubuntu.
+
 # 2.4.6
 
 * Add Debian 13 support.
