@@ -1,3 +1,9 @@
+# 2.4.8
+
+* Download macOS R-devel builds from GitHub releases.
+  Apparently GitHub Actions runners are now blocked by
+  mac.r-project.org.
+
 # 2.4.7
 
 * Support Pop!_OS, aliased to Ubuntu.
