@@ -1,3 +1,11 @@
+# 2.4.9
+
+* Download macOS R-devel builds from mac.cran.dev
+  (Cloudflare front for mac.r-project.org).
+
+* macOS R-devel resolves to the new Sonoma macOS R
+  builds now.
+
 # 2.4.8
 
 * Download macOS R-devel builds from GitHub releases.
