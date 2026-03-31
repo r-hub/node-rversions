@@ -1,3 +1,9 @@
+# 2.4.10
+
+* macOS R-devel builds point to the 4.6-branch builds,
+  temporarily, because the current R-devel builds
+  are not updated and they are also broken.
+
 # 2.4.9
 
 * Download macOS R-devel builds from mac.cran.dev
