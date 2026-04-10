@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <D:multistatus xmlns:D="DAV:">
-<D:response xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
+<D:response xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
 <D:href>/R/branches/</D:href>
 <D:propstat>
 <D:prop>
 <lp1:resourcetype><D:collection/></lp1:resourcetype>
 <lp1:getcontenttype>text/html; charset=UTF-8</lp1:getcontenttype>
-<lp1:getetag>W/"88873//branches"</lp1:getetag>
-<lp1:creationdate>2025-09-24T17:03:00.290560Z</lp1:creationdate>
-<lp1:getlastmodified>Wed, 24 Sep 2025 17:03:00 GMT</lp1:getlastmodified>
-<lp1:checked-in><D:href>/R/!svn/ver/88873/branches</D:href></lp1:checked-in>
+<lp1:getetag>W/"89852//branches"</lp1:getetag>
+<lp1:creationdate>2026-04-10T02:55:13.070040Z</lp1:creationdate>
+<lp1:getlastmodified>Fri, 10 Apr 2026 02:55:13 GMT</lp1:getlastmodified>
+<lp1:checked-in><D:href>/R/!svn/ver/89852/branches</D:href></lp1:checked-in>
 <lp1:version-controlled-configuration><D:href>/R/!svn/vcc/default</D:href></lp1:version-controlled-configuration>
-<lp1:version-name>88873</lp1:version-name>
-<lp1:creator-displayname>kalibera</lp1:creator-displayname>
+<lp1:version-name>89852</lp1:version-name>
+<lp1:creator-displayname>urbaneks</lp1:creator-displayname>
 <lp2:baseline-relative-path>branches</lp2:baseline-relative-path>
 <lp2:repository-uuid>00db46b3-68df-0310-9c12-caf00c1e9a41</lp2:repository-uuid>
 <lp2:deadprop-count>0</lp2:deadprop-count>
@@ -330,7 +330,7 @@
 <D:status>HTTP/1.1 200 OK</D:status>
 </D:propstat>
 </D:response>
-<D:response xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
+<D:response xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
 <D:href>/R/branches/unlabeled-1.39.2/</D:href>
 <D:propstat>
 <D:prop>
@@ -351,7 +351,7 @@
 <D:status>HTTP/1.1 200 OK</D:status>
 </D:propstat>
 </D:response>
-<D:response xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
+<D:response xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
 <D:href>/R/branches/unlabeled-1.43.2/</D:href>
 <D:propstat>
 <D:prop>
@@ -393,7 +393,7 @@
 <D:status>HTTP/1.1 200 OK</D:status>
 </D:propstat>
 </D:response>
-<D:response xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
+<D:response xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
 <D:href>/R/branches/unlabeled-1.56.2/</D:href>
 <D:propstat>
 <D:prop>
@@ -809,7 +809,7 @@
 <D:status>HTTP/1.1 200 OK</D:status>
 </D:propstat>
 </D:response>
-<D:response xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
+<D:response xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
 <D:href>/R/branches/R-2-14-branch/</D:href>
 <D:propstat>
 <D:prop>
@@ -839,11 +839,11 @@
 <D:href>/R/branches/R-2-15-branch/</D:href>
 <D:propstat>
 <D:prop>
+<C:svn.ignore/>
 <S:mergeinfo>/branches/R-2-12-branch:52939,54476,55265
 /branches/R-2-13-branch:55265,55432
 /branches/R-glmscore:55360-55826
 /trunk:58553,58561,58563,58565,58568,58570-58571,58576,58578,58580,58584-58587,58595,58597,58609,58613,58615,58617,58621,58631,58639,58641,58648,58650,58652,58654,58656-58657,58659,58676,58680,58684,58688,58691-58692,58696,58701-58702,58705,58708,58710,58714,58716,58721-58723,58727,58729,58733-58734,58736,58738,58740,58742,58744,58749,58751,58753-58754,58757,58760,58765,58767,58769,58774,58778,58783,58788-58789,58792,58795,58797,58800,58803,58805-58807,58810-58811,58813-58814,58816,58820,58825,58827,58830,58832-58834,58836,58838,58841,58843,58846-58848,58852,58856,58865,58867,58875,58878,58885,58896,58902-58903,58905,58912,58917,58920,58922,58924-58925,58931,58933,58935,58937,58939,58941,58943,58946,58948,58950,58956,58958-58959,58966,58970,58979,58982,58984,58989-58990,58993-58994,58996,59000,59002,59022,59024,59026,59029,59036-59037,59039,59041,59051,59058,59060-59061,59063,59071-59073,59076,59078,59092,59110,59116,59124,59127,59137,59140,59142,59144,59146,59149-59151,59156,59158-59159,59164,59168,59175,59181,59188,59190-59191,59197,59211,59213-59214,59217,59219,59230,59232,59236,59242,59244,59246-59247,59250,59272,59274,59287,59302,59309,59313,59316,59319,59321,59333,59344,59346,59352,59359,59362-59363,59365,59375,59381,59388,59395,59411,59413,59415,59417,59419,59425,59428,59431,59433,59438,59441,59444,59453,59456,59462,59464,59466,59468,59471,59473,59475,59477,59482,59484,59486,59488,59491,59495,59497,59508,59510,59512,59516,59520,59522,59526,59528,59535,59543,59547,59553,59558,59561,59566,59568,59578,59583,59586,59591-59592,59594,59596,59598,59605,59610,59616,59619,59621,59629,59633,59635,59639,59646-59647,59652,59654,59660,59662,59664,59669,59675,59683,59685,59687,59689,59691,59697,59699,59705-59706,59714,59720,59722,59727,59732,59736,59746,59750,59757,59761,59765,59767,59769,59771,59777,59783,59786,59793,59797,59808,59814,59819,59828,59841,59868,59876,59886,59896,59898,59907,59911,59914,59917,59924,59927,59930,59935,59938,59942-59943,59946,59948,59956,59958,59967,59971,59976,59980,59982,59991,59995,59997-59998,60001,60008,60011-60012,60019,60023,60026,60031,60033,60037,60057,60062,60068-60069,60071,60082,60095,60098,60106,60108,60111,60114,60118,60121,60123,60125-60126,60140,60143,60146-60148,60154,60170,60177-60178,60198,60202,60209,60211,60214,60231,60234,60236,60253,60255-60256,60269,60271,60273,60280,60297,60307,60312,60325,60337,60342,60345-60346,60352,60355,60358,60361,60363,60366,60368,60370,60384-60385,60392,60397,60415,60432,60441,60443,60445,60447,60449,60452-60453,60456,60458,60474,60476,60485-60486,60491,60495,60500,60510,60512,60528,60545,60551,60561-60562,60567,60583,60590,60605,60609,60615,60617,60621,60627,60629,60636,60638,60646,60650,60664,60682,60695,60724,60742,60772,60774,60782,60784,60787,60789,60791,60806-60807,60812,60817,60828,60847,60858,60860,60867,60878,60880,60892,60897,60900,60904,60906,60909-60910,60912,60918,60920,60922,60927,60929,60934,60943,60949,60952,60954,60957,60961,60965,60970-60971,60978,60980-60981,60984,60992,60994,61004,61006,61008,61013,61018,61023,61027,61037,61045,61055,61066,61068,61073,61077,61079,61083,61086,61088,61095,61100,61102,61104,61107,61112,61117,61123,61132,61134,61137,61140,61143,61146,61148,61150,61153,61160,61162-61163,61168,61173,61177-61178,61187,61189,61197,61200,61204,61206,61210,61212,61217,61224,61229,61233,61236,61238,61251,61255,61264,61287,61317,61328,61360,61364,61366,61369,61383,61388,61418,61420,61423,61437,61447,61449,61475,61493,61509,61519,61521,61523,61525,61528-61529,61531,61533,61536,61539-61540,61542,61547,61570,61590,61593,61596,61598,61600-61601,61605,61617,61630,61632,61657,61668,61670,61675,61678,61682,61684,61687,61703,61709,61715,61724,61740,61742,61747,61751,61785,61793,61803,61823,61837,61839,61844,61847,61853,61858,61864,61877,61881,61886,61889-61891,61896,61919,61953,61956-61957,61975,61983,61985,61990,61993,62000,62002,62013,62034-62035,62039,62045,62047,62049-62050,62060,62064,62070,62085,62114,62220,62242</S:mergeinfo>
-<C:svn.ignore/>
 <lp1:resourcetype><D:collection/></lp1:resourcetype>
 <lp1:getcontenttype>text/html; charset=UTF-8</lp1:getcontenttype>
 <lp1:getetag>W/"62244//branches/R-2-15-branch"</lp1:getetag>
@@ -882,7 +882,7 @@
 <D:status>HTTP/1.1 200 OK</D:status>
 </D:propstat>
 </D:response>
-<D:response xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
+<D:response xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
 <D:href>/R/branches/R-ObjC/</D:href>
 <D:propstat>
 <D:prop>
@@ -903,7 +903,7 @@
 <D:status>HTTP/1.1 200 OK</D:status>
 </D:propstat>
 </D:response>
-<D:response xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
+<D:response xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
 <D:href>/R/branches/R-noNULLenv/</D:href>
 <D:propstat>
 <D:prop>
@@ -1093,7 +1093,7 @@
 <D:status>HTTP/1.1 200 OK</D:status>
 </D:propstat>
 </D:response>
-<D:response xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
+<D:response xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
 <D:href>/R/branches/R-groups/</D:href>
 <D:propstat>
 <D:prop>
@@ -1234,7 +1234,7 @@
 <D:status>HTTP/1.1 200 OK</D:status>
 </D:propstat>
 </D:response>
-<D:response xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
+<D:response xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
 <D:href>/R/branches/R-1-4-patches/</D:href>
 <D:propstat>
 <D:prop>
@@ -1255,7 +1255,7 @@
 <D:status>HTTP/1.1 200 OK</D:status>
 </D:propstat>
 </D:response>
-<D:response xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
+<D:response xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
 <D:href>/R/branches/unlabeled-1.2.2/</D:href>
 <D:propstat>
 <D:prop>
@@ -1276,7 +1276,7 @@
 <D:status>HTTP/1.1 200 OK</D:status>
 </D:propstat>
 </D:response>
-<D:response xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
+<D:response xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
 <D:href>/R/branches/R-grid/</D:href>
 <D:propstat>
 <D:prop>
@@ -1297,7 +1297,7 @@
 <D:status>HTTP/1.1 200 OK</D:status>
 </D:propstat>
 </D:response>
-<D:response xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
+<D:response xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
 <D:href>/R/branches/R-ucrt/</D:href>
 <D:propstat>
 <D:prop>
@@ -1622,7 +1622,7 @@
 <D:status>HTTP/1.1 200 OK</D:status>
 </D:propstat>
 </D:response>
-<D:response xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
+<D:response xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
 <D:href>/R/branches/R-0-61-patches/</D:href>
 <D:propstat>
 <D:prop>
@@ -1664,7 +1664,7 @@
 <D:status>HTTP/1.1 200 OK</D:status>
 </D:propstat>
 </D:response>
-<D:response xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
+<D:response xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
 <D:href>/R/branches/R-exp-uncmin/</D:href>
 <D:propstat>
 <D:prop>
@@ -1765,7 +1765,7 @@
 <D:status>HTTP/1.1 200 OK</D:status>
 </D:propstat>
 </D:response>
-<D:response xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
+<D:response xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
 <D:href>/R/branches/R-Win-CMD/</D:href>
 <D:propstat>
 <D:prop>
@@ -1819,7 +1819,7 @@
 <D:status>HTTP/1.1 200 OK</D:status>
 </D:propstat>
 </D:response>
-<D:response xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
+<D:response xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
 <D:href>/R/branches/R-conflicts/</D:href>
 <D:propstat>
 <D:prop>
@@ -1849,7 +1849,7 @@
 <D:status>HTTP/1.1 200 OK</D:status>
 </D:propstat>
 </D:response>
-<D:response xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
+<D:response xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
 <D:href>/R/branches/R/</D:href>
 <D:propstat>
 <D:prop>
@@ -1890,7 +1890,7 @@
 <D:status>HTTP/1.1 200 OK</D:status>
 </D:propstat>
 </D:response>
-<D:response xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
+<D:response xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
 <D:href>/R/branches/R-1-5-patches/</D:href>
 <D:propstat>
 <D:prop>
@@ -1911,7 +1911,7 @@
 <D:status>HTTP/1.1 200 OK</D:status>
 </D:propstat>
 </D:response>
-<D:response xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
+<D:response xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
 <D:href>/R/branches/R-exp-newmem/</D:href>
 <D:propstat>
 <D:prop>
@@ -1973,7 +1973,7 @@
 <D:status>HTTP/1.1 200 OK</D:status>
 </D:propstat>
 </D:response>
-<D:response xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
+<D:response xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
 <D:href>/R/branches/R-Cairo/</D:href>
 <D:propstat>
 <D:prop>
@@ -2015,7 +2015,7 @@
 <D:status>HTTP/1.1 200 OK</D:status>
 </D:propstat>
 </D:response>
-<D:response xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
+<D:response xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
 <D:href>/R/branches/R-3-0-branch/</D:href>
 <D:propstat>
 <D:prop>
@@ -2042,7 +2042,7 @@
 <D:status>HTTP/1.1 200 OK</D:status>
 </D:propstat>
 </D:response>
-<D:response xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
+<D:response xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
 <D:href>/R/branches/R-4-0-branch/</D:href>
 <D:propstat>
 <D:prop>
@@ -2075,7 +2075,7 @@
 <D:status>HTTP/1.1 200 OK</D:status>
 </D:propstat>
 </D:response>
-<D:response xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
+<D:response xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
 <D:href>/R/branches/R-3-1-branch/</D:href>
 <D:propstat>
 <D:prop>
@@ -2124,7 +2124,7 @@
 <D:status>HTTP/1.1 200 OK</D:status>
 </D:propstat>
 </D:response>
-<D:response xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
+<D:response xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
 <D:href>/R/branches/R-4-1-branch/</D:href>
 <D:propstat>
 <D:prop>
@@ -2216,11 +2216,10 @@
 <D:status>HTTP/1.1 200 OK</D:status>
 </D:propstat>
 </D:response>
-<D:response xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
+<D:response xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
 <D:href>/R/branches/R-4-2-branch/</D:href>
 <D:propstat>
 <D:prop>
-<C:svn.ignore/>
 <S:mergeinfo>/branches/R-2-12-branch:52939,54476,55265
 /branches/R-2-13-branch:55265,55432
 /branches/R-2-15-branch:58894,59717
@@ -2238,6 +2237,7 @@
 /branches/R-ucrt:81323-81359
 /branches/R-vecpat:81390-81922
 /trunk:81979-81980,81982,81986,81990,81996,82000,82004-82006,82008-82009,82011,82015,82017,82019,82023,82025,82027-82029,82031,82035,82037-82038,82041-82042,82046-82048,82051,82053-82055,82057,82060,82063,82065,82069-82070,82072,82076-82077,82081-82082,82085,82087,82093,82095,82097,82099,82101,82104,82106-82107,82110,82112-82114,82116,82118-82119,82121,82124,82127,82129-82130,82136,82138,82140,82143,82145-82146,82148,82150,82154,82156,82158,82162,82164,82175-82176,82182-82183,82187,82194,82196,82202,82205,82208,82223-82224,82237,82241,82243,82248,82254,82256,82262,82268,82273,82275,82278,82282-82283,82285,82298,82300,82304,82308,82311,82315,82319,82322,82325,82328,82330-82331,82333-82334,82340,82344,82346,82349,82351,82353-82354,82360-82361,82368-82369,82377,82379,82385-82386,82389,82391,82394,82397,82401,82403,82408,82415-82416,82422-82423,82427,82435,82438,82440,82448,82453,82455,82457,82460,82462,82464,82470-82471,82473,82478,82485,82487-82488,82519,82522-82523,82529,82533,82535,82538,82551,82553,82555,82557,82559,82561,82565,82569-82570,82572,82575-82576,82579,82581,82583,82591-82592,82603,82612,82630,82632,82634,82651,82653,82658,82661,82666,82669,82674,82678,82681-82682,82686,82689,82694-82695,82697,82701,82703,82707,82709,82728,82733,82738,82747,82751,82766,82768,82773,82776-82777,82780,82784,82788,82796,82799,82805-82807,82809,82812-82813,82816,82825,82830,82832,82839,82844,82851,82853,82862,82879,82887,82893,82896,82900,82906,82908,82911,82915,82929,82931-82934,82936,82940,82943-82945,82947-82948,82957,82960,82964,82968-82971,82980-82982,82984,82986-82987,82995,82997,83002,83008,83012,83019,83024-83025,83042,83057,83070,83073,83088,83091,83094,83119,83137,83141,83172,83178,83200,83210,83232-83234,83253,83301,83308,83338,83341,83345,83354,83357,83389,83416-83417,83424,83433,83438,83448,83516,83525,83557,83567,83628,83651,83674,83740,83760,83780,83832,83871,83877,83920,84039,84049,84110,84247</S:mergeinfo>
+<C:svn.ignore/>
 <lp1:resourcetype><D:collection/></lp1:resourcetype>
 <lp1:getcontenttype>text/html; charset=UTF-8</lp1:getcontenttype>
 <lp1:getetag>W/"84249//branches/R-4-2-branch"</lp1:getetag>
@@ -2331,7 +2331,6 @@
 <D:href>/R/branches/R-3-4-branch/</D:href>
 <D:propstat>
 <D:prop>
-<C:svn.ignore/>
 <S:mergeinfo>/branches/R-2-12-branch:52939,54476,55265
 /branches/R-2-13-branch:55265,55432
 /branches/R-2-15-branch:58894,59717
@@ -2340,6 +2339,7 @@
 /branches/R-DL:69025-69313
 /branches/R-glmscore:55360-55826
 /trunk:72411,72424,72428,72432,72451,72495,72537,72539,72547,72622,72628,72645,72700</S:mergeinfo>
+<C:svn.ignore/>
 <lp1:resourcetype><D:collection/></lp1:resourcetype>
 <lp1:getcontenttype>text/html; charset=UTF-8</lp1:getcontenttype>
 <lp1:getetag>W/"74424//branches/R-3-4-branch"</lp1:getetag>
@@ -2357,7 +2357,7 @@
 <D:status>HTTP/1.1 200 OK</D:status>
 </D:propstat>
 </D:response>
-<D:response xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
+<D:response xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
 <D:href>/R/branches/R-2-4-branch/</D:href>
 <D:propstat>
 <D:prop>
@@ -2404,13 +2404,13 @@
 /trunk:86210-86211,86217-86218,86220-86222,86224-86225,86227,86229,86231,86233-86236,86240,86244,86248,86250,86252-86253,86255-86256,86258,86261,86263,86265,86267-86268,86270,86272,86276,86279-86280,86284,86286-86287,86290-86291,86293-86295,86299,86302-86303,86305,86307,86309,86311,86313-86314,86316,86318,86324,86326,86328,86330-86332,86335,86337,86341,86343,86345,86349-86350,86352,86356,86358,86360-86362,86364-86365,86367,86369,86372-86374,86376,86378-86380,86383,86386,86392,86394-86395,86398,86400,86402-86403,86407,86409-86410,86416-86417,86427,86429,86433,86436-86440,86442-86444,86448-86449,86454,86459,86464-86465,86472-86473,86481,86488,86490,86493,86495-86496,86498,86501,86504-86507,86509,86518,86522,86530,86532-86533,86535,86537-86538,86550-86551,86556,86558-86562,86565,86567,86572,86578,86586,86591-86592,86613,86624,86661,86663,86699,86709,86727,86748,86795,86827,86869,86874,86876,86878,86882,86891,86906,86913,86916,86931,86943-86944,86991,87013,87016-87017,87033-87034,87108-87110,87112,87127,87135,87141,87149,87153,87157,87163,87198,87202-87203,87206,87220,87222,87243,87275,87289,87294-87296,87298,87300-87301,87307,87322,87336,87346,87350,87355,87366,87368,87370,87372,87374,87376,87383,87386,87395,87397,87402-87403,87411,87414,87424,87429-87430,87432,87435,87439,87454,87458,87460,87462-87463,87466,87468,87470,87475,87478-87480,87483,87486-87487,87490,87495,87499,87518-87519,87527,87539,87546,87553,87555,87575,87583,87586,87588,87592,87622,87628,87636-87637,87654,87656,87662,87682,87686,87704,87741,87744,87755,87762</S:mergeinfo>
 <lp1:resourcetype><D:collection/></lp1:resourcetype>
 <lp1:getcontenttype>text/html; charset=UTF-8</lp1:getcontenttype>
-<lp1:getetag>W/"87845//branches/R-4-4-branch"</lp1:getetag>
-<lp1:creationdate>2025-02-28T08:09:45.325602Z</lp1:creationdate>
-<lp1:getlastmodified>Fri, 28 Feb 2025 08:09:45 GMT</lp1:getlastmodified>
-<lp1:checked-in><D:href>/R/!svn/ver/87845/branches/R-4-4-branch</D:href></lp1:checked-in>
+<lp1:getetag>W/"89407//branches/R-4-4-branch"</lp1:getetag>
+<lp1:creationdate>2026-02-12T12:44:04.809551Z</lp1:creationdate>
+<lp1:getlastmodified>Thu, 12 Feb 2026 12:44:04 GMT</lp1:getlastmodified>
+<lp1:checked-in><D:href>/R/!svn/ver/89407/branches/R-4-4-branch</D:href></lp1:checked-in>
 <lp1:version-controlled-configuration><D:href>/R/!svn/vcc/default</D:href></lp1:version-controlled-configuration>
-<lp1:version-name>87845</lp1:version-name>
-<lp1:creator-displayname>pd</lp1:creator-displayname>
+<lp1:version-name>89407</lp1:version-name>
+<lp1:creator-displayname>hornik</lp1:creator-displayname>
 <lp2:baseline-relative-path>branches/R-4-4-branch</lp2:baseline-relative-path>
 <lp2:repository-uuid>00db46b3-68df-0310-9c12-caf00c1e9a41</lp2:repository-uuid>
 <lp2:deadprop-count>1</lp2:deadprop-count>
@@ -2419,7 +2419,7 @@
 <D:status>HTTP/1.1 200 OK</D:status>
 </D:propstat>
 </D:response>
-<D:response xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
+<D:response xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
 <D:href>/R/branches/R-3-5-branch/</D:href>
 <D:propstat>
 <D:prop>
@@ -2469,7 +2469,7 @@
 <D:status>HTTP/1.1 200 OK</D:status>
 </D:propstat>
 </D:response>
-<D:response xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
+<D:response xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
 <D:href>/R/branches/R-more-NS/</D:href>
 <D:propstat>
 <D:prop>
@@ -2514,7 +2514,8 @@
 <D:href>/R/branches/R-4-5-branch/</D:href>
 <D:propstat>
 <D:prop>
-<S:mergeinfo>/branches/R-2-12-branch:52939,54476,55265
+<S:mergeinfo>/:89474
+/branches/R-2-12-branch:52939,54476,55265
 /branches/R-2-13-branch:55265,55432
 /branches/R-2-15-branch:58894,59717
 /branches/R-3-0-branch:62497
@@ -2534,16 +2535,16 @@
 /branches/R-typeset:82735-83683
 /branches/R-ucrt:81323-81359
 /branches/R-vecpat:81390-81922
-/trunk:87968-87969,87972,87975-87976,87979-87984,87990,87993,87995-87997,88000-88001,88003,88005,88008,88012-88013,88015,88018-88019,88021-88022,88024,88026,88033,88036,88038-88039,88043,88045,88047-88048,88051-88052,88055,88059-88061,88063,88068,88073-88074,88079,88081,88085,88089-88090,88094,88096,88098,88104,88106,88117,88119-88120,88126-88128,88135,88142,88149-88151,88154-88155,88163,88166,88176,88183,88185-88186,88190-88194,88196,88198,88204-88205,88208,88212,88219,88225,88227,88230-88231,88238,88246,88248,88252,88258,88270,88282-88283,88285,88294,88296,88303,88310,88337,88340,88365,88377,88379,88383,88385,88389,88394,88396,88406,88411-88412,88414,88419,88423-88424,88433-88435,88437,88441-88442,88446,88450,88472,88657,88670-88671,88676-88678,88788,88791,88821,88842,88860,88864,88870</S:mergeinfo>
+/trunk:87968-87969,87972,87975-87976,87979-87984,87990,87993,87995-87997,88000-88001,88003,88005,88008,88012-88013,88015,88018-88019,88021-88022,88024,88026,88033,88036,88038-88039,88043,88045,88047-88048,88051-88052,88055,88059-88061,88063,88068,88073-88074,88079,88081,88085,88089-88090,88094,88096,88098,88104,88106,88117,88119-88120,88126-88128,88135,88142,88149-88151,88154-88155,88163,88166,88176,88183,88185-88186,88190-88194,88196,88198,88204-88205,88208,88212,88219,88225,88227,88230-88231,88238,88246,88248,88252,88258,88270,88282-88283,88285,88294,88296,88303,88310,88337,88340,88365,88377,88379,88383,88385,88389,88394,88396,88406,88411-88412,88414,88419,88423-88424,88433-88435,88437,88441-88442,88446,88450,88472,88516,88519,88527,88532,88606,88657,88670-88671,88676-88678,88788,88791,88796,88812,88821,88823,88828-88830,88842,88853-88855,88860,88864,88870,88880,88886,88892,88899,88906,88910,88914-88915,88923,88978,88985,88991,89000,89016,89019,89027,89029,89054,89061,89075,89078,89081,89092-89093,89138,89140,89149,89174,89197,89205,89207,89214,89232,89252,89268,89270-89271,89275-89276,89282,89284,89302,89312,89314,89330,89344,89351,89358,89392,89427,89430,89439,89447,89450,89455,89458,89470,89474,89479,89505,89512</S:mergeinfo>
 <lp1:resourcetype><D:collection/></lp1:resourcetype>
 <lp1:getcontenttype>text/html; charset=UTF-8</lp1:getcontenttype>
-<lp1:getetag>W/"88873//branches/R-4-5-branch"</lp1:getetag>
-<lp1:creationdate>2025-09-24T17:03:00.290560Z</lp1:creationdate>
-<lp1:getlastmodified>Wed, 24 Sep 2025 17:03:00 GMT</lp1:getlastmodified>
-<lp1:checked-in><D:href>/R/!svn/ver/88873/branches/R-4-5-branch</D:href></lp1:checked-in>
+<lp1:getetag>W/"89599//branches/R-4-5-branch"</lp1:getetag>
+<lp1:creationdate>2026-03-11T08:15:34.904124Z</lp1:creationdate>
+<lp1:getlastmodified>Wed, 11 Mar 2026 08:15:34 GMT</lp1:getlastmodified>
+<lp1:checked-in><D:href>/R/!svn/ver/89599/branches/R-4-5-branch</D:href></lp1:checked-in>
 <lp1:version-controlled-configuration><D:href>/R/!svn/vcc/default</D:href></lp1:version-controlled-configuration>
-<lp1:version-name>88873</lp1:version-name>
-<lp1:creator-displayname>kalibera</lp1:creator-displayname>
+<lp1:version-name>89599</lp1:version-name>
+<lp1:creator-displayname>pd</lp1:creator-displayname>
 <lp2:baseline-relative-path>branches/R-4-5-branch</lp2:baseline-relative-path>
 <lp2:repository-uuid>00db46b3-68df-0310-9c12-caf00c1e9a41</lp2:repository-uuid>
 <lp2:deadprop-count>1</lp2:deadprop-count>
@@ -2605,6 +2606,48 @@
 </D:propstat>
 </D:response>
 <D:response xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
+<D:href>/R/branches/R-4-6-branch/</D:href>
+<D:propstat>
+<D:prop>
+<S:mergeinfo>/branches/R-2-12-branch:52939,54476,55265
+/branches/R-2-13-branch:55265,55432
+/branches/R-2-15-branch:58894,59717
+/branches/R-3-0-branch:62497
+/branches/R-3-1-branch:65920
+/branches/R-3-6-branch:76839,77241
+/branches/R-4-1-branch:80314
+/branches/R-4-4-branch:87016
+/branches/R-DL:69025-69313
+/branches/R-OBJSXP:84772-85462
+/branches/R-conflicts:75454-76247
+/branches/R-defquartz:82652-83916
+/branches/R-defs:77464-78758
+/branches/R-glmscore:55360-55826
+/branches/R-groups:80166-81095
+/branches/R-structure:81439
+/branches/R-symfam:78109-78182
+/branches/R-typeset:82735-83683
+/branches/R-ucrt:81323-81359
+/branches/R-vecpat:81390-81922
+/trunk:89724-89726,89729,89731,89734,89736,89739,89741-89744,89746,89748,89750,89752,89754-89755,89760-89761,89768,89770,89773,89778,89780-89782,89784,89792,89798,89802,89804,89806,89808,89812,89815,89817,89819,89821,89823,89825,89827-89828,89831,89835,89837,89844,89846,89849,89851</S:mergeinfo>
+<lp1:resourcetype><D:collection/></lp1:resourcetype>
+<lp1:getcontenttype>text/html; charset=UTF-8</lp1:getcontenttype>
+<lp1:getetag>W/"89852//branches/R-4-6-branch"</lp1:getetag>
+<lp1:creationdate>2026-04-10T02:55:13.070040Z</lp1:creationdate>
+<lp1:getlastmodified>Fri, 10 Apr 2026 02:55:13 GMT</lp1:getlastmodified>
+<lp1:checked-in><D:href>/R/!svn/ver/89852/branches/R-4-6-branch</D:href></lp1:checked-in>
+<lp1:version-controlled-configuration><D:href>/R/!svn/vcc/default</D:href></lp1:version-controlled-configuration>
+<lp1:version-name>89852</lp1:version-name>
+<lp1:creator-displayname>urbaneks</lp1:creator-displayname>
+<lp2:baseline-relative-path>branches/R-4-6-branch</lp2:baseline-relative-path>
+<lp2:repository-uuid>00db46b3-68df-0310-9c12-caf00c1e9a41</lp2:repository-uuid>
+<lp2:deadprop-count>1</lp2:deadprop-count>
+<D:lockdiscovery/>
+</D:prop>
+<D:status>HTTP/1.1 200 OK</D:status>
+</D:propstat>
+</D:response>
+<D:response xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
 <D:href>/R/branches/R-2-7-branch/</D:href>
 <D:propstat>
 <D:prop>
@@ -2646,7 +2689,7 @@
 <D:status>HTTP/1.1 200 OK</D:status>
 </D:propstat>
 </D:response>
-<D:response xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
+<D:response xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
 <D:href>/R/branches/R-2-8-branch/</D:href>
 <D:propstat>
 <D:prop>
@@ -2806,7 +2849,7 @@
 <D:status>HTTP/1.1 200 OK</D:status>
 </D:propstat>
 </D:response>
-<D:response xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
+<D:response xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
 <D:href>/R/branches/R-1-2-patches/</D:href>
 <D:propstat>
 <D:prop>
@@ -2914,6 +2957,7 @@
 <D:href>/R/branches/R-DL/</D:href>
 <D:propstat>
 <D:prop>
+<C:svn.ignore/>
 <S:mergeinfo>/branches/R-2-12-branch:52939,54476,55265
 /branches/R-2-13-branch:55265,55432
 /branches/R-2-15-branch:58894,59717
@@ -2921,7 +2965,6 @@
 /branches/R-3-1-branch:65920
 /branches/R-glmscore:55360-55826
 /trunk:69025-69312</S:mergeinfo>
-<C:svn.ignore/>
 <lp1:resourcetype><D:collection/></lp1:resourcetype>
 <lp1:getcontenttype>text/html; charset=UTF-8</lp1:getcontenttype>
 <lp1:getetag>W/"69313//branches/R-DL"</lp1:getetag>
@@ -3076,7 +3119,7 @@
 <D:status>HTTP/1.1 200 OK</D:status>
 </D:propstat>
 </D:response>
-<D:response xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
+<D:response xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
 <D:href>/R/branches/R-bool/</D:href>
 <D:propstat>
 <D:prop>
