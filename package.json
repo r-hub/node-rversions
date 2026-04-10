@@ -6,6 +6,13 @@
   "scripts": {
     "test": "nyc ava"
   },
+  "ava": {
+    "files": [
+      "test/**/*.js",
+      "!test/helpers.js"
+    ],
+    "timeout": "30s"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/r-hub/node-rversions.git"
@@ -31,6 +38,7 @@
   "devDependencies": {
     "ava": "^5.2.0",
     "create-test-server": "^3.0.1",
+    "nock": "^14.0.12",
     "nyc": "^15.1.0"
   }
 }
