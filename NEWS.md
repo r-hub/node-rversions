@@ -1,3 +1,7 @@
+# 2.4.11
+
+Internal changes only.
+
 # 2.4.10
 
 * macOS R-devel builds point to the 4.6-branch builds,
