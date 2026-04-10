@@ -2,10 +2,9 @@
 'use strict';
 
 const test = require('ava');
-const { setup } = require('./helpers');
+const { setup, teardown } = require('./helpers');
 
-test.beforeEach(t => {
-    setup(t);
-});
+test.beforeEach(() => { setup(); });
+test.afterEach(() => { teardown(); });
 
 test.todo('add tests');
