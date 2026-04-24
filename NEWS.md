@@ -1,3 +1,7 @@
+# unreleased
+
+* Retire Fedora 41 for EOL.
+
 # 2.4.12
 
 * Add Ubuntu 26.04 support.
