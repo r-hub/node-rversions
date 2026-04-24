@@ -1,6 +1,8 @@
-# unreleased
+# 2.4.13
 
 * Retire Fedora 41 for EOL.
+
+* Add P3M support for Ubuntu 26.04.
 
 # 2.4.12
 
