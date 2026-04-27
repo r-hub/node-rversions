@@ -221,7 +221,7 @@ test.serial('resolve mac x86_64 returns big-sur URL for 4.3+', async t => {
     t.is(r.url, 'https://cran.rstudio.com/bin/macosx/big-sur-x86_64/base/R-4.5.0-x86_64.pkg');
 });
 
-test.serial('resolve mac arm64 returns arm64 URL', async t => {
+test.serial('resolve mac arm64 returns big-sur URL for 4.1.0 to 4.5.x', async t => {
     mockSvnTags();
     const r = await resolve('4.5.0', 'mac', 'arm64', false);
     t.is(r.url, 'https://cran.rstudio.com/bin/macosx/big-sur-arm64/base/R-4.5.0-arm64.pkg');

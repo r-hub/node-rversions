@@ -251,9 +251,9 @@ test.serial('available mac arm64 oldest release is 4.1.0', async t => {
     mockSvnBranches();
     mockSvnR46Branch();
     mockSvnTrunk();
-    // arm64 release HEAD
+    // arm64 release HEAD (sonoma-arm64 from R 4.6.0 onwards)
     nock('https://cran.rstudio.com')
-        .head('/bin/macosx/big-sur-arm64/base/R-4.5.3-arm64.pkg').reply(200);
+        .head('/bin/macosx/sonoma-arm64/base/R-4.5.3-arm64.pkg').reply(200);
     // arm64 next HEAD (same URL as x86_64 next but for arm64)
     nock('https://mac.cran.dev')
         .head('/sonoma/last-success/R-4.6-branch-arm64.pkg').reply(200);

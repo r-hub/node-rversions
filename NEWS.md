@@ -4,6 +4,10 @@
 
 * Add P3M support for Ubuntu 26.04.
 
+* Fix arm64 macOS installer location for R 4.6.0 and later. CRAN moved
+  arm64 binaries from `big-sur-arm64/` to `sonoma-arm64/` for R 4.6.0,
+  raising the minimum macOS to Sonoma (14).
+
 # 2.4.12
 
 * Add Ubuntu 26.04 support.
