@@ -17,6 +17,7 @@ const fix = {
     positVersions:       JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/posit-versions.json'), 'utf8')),
     nick452: fs.readFileSync(path.join(__dirname, 'fixtures/version-nick-4-5-2.txt'), 'utf8').trim(),
     nick453: fs.readFileSync(path.join(__dirname, 'fixtures/version-nick-4-5-3.txt'), 'utf8').trim(),
+    nick460: fs.readFileSync(path.join(__dirname, 'fixtures/version-nick-4-6-0.txt'), 'utf8').trim(),
     rdevelWin: fs.readFileSync(path.join(__dirname, 'fixtures/rdevel-win.html'), 'utf8'),
 };
 
@@ -30,6 +31,8 @@ function mockSvnTags() {
         .get('/R/tags/R-4-5-2/VERSION-NICK').reply(200, fix.nick452);
     nock('https://svn.r-project.org')
         .get('/R/tags/R-4-5-3/VERSION-NICK').reply(200, fix.nick453);
+    nock('https://svn.r-project.org')
+        .get('/R/tags/R-4-6-0/VERSION-NICK').reply(200, fix.nick460);
 }
 
 function mockSvnBranches() {
@@ -253,7 +256,7 @@ test.serial('available mac arm64 oldest release is 4.1.0', async t => {
     mockSvnTrunk();
     // arm64 release HEAD
     nock('https://cran.rstudio.com')
-        .head('/bin/macosx/big-sur-arm64/base/R-4.5.3-arm64.pkg').reply(200);
+        .head('/bin/macosx/sonoma-arm64/base/R-4.5.3-arm64.pkg').reply(200);
     // arm64 next HEAD (same URL as x86_64 next but for arm64)
     nock('https://mac.cran.dev')
         .head('/sonoma/last-success/R-4.6-branch-arm64.pkg').reply(200);

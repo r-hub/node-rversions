@@ -17,6 +17,7 @@ const svnTagsFixture = fs.readFileSync(
 const nickFixtures = {
     '4.5.2': fs.readFileSync(path.join(__dirname, 'fixtures/version-nick-4-5-2.txt'), 'utf8').trim(),
     '4.5.3': fs.readFileSync(path.join(__dirname, 'fixtures/version-nick-4-5-3.txt'), 'utf8').trim(),
+    '4.6.0': fs.readFileSync(path.join(__dirname, 'fixtures/version-nick-4-6-0.txt'), 'utf8').trim(),
 };
 
 function mockSvnTags() {

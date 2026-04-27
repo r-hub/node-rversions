@@ -17,6 +17,7 @@ const fix = {
     positVersions:       JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/posit-versions.json'), 'utf8')),
     nick452: fs.readFileSync(path.join(__dirname, 'fixtures/version-nick-4-5-2.txt'), 'utf8').trim(),
     nick453: fs.readFileSync(path.join(__dirname, 'fixtures/version-nick-4-5-3.txt'), 'utf8').trim(),
+    nick460: fs.readFileSync(path.join(__dirname, 'fixtures/version-nick-4-6-0.txt'), 'utf8').trim(),
     rdevelWin: fs.readFileSync(path.join(__dirname, 'fixtures/rdevel-win.html'), 'utf8'),
 };
 
@@ -27,11 +28,13 @@ function mockSvnTags() {
     nock('https://svn.r-project.org')
         .intercept('/R/tags/', 'PROPFIND')
         .reply(207, fix.svnTags, { 'Content-Type': 'text/xml' });
-    // 4.5.2 and 4.5.3 are not yet in get-nick.js's local cache
+    // 4.5.2, 4.5.3, 4.6.0 are not yet in get-nick.js's local cache
     nock('https://svn.r-project.org')
         .get('/R/tags/R-4-5-2/VERSION-NICK').reply(200, fix.nick452);
     nock('https://svn.r-project.org')
         .get('/R/tags/R-4-5-3/VERSION-NICK').reply(200, fix.nick453);
+    nock('https://svn.r-project.org')
+        .get('/R/tags/R-4-6-0/VERSION-NICK').reply(200, fix.nick460);
 }
 
 function mockSvnBranches() {
@@ -158,14 +161,14 @@ test.serial('resolve no-OS oldrel returns oldrel/1', async t => {
     mockSvnTags();
     const r = await resolve('oldrel', undefined, undefined, false);
     t.is(r.type, 'oldrel/1');
-    t.is(r.version, '4.4.3');
+    t.is(r.version, '4.5.3');
 });
 
 test.serial('resolve no-OS oldrel/2 returns oldrel/2', async t => {
     mockSvnTags();
     const r = await resolve('oldrel/2', undefined, undefined, false);
     t.is(r.type, 'oldrel/2');
-    t.is(r.version, '4.3.3');
+    t.is(r.version, '4.4.3');
 });
 
 test.serial('resolve no-OS throws for version not in the list', async t => {
@@ -221,10 +224,16 @@ test.serial('resolve mac x86_64 returns big-sur URL for 4.3+', async t => {
     t.is(r.url, 'https://cran.rstudio.com/bin/macosx/big-sur-x86_64/base/R-4.5.0-x86_64.pkg');
 });
 
-test.serial('resolve mac arm64 returns arm64 URL', async t => {
+test.serial('resolve mac arm64 returns big-sur-arm64 URL for < 4.6.0', async t => {
     mockSvnTags();
     const r = await resolve('4.5.0', 'mac', 'arm64', false);
     t.is(r.url, 'https://cran.rstudio.com/bin/macosx/big-sur-arm64/base/R-4.5.0-arm64.pkg');
+});
+
+test.serial('resolve mac arm64 returns sonoma-arm64 URL for 4.6.0+', async t => {
+    mockSvnTags();
+    const r = await resolve('4.6.0', 'mac', 'arm64', false);
+    t.is(r.url, 'https://cran.rstudio.com/bin/macosx/sonoma-arm64/base/R-4.6.0-arm64.pkg');
 });
 
 test.serial('resolve mac x86_64 uses pre-4.3 URL format for older versions', async t => {
@@ -332,7 +341,7 @@ test.serial('resolve win oldrel returns oldrel Windows URL', async t => {
     mockSvnTags();
     const r = await resolve('oldrel', 'win', 'x86_64', false);
     t.is(r.type, 'oldrel/1');
-    t.is(r.version, '4.4.3');
+    t.is(r.version, '4.5.3');
     t.true(r.url.includes('windows'));
 });
 
@@ -355,7 +364,7 @@ test.serial('resolve mac throws for unsupported arch', async t => {
     );
 });
 
-test.serial('resolve mac aarch64 alias resolves as arm64', async t => {
+test.serial('resolve mac aarch64 alias resolves as arm64 (big-sur for < 4.6.0)', async t => {
     mockSvnTags();
     const r = await resolve('4.5.0', 'mac', 'aarch64', false);
     t.is(r.url, 'https://cran.rstudio.com/bin/macosx/big-sur-arm64/base/R-4.5.0-arm64.pkg');
@@ -422,7 +431,7 @@ test.serial('resolve mac oldrel returns oldrel pkg URL', async t => {
     mockSvnTags();
     const r = await resolve('oldrel', 'mac', 'x86_64', false);
     t.is(r.type, 'oldrel/1');
-    t.is(r.version, '4.4.3');
+    t.is(r.version, '4.5.3');
     t.true(r.url.includes('big-sur-x86_64'));
 });
 
@@ -494,7 +503,7 @@ test.serial('resolve linux oldrel returns oldrel posit URL', async t => {
     mockSvnTags();
     const r = await resolve('oldrel', 'linux-ubuntu-22.04', 'x86_64', false);
     t.is(r.type, 'oldrel/1');
-    t.is(r.version, '4.4.3');
+    t.is(r.version, '4.5.3');
     t.true(r.url.includes('posit.co'));
 });
 

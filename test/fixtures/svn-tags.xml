@@ -4234,6 +4234,27 @@
 </D:propstat>
 </D:response>
 <D:response xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
+<D:href>/R/tags/R-4-6-0/</D:href>
+<D:propstat>
+<D:prop>
+<lp1:resourcetype><D:collection/></lp1:resourcetype>
+<lp1:getcontenttype>text/html; charset=UTF-8</lp1:getcontenttype>
+<lp1:getetag>W/"90000//tags/R-4-6-0"</lp1:getetag>
+<lp1:creationdate>2026-04-22T10:00:00.000000Z</lp1:creationdate>
+<lp1:getlastmodified>Tue, 22 Apr 2026 10:00:00 GMT</lp1:getlastmodified>
+<lp1:checked-in><D:href>/R/!svn/ver/90000/tags/R-4-6-0</D:href></lp1:checked-in>
+<lp1:version-controlled-configuration><D:href>/R/!svn/vcc/default</D:href></lp1:version-controlled-configuration>
+<lp1:version-name>90000</lp1:version-name>
+<lp1:creator-displayname>pd</lp1:creator-displayname>
+<lp2:baseline-relative-path>tags/R-4-6-0</lp2:baseline-relative-path>
+<lp2:repository-uuid>00db46b3-68df-0310-9c12-caf00c1e9a41</lp2:repository-uuid>
+<lp2:deadprop-count>1</lp2:deadprop-count>
+<D:lockdiscovery/>
+</D:prop>
+<D:status>HTTP/1.1 200 OK</D:status>
+</D:propstat>
+</D:response>
+<D:response xmlns:S="http://subversion.tigris.org/xmlns/svn/" xmlns:C="http://subversion.tigris.org/xmlns/custom/" xmlns:V="http://subversion.tigris.org/xmlns/dav/" xmlns:lp1="DAV:" xmlns:lp2="http://subversion.tigris.org/xmlns/dav/">
 <D:href>/R/tags/patch-update/</D:href>
 <D:propstat>
 <D:prop>
