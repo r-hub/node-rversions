@@ -1,8 +1,11 @@
 {
   "name": "rversions",
-  "version": "2.4.13",
+  "version": "2.4.14",
   "description": "Query the current and past R versions",
   "main": "index.js",
+  "bin": {
+    "rver": "bin/rver.js"
+  },
   "scripts": {
     "test": "nyc ava"
   },

@@ -7,6 +7,11 @@
 > Past and present R versions
 
 -   [Install](#install)
+-   [CLI](#cli)
+    -   [rver available](#rver-available)
+    -   [rver resolve](#rver-resolve)
+    -   [rver rtools-versions](#rver-rtools-versions)
+    -   [rver linux-distros](#rver-linux-distros)
 -   [Usage](#usage)
     -   [R-devel](#r-devel)
     -   [R-next](#r-next)
@@ -24,6 +29,83 @@
 ## Install
 
     $ npm install rversions
+
+## CLI
+
+Install globally to get the `rver` command:
+
+    $ npm install -g rversions
+
+### rver available
+
+List available R versions. Prints one version string per line by default; use
+`--json` for full objects.
+
+```sh
+$ rver available | tail -3
+4.5.3   https://cran.rstudio.com/src/base/R-4/R-4.5.3.tar.gz
+4.6.0   https://cran.rstudio.com/src/base/R-4/R-4.6.0.tar.gz
+4.7.0   https://cran.rstudio.com/src/base-prerelease/R-devel.tar.gz
+
+$ rver available --os win --arch x86_64 | tail -3
+4.5.3   https://cran.rstudio.com/bin/windows/base/old/4.5.3/R-4.5.3-win.exe
+4.6.0   https://cran.rstudio.com/bin/windows/base/R-4.6.0-win.exe
+4.7.0   https://cran.rstudio.com/bin/windows/base/R-devel-win.exe
+
+$ rver available --os linux-ubuntu-22.04 --json
+[...]
+```
+
+### rver resolve
+
+Resolve a version specifier to a specific version and download URL.
+Prints `version<TAB>url` by default; use `--json` for the full object.
+
+```sh
+$ rver resolve release
+4.6.0   https://cran.rstudio.com/src/base/R-4/R-4.6.0.tar.gz
+
+$ rver resolve release --os win --arch x86_64
+4.6.0   https://cran.rstudio.com/bin/windows/base/R-4.6.0-win.exe
+
+$ rver resolve 4.4 --os mac --arch arm64 --json
+{
+  "version": "4.4.3",
+  ...
+}
+```
+
+Supported version specifiers: `release`, `devel`, `next`, `oldrel`,
+`oldrel/2`, a minor version like `4.4`, or a full version like `4.4.3`.
+
+### rver rtools-versions
+
+List Rtools versions with the range of R versions they support and their
+download URL. Use `--arch aarch64` for the Windows ARM64 builds.
+
+```sh
+$ rver rtools-versions | tail -3
+43      4.3.0..4.3.100  https://github.com/r-hub/rtools43/releases/download/latest/rtools43.exe
+44      4.4.0..4.4.100  https://github.com/r-hub/rtools44/releases/download/latest/rtools44.exe
+45      4.5.0..100.0.0  https://github.com/r-hub/rtools45/releases/download/latest/rtools45.exe
+```
+
+### rver linux-distros
+
+List supported Linux distributions. Prints one distro ID per line; use the ID
+with the `linux-` prefix as the `--os` value for the other commands.
+
+```sh
+$ rver linux-distros | head -5
+ubuntu-1604
+ubuntu-1804
+ubuntu-2004
+ubuntu-2204
+ubuntu-2404
+
+$ rver linux-distros --json
+[...]
+```
 
 ## Usage
 

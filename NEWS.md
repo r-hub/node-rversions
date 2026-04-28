@@ -1,3 +1,11 @@
+# 2.4.14
+
+* Fix resolving new sonoma arm64 macOS builds.
+
+* New `rver` CLI with `available`, `resolve`, `rtools-versions`, and
+  `linux-distros` subcommands. All commands support `--json` for
+  machine-readable output.
+
 # 2.4.13
 
 * Retire Fedora 41 for EOL.
