@@ -403,7 +403,7 @@ test.serial('resolve mac devel returns devel pkg URL', async t => {
     const r = await resolve('devel', 'mac', 'x86_64', false);
     t.is(r.version, '4.7.0');
     t.is(r.type, 'devel');
-    t.is(r.url, 'https://mac.cran.dev/big-sur/last-success/R-4.6-branch-x86_64.pkg');
+    t.is(r.url, 'https://mac.cran.dev/big-sur/last-success/R-devel-x86_64.pkg');
 });
 
 test.serial('resolve mac release returns latest pkg URL', async t => {

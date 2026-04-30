@@ -1,3 +1,7 @@
+# 2.4.15
+
+Correct download URLs for macOS next and devel builds.
+
 # 2.4.14
 
 * Fix resolving new sonoma arm64 macOS builds.
