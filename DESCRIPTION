@@ -3,12 +3,10 @@ Version: 1.0.0
 License: MIT
 Imports:
     cli,
-    curl,
     gh,
     glue,
-    parsedate,
-    pkgload,
-    rvest
+    httr2,
+    pkgload
 Suggests:
     uncovr,
     testthat (>= 3.0.0),

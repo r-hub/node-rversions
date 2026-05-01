@@ -1,31 +1,33 @@
 update_win_aarch64 <- function() {
-  url <- win_aarch64_prerelease_url()
-  cli::cli_alert_info("Getting directory listing from {.url {url}}")
-  page <- rvest::read_html(url)
-  tab <- rvest::html_table(page)[[1]]
-  tab[["Last modified"]] <- parsedate::parse_iso_8601(tab[["Last modified"]])
-  tab <- tab[order(tab[["Last modified"]], decreasing = TRUE), ]
-  nxt <- tab[grepl("^R-(patched|alpha|beta|rc)", tab$Name, ignore.case = TRUE), ]
-  devel <- tab[grepl("^R-devel", tab$Name), ]
-  nxt_nm <- tolower(sub("_.*$", "", sub("^R-", "", nxt$Name[1])))
-  update_win_aarch64_file(nxt$Name[1], nxt_nm, "next")
-  update_win_aarch64_file(devel$Name[1], "devel", "devel")
+  cli::cli_alert_info("Getting latest successful run of r-devel/r-svn build-svn.yaml")
+  runs <- gh::gh(
+    "GET /repos/r-devel/r-svn/actions/workflows/build-svn.yaml/runs",
+    status = "success",
+    per_page = 1
+  )
+  if (length(runs$workflow_runs) == 0) {
+    cli::cli_abort("No successful workflow runs found")
+  }
+  run <- runs$workflow_runs[[1]]
+  run_date <- format(as.Date(run$run_started_at), "%Y%m%d")
+
+  cli::cli_alert_info("Getting artifacts for run {.val {run$id}}")
+  artifacts <- gh::gh(
+    "GET /repos/r-devel/r-svn/actions/runs/{run_id}/artifacts",
+    run_id = run$id
+  )
+  artifact <- Filter(function(x) x$name == "Windows-R-devel-arm", artifacts$artifacts)
+  if (length(artifact) == 0) {
+    cli::cli_abort("Could not find Windows-R-devel-arm artifact")
+  }
+
+  fn <- paste0("R-devel-", run_date, "-aarch64.exe")
+  update_win_aarch64_file(artifact[[1]]$archive_download_url, fn, "devel", "devel")
 }
 
 # ------------------------------------------------------------------------------
 
-win_aarch64_prerelease_url <- function() {
-  url <- Sys.getenv(
-    "R_WIN_AARCH64_PRERELEASE_URL",
-    unset = "https://www.r-project.org/nosvn/winutf8/aarch64/prerelease/"
-  )
-  if (!endsWith(url, "/")) {
-    url <- paste0(url, "/")
-  }
-  url
-}
-
-update_win_aarch64_file <- function(name, version, tag) {
+update_win_aarch64_file <- function(download_url, fn, version, tag) {
   cli::cli_alert_info("Updating Windows aarch64 build for {.val {version}}")
   cli::cli_alert_info("Getting current release assets")
   ghq <- glue::glue(
@@ -61,20 +63,30 @@ update_win_aarch64_file <- function(name, version, tag) {
     assets
   )
 
-  # if not devel, then add the tag ('-next') into the name.
-  fn <- gsub("_", "-", name)
-  if (version != "devel") {
-    fn <- sub("^R-", paste0("R-", tag, "-"), fn)
-  }
   if (fn %in% vapply(assets, `[[`, "", "name")) {
     cli::cli_alert_info(
       "The file {.val {fn}} is already present in the release {.val {tag}}"
     )
     return(invisible())
   }
-  dlurl <- paste0(win_aarch64_prerelease_url(), name)
-  cli::cli_alert_info("Downloading new file {.val {fn}}.")
-  curl::curl_download(dlurl, fn)
+
+  cli::cli_alert_info("Downloading artifact for {.val {fn}}.")
+  tmpzip <- tempfile(fileext = ".zip")
+  on.exit(unlink(tmpzip), add = TRUE)
+  req <- httr2::request(download_url)
+  req <- httr2::req_auth_bearer_token(req, gh::gh_token())
+  httr2::req_perform(req, path = tmpzip)
+
+  tmpdir <- tempfile()
+  dir.create(tmpdir)
+  on.exit(unlink(tmpdir, recursive = TRUE), add = TRUE)
+  utils::unzip(tmpzip, exdir = tmpdir)
+  exe_files <- list.files(tmpdir, pattern = "\\.exe$", recursive = TRUE, full.names = TRUE)
+  if (length(exe_files) == 0) {
+    cli::cli_abort("No .exe file found in artifact zip")
+  }
+  file.copy(exe_files[[1]], fn)
+  on.exit(unlink(fn), add = TRUE)
 
   # upload new release
   # TODO: why doesn't this work with gh?
