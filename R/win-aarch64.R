@@ -21,7 +21,7 @@ update_win_aarch64 <- function() {
     cli::cli_abort("Could not find Windows-R-devel-arm artifact")
   }
 
-  fn <- paste0("R-devel-", run_date, "-aarch64.exe")
+  fn <- paste0("R-devel-", run_date, "-", run$id, "-aarch64.exe")
   update_win_aarch64_file(artifact[[1]]$archive_download_url, fn, "devel", "devel")
 }
 
