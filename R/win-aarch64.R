@@ -1,5 +1,7 @@
 update_win_aarch64 <- function() {
-  cli::cli_alert_info("Getting latest successful run of r-devel/r-svn build-svn.yaml")
+  cli::cli_alert_info(
+    "Getting latest successful run of r-devel/r-svn build-svn.yaml"
+  )
   runs <- gh::gh(
     "GET /repos/r-devel/r-svn/actions/workflows/build-svn.yaml/runs",
     status = "success",
@@ -16,13 +18,21 @@ update_win_aarch64 <- function() {
     "GET /repos/r-devel/r-svn/actions/runs/{run_id}/artifacts",
     run_id = run$id
   )
-  artifact <- Filter(function(x) x$name == "Windows-R-devel-arm", artifacts$artifacts)
+  artifact <- Filter(
+    function(x) x$name == "Win-installer-aarch64",
+    artifacts$artifacts
+  )
   if (length(artifact) == 0) {
     cli::cli_abort("Could not find Windows-R-devel-arm artifact")
   }
 
   fn <- paste0("R-devel-", run_date, "-", run$id, "-aarch64.exe")
-  update_win_aarch64_file(artifact[[1]]$archive_download_url, fn, "devel", "devel")
+  update_win_aarch64_file(
+    artifact[[1]]$archive_download_url,
+    fn,
+    "devel",
+    "devel"
+  )
 }
 
 # ------------------------------------------------------------------------------
@@ -81,7 +91,12 @@ update_win_aarch64_file <- function(download_url, fn, version, tag) {
   dir.create(tmpdir)
   on.exit(unlink(tmpdir, recursive = TRUE), add = TRUE)
   utils::unzip(tmpzip, exdir = tmpdir)
-  exe_files <- list.files(tmpdir, pattern = "\\.exe$", recursive = TRUE, full.names = TRUE)
+  exe_files <- list.files(
+    tmpdir,
+    pattern = "\\.exe$",
+    recursive = TRUE,
+    full.names = TRUE
+  )
   if (length(exe_files) == 0) {
     cli::cli_abort("No .exe file found in artifact zip")
   }
