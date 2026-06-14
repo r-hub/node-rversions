@@ -4,7 +4,7 @@ update_win_aarch64 <- function() {
   errors <- Filter(function(e) inherits(e, "error"), list(err_devel, err_next))
   if (length(errors) > 0) {
     msgs <- vapply(errors, conditionMessage, "")
-    cli::cli_abort(c("Some updates failed:", msgs))
+    cli::cli_abort(c("Some updates failed: {msgs}."))
   }
   invisible()
 }
@@ -37,7 +37,6 @@ update_win_aarch64_devel <- function() {
   update_win_aarch64_file(
     asset$browser_download_url,
     fn,
-    "devel",
     "devel"
   )
 }
@@ -67,19 +66,17 @@ update_win_aarch64_next <- function() {
     paste0("-", asset_date, "-aarch64.exe"),
     asset$name
   )
-  browser()
   update_win_aarch64_file(
     asset$browser_download_url,
     fn,
-    "next",
     "next"
   )
 }
 
 # ------------------------------------------------------------------------------
 
-update_win_aarch64_file <- function(download_url, fn, version, tag) {
-  cli::cli_alert_info("Updating Windows aarch64 build for {.val {version}}")
+update_win_aarch64_file <- function(download_url, fn, tag) {
+  cli::cli_alert_info("Updating Windows aarch64 build for {.val {tag}}")
   cli::cli_alert_info("Getting current release assets")
   ghq <- glue::glue(
     .open = "<<",
@@ -110,7 +107,7 @@ update_win_aarch64_file <- function(download_url, fn, version, tag) {
     cli::cli_abort("Could not find release assets for {.val {tag}}")
   }
   assets <- Filter(
-    function(x) grepl(paste0(version, ".*aarch64[.]exe$"), x$name),
+    function(x) grepl("aarch64[.]exe$", x$name),
     assets
   )
 
