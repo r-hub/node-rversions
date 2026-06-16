@@ -309,6 +309,54 @@ test.serial('available linux ubuntu-22.04 amd64 entries have required fields', a
     }
 });
 
+test.serial('available linux manylinux_2_34 amd64 returns posit tarball URLs', async t => {
+    mockSvnTags(); mockSvnTags();
+    mockPositVersions();
+    mockSvnBranches();
+    mockSvnR46Branch();
+    mockSvnTrunk();
+    const av = await available('linux-manylinux_2_34', 'x86_64', false);
+    t.true(Array.isArray(av));
+    const rel = av.find(v => v.version === '4.5.0');
+    t.is(rel.url, 'https://cdn.posit.co/r/manylinux_2_34/R-4.5.0-manylinux_2_34.tar.gz');
+});
+
+test.serial('available linux manylinux_2_34 arm64 returns posit arm64 tarball URLs', async t => {
+    mockSvnTags(); mockSvnTags();
+    mockPositVersions();
+    mockSvnBranches();
+    mockSvnR46Branch();
+    mockSvnTrunk();
+    const av = await available('linux-manylinux_2_34', 'aarch64', false);
+    t.true(Array.isArray(av));
+    const rel = av.find(v => v.version === '4.5.0');
+    t.is(rel.url, 'https://cdn.posit.co/r/manylinux_2_34/R-4.5.0-manylinux_2_34-arm64.tar.gz');
+});
+
+test.serial('available linux musllinux_1_2 amd64 returns posit tarball URLs', async t => {
+    mockSvnTags(); mockSvnTags();
+    mockPositVersions();
+    mockSvnBranches();
+    mockSvnR46Branch();
+    mockSvnTrunk();
+    const av = await available('linux-musllinux_1_2', 'x86_64', false);
+    t.true(Array.isArray(av));
+    const rel = av.find(v => v.version === '4.5.0');
+    t.is(rel.url, 'https://cdn.posit.co/r/musllinux_1_2/R-4.5.0-musllinux_1_2.tar.gz');
+});
+
+test.serial('available linux musllinux_1_2 arm64 returns posit arm64 tarball URLs', async t => {
+    mockSvnTags(); mockSvnTags();
+    mockPositVersions();
+    mockSvnBranches();
+    mockSvnR46Branch();
+    mockSvnTrunk();
+    const av = await available('linux-musllinux_1_2', 'aarch64', false);
+    t.true(Array.isArray(av));
+    const rel = av.find(v => v.version === '4.5.0');
+    t.is(rel.url, 'https://cdn.posit.co/r/musllinux_1_2/R-4.5.0-musllinux_1_2-arm64.tar.gz');
+});
+
 test.serial('available linux retired distro filters to last-build', async t => {
     // ubuntu-18.04 is retired with last-build='4.3.1'
     mockSvnTags(); mockSvnTags();

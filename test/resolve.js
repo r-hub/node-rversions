@@ -266,6 +266,30 @@ test.serial('resolve linux throws for unknown distro', async t => {
     );
 });
 
+test.serial('resolve linux manylinux_2_34 returns Posit amd64 tarball URL', async t => {
+    mockSvnTags();
+    const r = await resolve('4.5.0', 'linux-manylinux_2_34', 'x86_64', false);
+    t.is(r.url, 'https://cdn.posit.co/r/manylinux_2_34/R-4.5.0-manylinux_2_34.tar.gz');
+});
+
+test.serial('resolve linux manylinux_2_34 returns Posit arm64 tarball URL', async t => {
+    mockSvnTags();
+    const r = await resolve('4.5.0', 'linux-manylinux_2_34', 'aarch64', false);
+    t.is(r.url, 'https://cdn.posit.co/r/manylinux_2_34/R-4.5.0-manylinux_2_34-arm64.tar.gz');
+});
+
+test.serial('resolve linux musllinux_1_2 returns Posit amd64 tarball URL', async t => {
+    mockSvnTags();
+    const r = await resolve('4.5.0', 'linux-musllinux_1_2', 'x86_64', false);
+    t.is(r.url, 'https://cdn.posit.co/r/musllinux_1_2/R-4.5.0-musllinux_1_2.tar.gz');
+});
+
+test.serial('resolve linux musllinux_1_2 returns Posit arm64 tarball URL', async t => {
+    mockSvnTags();
+    const r = await resolve('4.5.0', 'linux-musllinux_1_2', 'aarch64', false);
+    t.is(r.url, 'https://cdn.posit.co/r/musllinux_1_2/R-4.5.0-musllinux_1_2-arm64.tar.gz');
+});
+
 // --- Additional Windows tests -----------------------------------------------
 
 function mockRdevelWin() {

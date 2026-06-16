@@ -1,5 +1,8 @@
 # 2.4.16
 
+* Add manylinux 2.34 amd musllinux 1.2 Linux distros from
+  https://github.com/rstudio/r-builds/blob/main/builder/portable-r/README.md
+
 # 2.4.15
 
 Correct download URLs for macOS next and devel builds.
