@@ -1,3 +1,7 @@
+# 2.4.17
+
+* Debian 12 is now deprecated.
+
 # 2.4.16
 
 * Add manylinux 2.34 amd musllinux 1.2 Linux distros from
