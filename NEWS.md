@@ -1,3 +1,9 @@
+# 2.4.18
+
+* Fedora 42 is now deprecated.
+
+* Add Fedora 44 support.
+
 # 2.4.17
 
 * Debian 12 is now deprecated.
