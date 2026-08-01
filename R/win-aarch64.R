@@ -11,16 +11,16 @@ update_win_aarch64 <- function() {
 
 update_win_aarch64_devel <- function() {
   cli::cli_alert_info(
-    "Getting latest R-*-aarch64.exe from r-devel/actions devel release"
+    "Getting latest R-*-aarch64.exe from r-devel/windows-arm64 devel release"
   )
-  release <- gh::gh("GET /repos/r-devel/actions/releases/tags/devel")
+  release <- gh::gh("GET /repos/r-devel/windows-arm64/releases/tags/devel")
   assets <- Filter(
     function(x) grepl("^R-.*-aarch64\\.exe$", x$name),
     release$assets
   )
   if (length(assets) == 0) {
     cli::cli_abort(
-      "No R-*-aarch64.exe asset found in r-devel/actions devel release"
+      "No R-*-aarch64.exe asset found in r-devel/windows-arm64 devel release"
     )
   }
   assets <- assets[order(
@@ -43,16 +43,16 @@ update_win_aarch64_devel <- function() {
 
 update_win_aarch64_next <- function() {
   cli::cli_alert_info(
-    "Getting latest R-*-aarch64.exe from r-devel/actions next release"
+    "Getting latest R-*-aarch64.exe from r-devel/windows-arm64 next release"
   )
-  release <- gh::gh("GET /repos/r-devel/actions/releases/tags/next")
+  release <- gh::gh("GET /repos/r-devel/windows-arm64/releases/tags/next")
   assets <- Filter(
     function(x) grepl("^R-.*-aarch64\\.exe$", x$name),
     release$assets
   )
   if (length(assets) == 0) {
     cli::cli_abort(
-      "No R-*-aarch64.exe asset found in r-devel/actions next release"
+      "No R-*-aarch64.exe asset found in r-devel/windows-arm64 next release"
     )
   }
   assets <- assets[order(
