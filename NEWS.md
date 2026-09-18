@@ -1,3 +1,7 @@
+# 2.4.19
+
+* Add Amazon Linux 2023 as an alias to RHEL 9.
+
 # 2.4.18
 
 * Fedora 42 is now deprecated.
