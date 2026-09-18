@@ -1,3 +1,7 @@
+# 2.4.20
+
+* Avoid cruft in published package.
+
 # 2.4.19
 
 * Add Amazon Linux 2023 as an alias to RHEL 9.
