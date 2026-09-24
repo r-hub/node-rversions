@@ -1,3 +1,7 @@
+# 2.4.21
+
+* Fix potential crashes when trying r-next etc. via HTTP `HEAD` queries.
+
 # 2.4.20
 
 * Avoid cruft in published package.
