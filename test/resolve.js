@@ -499,10 +499,88 @@ test.serial('resolve linux ubuntu-24.04 arm64 sets aarch64-ppm-binaries', async 
 
 test.serial('resolve linux ubuntu-18.04 arm64 uses rhub github URL', async t => {
     mockSvnTags();
-    const r = await resolve('4.5.0', 'linux-ubuntu-18.04', 'arm64', false);
+    const r = await resolve('4.3.1', 'linux-ubuntu-18.04', 'arm64', false);
     t.true(r.url.includes('github.com'));
     t.true(r.url.includes('ubuntu-1804'));
-    t.true(r.url.includes('4.5.0'));
+    t.true(r.url.includes('4.3.1'));
+});
+
+test.serial('resolve linux retired distro allows last build', async t => {
+    mockSvnTags();
+    const r = await resolve('4.5.0', 'linux-debian-11', 'x86_64', false);
+    t.is(r.version, '4.5.0');
+});
+
+test.serial('resolve linux retired distro throws after last build', async t => {
+    mockSvnTags();
+    await t.throwsAsync(
+        () => resolve('4.5.1', 'linux-debian-11', 'x86_64', false),
+        { message: /retired and the last build is R 4[.]5[.]0/ }
+    );
+});
+
+test.serial('resolve linux retired distro throws after aarch64 last build', async t => {
+    mockSvnTags();
+    await t.throwsAsync(
+        () => resolve('4.3.2', 'linux-ubuntu-18.04', 'arm64', false),
+        { message: /ubuntu-18[.]04 [(]ubuntu-1804[)] aarch64, it is retired and the last build is R 4[.]3[.]1/ }
+    );
+});
+
+test.serial('resolve linux throws before first build', async t => {
+    mockSvnTags();
+    await t.throwsAsync(
+        () => resolve('4.0.2', 'linux-ubuntu-26.04', 'x86_64', false),
+        { message: /first build is R 4[.]0[.]3/ }
+    );
+});
+
+test.serial('resolve linux throws before aarch64 first build', async t => {
+    mockSvnTags();
+    await t.throwsAsync(
+        () => resolve('3.3.2', 'linux-ubuntu-18.04', 'arm64', false),
+        { message: /ubuntu-18[.]04 [(]ubuntu-1804[)] aarch64, first build is R 3[.]3[.]3/ }
+    );
+});
+
+test.serial('resolve linux retired distro minor version falls back to last build', async t => {
+    mockSvnTags(); mockSvnTags(); mockSvnTags();
+    mockPositVersions();
+    const r = await resolve('4.5', 'linux-debian-11', 'x86_64', false);
+    t.is(r.version, '4.5.0');
+    t.is(r.type, '4.5');
+    t.is(r.url, 'https://cdn.posit.co/r/debian-11/pkgs/r-4.5.0_1_amd64.deb');
+});
+
+test.serial('resolve linux retired distro newer minor version throws', async t => {
+    mockSvnTags(); mockSvnTags();
+    mockPositVersions();
+    await t.throwsAsync(
+        () => resolve('4.6', 'linux-debian-11', 'x86_64', false),
+        { message: /it is retired and the last build is R 4[.]5[.]0/ }
+    );
+});
+
+test.serial('resolve linux aarch64 first build list allows listed builds', async t => {
+    mockSvnTags();
+    const r = await resolve('3.6.3', 'linux-fedora-39', 'arm64', false);
+    t.is(r.version, '3.6.3');
+});
+
+test.serial('resolve linux aarch64 first build list throws for others', async t => {
+    mockSvnTags();
+    await t.throwsAsync(
+        () => resolve('3.6.2', 'linux-fedora-39', 'arm64', false),
+        { message: /fedora-39 aarch64, available builds before R 4[.]0[.]0 are R 3[.]1[.]3/ }
+    );
+});
+
+test.serial('resolve linux checks implementation distro build range', async t => {
+    mockSvnTags();
+    await t.throwsAsync(
+        () => resolve('4.4.1', 'linux-sles-15.4', 'x86_64', false),
+        { message: /sles-15[.]4 [(]opensuse-154[)] x86_64, it is retired and the last build is R 4[.]4[.]0/ }
+    );
 });
 
 test.serial('resolve linux devel returns devel posit URL', async t => {

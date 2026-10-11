@@ -1,3 +1,8 @@
+# 2.4.22
+
+* Correctly check last builds for retired distros and error when
+  requesting a version past retirement. Also check the first builds.
+
 # 2.4.21
 
 * Fix potential crashes when trying r-next etc. via HTTP `HEAD` queries.
