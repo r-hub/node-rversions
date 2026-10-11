@@ -1,3 +1,11 @@
+# 2.4.22
+
+* `resolve()` and `available()` now throw a `NotFoundError` for queries
+  that cannot be answered: unknown OS, distro or arch, invalid version,
+  or no build for the requested platform. It has
+  `code: 'ERVERSIONS_NOT_FOUND'`, so callers can tell these errors apart
+  from network errors. `NotFoundError` is exported from the package.
+
 # 2.4.21
 
 * Correctly check last builds for retired distros and error when

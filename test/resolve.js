@@ -6,6 +6,7 @@ const path = require('path');
 const test = require('ava');
 const { nock, setup, teardown } = require('./helpers');
 const resolve = require('../lib/resolve');
+const { NotFoundError } = require('../lib/errors');
 
 const fix = {
     svnTags:             fs.readFileSync(path.join(__dirname, 'fixtures/svn-tags.xml'), 'utf8'),
@@ -517,6 +518,43 @@ test.serial('resolve linux retired distro throws after last build', async t => {
         () => resolve('4.5.1', 'linux-debian-11', 'x86_64', false),
         { message: /retired and the last build is R 4[.]5[.]0/ }
     );
+});
+
+test.serial('resolve throws NotFoundError for missing builds', async t => {
+    mockSvnTags();
+    const err = await t.throwsAsync(
+        () => resolve('4.5.1', 'linux-debian-11', 'x86_64', false)
+    );
+    t.true(err instanceof NotFoundError);
+    t.is(err.name, 'NotFoundError');
+    t.is(err.code, 'ERVERSIONS_NOT_FOUND');
+});
+
+test.serial('resolve throws NotFoundError for bad queries', async t => {
+    const code = { code: 'ERVERSIONS_NOT_FOUND' };
+    await t.throwsAsync(() => resolve('4.5.0', 'haiku'), code);
+    await t.throwsAsync(
+        () => resolve('4.5.0', 'linux-unknownos-9000', undefined, false),
+        code
+    );
+    await t.throwsAsync(
+        () => resolve('4.5.0', 'linux-ubuntu-22.04', 's390x', false),
+        code
+    );
+    await t.throwsAsync(
+        () => resolve('notaversion', undefined, undefined, false),
+        code
+    );
+});
+
+test.serial('resolve does not throw NotFoundError for network errors', async t => {
+    nock('https://svn.r-project.org')
+        .intercept('/R/tags/', 'PROPFIND')
+        .replyWithError('connection refused');
+    const err = await t.throwsAsync(
+        () => resolve('4.5.0', 'linux-debian-11', 'x86_64', false)
+    );
+    t.not(err.code, 'ERVERSIONS_NOT_FOUND');
 });
 
 test.serial('resolve linux retired distro throws after aarch64 last build', async t => {

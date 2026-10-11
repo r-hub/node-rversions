@@ -1,3 +1,4 @@
+const { NotFoundError } = require('./lib/errors');
 const available = require('./lib/available');
 const resolve = require('./lib/resolve');
 const r_versions = require('./lib/r-versions');
@@ -20,7 +21,7 @@ const linux_distros = require('./lib/list-linux-distros');
 function get_rtools_versions(arch = "x86_64") {
     if (arch == "x86_64") return rtools_versions;
     if (arch == "aarch64") return rtools_aarch64;
-    throw new Error("Unsupported Windows arch: '" + arch + "'.");
+    throw new NotFoundError("Unsupported Windows arch: '" + arch + "'.");
 }
 
 module.exports = {
@@ -40,5 +41,6 @@ module.exports = {
     r_next_macos: r_next_macos,
     r_minor: r_minor,
     rtools_versions: get_rtools_versions,
-    linux_distros: linux_distros
+    linux_distros: linux_distros,
+    NotFoundError: NotFoundError
 };
