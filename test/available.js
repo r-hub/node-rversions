@@ -357,6 +357,17 @@ test.serial('available linux musllinux_1_2 arm64 returns posit arm64 tarball URL
     t.is(rel.url, 'https://cdn.posit.co/r/musllinux_1_2/R-4.5.0-musllinux_1_2-arm64.tar.gz');
 });
 
+test.serial('available linux build filters compare versions, not strings', async t => {
+    // ubuntu-18.04 is retired with last-build='4.3.1', as strings
+    // '4.10.0' <= '4.3.1'
+    mockSvnTags(); mockSvnTags();
+    nock('https://cdn.posit.co')
+        .get('/r/versions.json')
+        .reply(200, { r_versions: ['next', 'devel', '4.10.0', '4.3.1', '4.3.0'] });
+    const av = await available('linux-ubuntu-18.04', 'x86_64', false);
+    t.deepEqual(av.map(v => v.version), ['4.3.0', '4.3.1']);
+});
+
 test.serial('available linux retired distro filters to last-build', async t => {
     // ubuntu-18.04 is retired with last-build='4.3.1'
     mockSvnTags(); mockSvnTags();
