@@ -1,0 +1,170 @@
+{
+  "data": {
+    "repository": {
+      "refs": {
+        "pageInfo": {
+          "hasNextPage": false,
+          "endCursor": null
+        },
+        "nodes": [
+          {
+            "name": "R-2-10-branch",
+            "target": {
+              "committedDate": "2010-04-07T14:44:49Z"
+            }
+          },
+          {
+            "name": "R-2-11-branch",
+            "target": {
+              "committedDate": "2010-09-30T08:11:26Z"
+            }
+          },
+          {
+            "name": "R-2-12-branch",
+            "target": {
+              "committedDate": "2011-03-18T18:04:20Z"
+            }
+          },
+          {
+            "name": "R-2-13-branch",
+            "target": {
+              "committedDate": "2011-09-30T09:01:06Z"
+            }
+          },
+          {
+            "name": "R-2-14-branch",
+            "target": {
+              "committedDate": "2012-02-29T08:10:21Z"
+            }
+          },
+          {
+            "name": "R-2-15-branch",
+            "target": {
+              "committedDate": "2013-03-13T19:45:10Z"
+            }
+          },
+          {
+            "name": "R-3-0-branch",
+            "target": {
+              "committedDate": "2014-03-06T08:12:43Z"
+            }
+          },
+          {
+            "name": "R-4-0-branch",
+            "target": {
+              "committedDate": "2021-06-20T10:35:11Z"
+            }
+          },
+          {
+            "name": "R-3-1-branch",
+            "target": {
+              "committedDate": "2015-04-21T18:10:32Z"
+            }
+          },
+          {
+            "name": "R-4-1-branch",
+            "target": {
+              "committedDate": "2022-03-10T08:05:43Z"
+            }
+          },
+          {
+            "name": "R-3-2-branch",
+            "target": {
+              "committedDate": "2016-05-05T21:35:41Z"
+            }
+          },
+          {
+            "name": "R-4-2-branch",
+            "target": {
+              "committedDate": "2023-04-13T07:12:24Z"
+            }
+          },
+          {
+            "name": "R-3-3-branch",
+            "target": {
+              "committedDate": "2017-08-09T01:14:02Z"
+            }
+          },
+          {
+            "name": "R-4-3-branch",
+            "target": {
+              "committedDate": "2024-04-09T19:52:42Z"
+            }
+          },
+          {
+            "name": "R-3-4-branch",
+            "target": {
+              "committedDate": "2018-03-19T08:45:54Z"
+            }
+          },
+          {
+            "name": "R-2-4-branch",
+            "target": {
+              "committedDate": "2007-03-31T11:32:31Z"
+            }
+          },
+          {
+            "name": "R-4-4-branch",
+            "target": {
+              "committedDate": "2026-02-12T12:44:04Z"
+            }
+          },
+          {
+            "name": "R-3-5-branch",
+            "target": {
+              "committedDate": "2019-03-11T08:04:52Z"
+            }
+          },
+          {
+            "name": "R-2-5-branch",
+            "target": {
+              "committedDate": "2007-09-16T16:48:24Z"
+            }
+          },
+          {
+            "name": "R-4-5-branch",
+            "target": {
+              "committedDate": "2026-03-11T08:15:34Z"
+            }
+          },
+          {
+            "name": "R-3-6-branch",
+            "target": {
+              "committedDate": "2020-04-28T20:30:22Z"
+            }
+          },
+          {
+            "name": "R-2-6-branch",
+            "target": {
+              "committedDate": "2008-04-03T12:18:09Z"
+            }
+          },
+          {
+            "name": "R-4-6-branch",
+            "target": {
+              "committedDate": "2026-04-10T02:55:13Z"
+            }
+          },
+          {
+            "name": "R-2-7-branch",
+            "target": {
+              "committedDate": "2008-09-20T18:21:52Z"
+            }
+          },
+          {
+            "name": "R-2-8-branch",
+            "target": {
+              "committedDate": "2009-03-27T11:45:00Z"
+            }
+          },
+          {
+            "name": "R-2-9-branch",
+            "target": {
+              "committedDate": "2009-09-24T01:04:21Z"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,3 +1,9 @@
+# 2.4.23
+
+* Avoid using svn.r-project.org, it does not server HTTP or WEBDAV any
+  more. We use https://github.com/wch/r-source instead, so more queries
+  need a GITHUB_TOKEN set now.
+
 # 2.4.22
 
 * `resolve()` and `available()` now throw a `NotFoundError` for queries

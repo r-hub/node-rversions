@@ -8,8 +8,8 @@ const { nock, setup, teardown } = require('./helpers');
 const available = require('../lib/available');
 
 const fix = {
-    svnTags:             fs.readFileSync(path.join(__dirname, 'fixtures/svn-tags.xml'), 'utf8'),
-    svnBranches:         fs.readFileSync(path.join(__dirname, 'fixtures/svn-branches.xml'), 'utf8'),
+    githubTags:             require('./fixtures/github-tags.json'),
+    githubBranches:         require('./fixtures/github-branches.json'),
     trunkVersion:        fs.readFileSync(path.join(__dirname, 'fixtures/svn-trunk-version.txt'), 'utf8'),
     trunkVersionNick:    fs.readFileSync(path.join(__dirname, 'fixtures/svn-trunk-version-nick.txt'), 'utf8'),
     branch46Version:     fs.readFileSync(path.join(__dirname, 'fixtures/svn-branch-4-6-version.txt'), 'utf8'),
@@ -24,33 +24,33 @@ const fix = {
 // --- Mock helpers ---------------------------------------------------------
 
 function mockSvnTags() {
-    nock('https://svn.r-project.org')
-        .intercept('/R/tags/', 'PROPFIND')
-        .reply(207, fix.svnTags, { 'Content-Type': 'text/xml' });
-    nock('https://svn.r-project.org')
-        .get('/R/tags/R-4-5-2/VERSION-NICK').reply(200, fix.nick452);
-    nock('https://svn.r-project.org')
-        .get('/R/tags/R-4-5-3/VERSION-NICK').reply(200, fix.nick453);
-    nock('https://svn.r-project.org')
-        .get('/R/tags/R-4-6-0/VERSION-NICK').reply(200, fix.nick460);
+    nock('https://api.github.com')
+        .post('/graphql', b => b.variables.prefix === 'refs/heads/tags/')
+        .reply(200, fix.githubTags);
+    nock('https://raw.githubusercontent.com')
+        .get('/wch/r-source/tags/R-4-5-2/VERSION-NICK').reply(200, fix.nick452);
+    nock('https://raw.githubusercontent.com')
+        .get('/wch/r-source/tags/R-4-5-3/VERSION-NICK').reply(200, fix.nick453);
+    nock('https://raw.githubusercontent.com')
+        .get('/wch/r-source/tags/R-4-6-0/VERSION-NICK').reply(200, fix.nick460);
 }
 
 function mockSvnBranches() {
-    nock('https://svn.r-project.org')
-        .intercept('/R/branches/', 'PROPFIND')
-        .reply(207, fix.svnBranches, { 'Content-Type': 'text/xml' });
+    nock('https://api.github.com')
+        .post('/graphql', b => b.variables.prefix === 'refs/heads/')
+        .reply(200, fix.githubBranches);
 }
 
 function mockSvnTrunk() {
-    nock('https://svn.r-project.org')
-        .get('/R/trunk/VERSION').reply(200, fix.trunkVersion)
-        .get('/R/trunk/VERSION-NICK').reply(200, fix.trunkVersionNick);
+    nock('https://raw.githubusercontent.com')
+        .get('/wch/r-source/trunk/VERSION').reply(200, fix.trunkVersion)
+        .get('/wch/r-source/trunk/VERSION-NICK').reply(200, fix.trunkVersionNick);
 }
 
 function mockSvnR46Branch() {
-    nock('https://svn.r-project.org')
-        .get('/R/branches/R-4-6-branch/VERSION').reply(200, fix.branch46Version)
-        .get('/R/branches/R-4-6-branch/VERSION-NICK').reply(200, fix.branch46VersionNick);
+    nock('https://raw.githubusercontent.com')
+        .get('/wch/r-source/R-4-6-branch/VERSION').reply(200, fix.branch46Version)
+        .get('/wch/r-source/R-4-6-branch/VERSION-NICK').reply(200, fix.branch46VersionNick);
 }
 
 function mockTarball453Head() {
