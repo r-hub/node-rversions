@@ -1,3 +1,9 @@
+# 2.4.24
+
+* svn.r-project.org works again, so we use it again instead of
+  https://github.com/wch/r-source. Listing R versions and branches does
+  not need a GITHUB_TOKEN any more.
+
 # 2.4.23
 
 * Avoid using svn.r-project.org, it does not server HTTP or WEBDAV any

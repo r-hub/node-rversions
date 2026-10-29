@@ -9,8 +9,8 @@ const resolve = require('../lib/resolve');
 const { NotFoundError } = require('../lib/errors');
 
 const fix = {
-    githubTags:             require('./fixtures/github-tags.json'),
-    githubBranches:         require('./fixtures/github-branches.json'),
+    svnTags:             fs.readFileSync(path.join(__dirname, 'fixtures/svn-tags.xml'), 'utf8'),
+    svnBranches:         fs.readFileSync(path.join(__dirname, 'fixtures/svn-branches.xml'), 'utf8'),
     trunkVersion:        fs.readFileSync(path.join(__dirname, 'fixtures/svn-trunk-version.txt'), 'utf8'),
     trunkVersionNick:    fs.readFileSync(path.join(__dirname, 'fixtures/svn-trunk-version-nick.txt'), 'utf8'),
     branch46Version:     fs.readFileSync(path.join(__dirname, 'fixtures/svn-branch-4-6-version.txt'), 'utf8'),
@@ -26,34 +26,34 @@ const fix = {
 // Each call registers fresh nock interceptors (consumed once per request).
 
 function mockSvnTags() {
-    nock('https://api.github.com')
-        .post('/graphql', b => b.variables.prefix === 'refs/heads/tags/')
-        .reply(200, fix.githubTags);
+    nock('https://svn.r-project.org')
+        .intercept('/R/tags/', 'PROPFIND')
+        .reply(207, fix.svnTags, { 'Content-Type': 'text/xml' });
     // 4.5.2, 4.5.3, 4.6.0 are not yet in get-nick.js's local cache
-    nock('https://raw.githubusercontent.com')
-        .get('/wch/r-source/tags/R-4-5-2/VERSION-NICK').reply(200, fix.nick452);
-    nock('https://raw.githubusercontent.com')
-        .get('/wch/r-source/tags/R-4-5-3/VERSION-NICK').reply(200, fix.nick453);
-    nock('https://raw.githubusercontent.com')
-        .get('/wch/r-source/tags/R-4-6-0/VERSION-NICK').reply(200, fix.nick460);
+    nock('https://svn.r-project.org')
+        .get('/R/tags/R-4-5-2/VERSION-NICK').reply(200, fix.nick452);
+    nock('https://svn.r-project.org')
+        .get('/R/tags/R-4-5-3/VERSION-NICK').reply(200, fix.nick453);
+    nock('https://svn.r-project.org')
+        .get('/R/tags/R-4-6-0/VERSION-NICK').reply(200, fix.nick460);
 }
 
 function mockSvnBranches() {
-    nock('https://api.github.com')
-        .post('/graphql', b => b.variables.prefix === 'refs/heads/')
-        .reply(200, fix.githubBranches);
+    nock('https://svn.r-project.org')
+        .intercept('/R/branches/', 'PROPFIND')
+        .reply(207, fix.svnBranches, { 'Content-Type': 'text/xml' });
 }
 
 function mockSvnTrunk() {
-    nock('https://raw.githubusercontent.com')
-        .get('/wch/r-source/trunk/VERSION').reply(200, fix.trunkVersion)
-        .get('/wch/r-source/trunk/VERSION-NICK').reply(200, fix.trunkVersionNick);
+    nock('https://svn.r-project.org')
+        .get('/R/trunk/VERSION').reply(200, fix.trunkVersion)
+        .get('/R/trunk/VERSION-NICK').reply(200, fix.trunkVersionNick);
 }
 
 function mockSvnR46Branch() {
-    nock('https://raw.githubusercontent.com')
-        .get('/wch/r-source/R-4-6-branch/VERSION').reply(200, fix.branch46Version)
-        .get('/wch/r-source/R-4-6-branch/VERSION-NICK').reply(200, fix.branch46VersionNick);
+    nock('https://svn.r-project.org')
+        .get('/R/branches/R-4-6-branch/VERSION').reply(200, fix.branch46Version)
+        .get('/R/branches/R-4-6-branch/VERSION-NICK').reply(200, fix.branch46VersionNick);
 }
 
 function mockPositVersions() {
@@ -548,8 +548,8 @@ test.serial('resolve throws NotFoundError for bad queries', async t => {
 });
 
 test.serial('resolve does not throw NotFoundError for network errors', async t => {
-    nock('https://api.github.com')
-        .post('/graphql')
+    nock('https://svn.r-project.org')
+        .intercept('/R/tags/', 'PROPFIND')
         .replyWithError('connection refused');
     const err = await t.throwsAsync(
         () => resolve('4.5.0', 'linux-debian-11', 'x86_64', false)

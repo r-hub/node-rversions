@@ -7,7 +7,10 @@ const test = require('ava');
 const { nock, setup, teardown } = require('./helpers');
 const r_versions = require('../lib/r-versions');
 
-const githubTagsFixture = require('./fixtures/github-tags.json');
+const svnTagsFixture = fs.readFileSync(
+    path.join(__dirname, 'fixtures/svn-tags.xml'),
+    'utf8'
+);
 
 // Versions not yet in get-nick.js's local cache need their own mocks.
 // These fixture files were downloaded from the real SVN server.
@@ -18,13 +21,13 @@ const nickFixtures = {
 };
 
 function mockSvnTags() {
-    nock('https://api.github.com')
-        .post('/graphql', b => b.variables.prefix === 'refs/heads/tags/')
-        .reply(200, githubTagsFixture);
+    nock('https://svn.r-project.org')
+        .intercept('/R/tags/', 'PROPFIND')
+        .reply(207, svnTagsFixture, { 'Content-Type': 'text/xml' });
 
     for (const [ver, nick] of Object.entries(nickFixtures)) {
-        nock('https://raw.githubusercontent.com')
-            .get(`/wch/r-source/tags/R-${ver.replace(/\./g, '-')}/VERSION-NICK`)
+        nock('https://svn.r-project.org')
+            .get(`/R/tags/R-${ver.replace(/\./g, '-')}/VERSION-NICK`)
             .reply(200, nick);
     }
 }
