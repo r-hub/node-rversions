@@ -1,3 +1,7 @@
+# 2.4.26
+
+* Update Rtools <= 4.0 locations as well, CRAN moved those, too.
+
 # 2.4.25
 
 * Update locations of old Windows installer, CRAN moved them to the
