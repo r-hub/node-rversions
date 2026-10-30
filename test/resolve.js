@@ -190,10 +190,13 @@ test.serial('resolve win x86_64 returns Windows installer URL', async t => {
     t.is(r.url, 'https://cran.rstudio.com/bin/windows/base/old/4.5.0/R-4.5.0-win.exe');
 });
 
-test.serial('resolve win pre-4.0 uses cran-archive URL', async t => {
+test.serial('resolve win pre-4.2 uses cran-archive URL', async t => {
     mockSvnTags();
     const r = await resolve('3.5.0', 'win', 'x86_64', false);
     t.is(r.url, 'https://cran-archive.r-project.org/bin/windows/base/old/3.5.0/R-3.5.0-win.exe');
+    mockSvnTags();
+    const r2 = await resolve('4.1.3', 'win', 'x86_64', false);
+    t.is(r2.url, 'https://cran-archive.r-project.org/bin/windows/base/old/4.1.3/R-4.1.3-win.exe');
 });
 
 test.serial('resolve win aarch64 returns GitHub arm64 installer URL', async t => {

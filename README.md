@@ -505,7 +505,7 @@ console.log(await rversions.resolve("4.1", "win"));
     ##   version: '4.1.3',
     ##   nickname: 'One Push-Up',
     ##   type: '4.1',
-    ##   url: 'https://cran.rstudio.com/bin/windows/base/old/4.1.3/R-4.1.3-win.exe',
+    ##   url: 'https://cran-archive.r-project.org/bin/windows/base/old/4.1.3/R-4.1.3-win.exe',
     ##   date: '2022-03-10T08:05:38.083503Z',
     ##   rtools: '40',
     ##   rtools_url: 'https://cran.rstudio.com/bin/windows/Rtools/rtools40-x86_64.exe'

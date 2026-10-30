@@ -1,3 +1,8 @@
+# 2.4.25
+
+* Update locations of old Windows installer, CRAN moved them to the
+  archive server.
+
 # 2.4.24
 
 * svn.r-project.org works again, so we use it again instead of
