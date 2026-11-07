@@ -62,8 +62,8 @@ function mockPositVersions() {
 }
 
 function mockTarball453Head() {
-    nock('https://cran.rstudio.com')
-        .head('/src/base/R-4/R-4.5.3.tar.gz').reply(200);
+    nock('https://github.com')
+        .head('/r-hub/R/releases/download/v4.5.3/R-4.5.3.tar.gz').reply(200);
 }
 
 test.beforeEach(() => { setup(); });
@@ -78,25 +78,25 @@ test.serial('resolve throws for unknown OS', async t => {
 test.serial('resolve routes win to Windows resolver', async t => {
     mockSvnTags();
     const r = await resolve('4.5.0', 'win', undefined, false);
-    t.true(r.url.includes('windows'));
+    t.true(r.url.includes('-win'));
 });
 
 test.serial('resolve routes windows alias to Windows resolver', async t => {
     mockSvnTags();
     const r = await resolve('4.5.0', 'windows', undefined, false);
-    t.true(r.url.includes('windows'));
+    t.true(r.url.includes('-win'));
 });
 
 test.serial('resolve OS matching is case-insensitive', async t => {
     mockSvnTags();
     const r = await resolve('4.5.0', 'WIN', undefined, false);
-    t.true(r.url.includes('windows'));
+    t.true(r.url.includes('-win'));
 });
 
 test.serial('resolve routes mac to macOS resolver', async t => {
     mockSvnTags();
     const r = await resolve('4.5.0', 'mac', undefined, false);
-    t.true(r.url.includes('macosx') || r.url.includes('macos'));
+    t.true(r.url.endsWith('.pkg'));
 });
 
 test.serial('resolve routes linux-* to Linux resolver', async t => {
@@ -108,7 +108,7 @@ test.serial('resolve routes linux-* to Linux resolver', async t => {
 test.serial('resolve with no OS resolves without OS-specific URL', async t => {
     mockSvnTags();
     const r = await resolve('4.5.0', undefined, undefined, false);
-    t.is(r.url, 'https://cran.rstudio.com/src/base/R-4/R-4.5.0.tar.gz');
+    t.is(r.url, 'https://github.com/r-hub/R/releases/download/v4.5.0/R-4.5.0.tar.gz');
 });
 
 // --- No-OS: version strings -----------------------------------------------
@@ -119,7 +119,7 @@ test.serial('resolve no-OS specific version returns tarball URL and metadata', a
     t.is(r.version, '4.5.0');
     t.is(r.type, '4.5.0');
     t.is(r.nickname, 'How About a Twenty-Six');
-    t.is(r.url, 'https://cran.rstudio.com/src/base/R-4/R-4.5.0.tar.gz');
+    t.is(r.url, 'https://github.com/r-hub/R/releases/download/v4.5.0/R-4.5.0.tar.gz');
 });
 
 test.serial('resolve no-OS minor version returns latest patch release', async t => {
@@ -127,7 +127,7 @@ test.serial('resolve no-OS minor version returns latest patch release', async t 
     const r = await resolve('4.5', undefined, undefined, false);
     t.is(r.version, '4.5.3');
     t.is(r.type, '4.5');
-    t.is(r.url, 'https://cran.rstudio.com/src/base/R-4/R-4.5.3.tar.gz');
+    t.is(r.url, 'https://github.com/r-hub/R/releases/download/v4.5.3/R-4.5.3.tar.gz');
 });
 
 test.serial('resolve no-OS release returns latest release tarball', async t => {
@@ -136,7 +136,7 @@ test.serial('resolve no-OS release returns latest release tarball', async t => {
     const r = await resolve('release', undefined, undefined, false);
     t.is(r.version, '4.5.3');
     t.is(r.type, 'release');
-    t.is(r.url, 'https://cran.rstudio.com/src/base/R-4/R-4.5.3.tar.gz');
+    t.is(r.url, 'https://github.com/r-hub/R/releases/download/v4.5.3/R-4.5.3.tar.gz');
 });
 
 test.serial('resolve no-OS devel returns devel version info', async t => {
@@ -187,16 +187,22 @@ test.serial('resolve win x86_64 returns Windows installer URL', async t => {
     mockSvnTags();
     const r = await resolve('4.5.0', 'win', 'x86_64', false);
     t.is(r.version, '4.5.0');
-    t.is(r.url, 'https://cran.rstudio.com/bin/windows/base/old/4.5.0/R-4.5.0-win.exe');
+    t.is(r.url, 'https://github.com/r-hub/R/releases/download/v4.5.0/R-4.5.0-win.exe');
 });
 
-test.serial('resolve win pre-4.2 uses cran-archive URL', async t => {
+test.serial('resolve win older versions use GitHub URLs with CRAN file names', async t => {
     mockSvnTags();
     const r = await resolve('3.5.0', 'win', 'x86_64', false);
-    t.is(r.url, 'https://cran-archive.r-project.org/bin/windows/base/old/3.5.0/R-3.5.0-win.exe');
+    t.is(r.url, 'https://github.com/r-hub/R/releases/download/v3.5.0/R-3.5.0-win.exe');
     mockSvnTags();
     const r2 = await resolve('4.1.3', 'win', 'x86_64', false);
-    t.is(r2.url, 'https://cran-archive.r-project.org/bin/windows/base/old/4.1.3/R-4.1.3-win.exe');
+    t.is(r2.url, 'https://github.com/r-hub/R/releases/download/v4.1.3/R-4.1.3-win.exe');
+    mockSvnTags();
+    const r3 = await resolve('3.2.4', 'win', 'x86_64', false);
+    t.is(r3.url, 'https://github.com/r-hub/R/releases/download/v3.2.4-1/R-3.2.4revised-win.exe');
+    mockSvnTags();
+    const r4 = await resolve('2.5.0', 'win', 'x86_64', false);
+    t.is(r4.url, 'https://github.com/r-hub/R/releases/download/v2.5.0/R-2.5.0-win32.exe');
 });
 
 test.serial('resolve win aarch64 returns GitHub arm64 installer URL', async t => {
@@ -222,28 +228,28 @@ test.serial('resolve win aarch64 throws for versions before 4.4.0', async t => {
 
 // --- macOS ----------------------------------------------------------------
 
-test.serial('resolve mac x86_64 returns big-sur URL for 4.3+', async t => {
+test.serial('resolve mac x86_64 returns x86_64 pkg URL for 4.3+', async t => {
     mockSvnTags();
     const r = await resolve('4.5.0', 'mac', 'x86_64', false);
-    t.is(r.url, 'https://cran.rstudio.com/bin/macosx/big-sur-x86_64/base/R-4.5.0-x86_64.pkg');
+    t.is(r.url, 'https://github.com/r-hub/R/releases/download/v4.5.0/R-4.5.0-x86_64.pkg');
 });
 
-test.serial('resolve mac arm64 returns big-sur-arm64 URL for < 4.6.0', async t => {
+test.serial('resolve mac arm64 returns arm64 pkg URL for < 4.6.0', async t => {
     mockSvnTags();
     const r = await resolve('4.5.0', 'mac', 'arm64', false);
-    t.is(r.url, 'https://cran.rstudio.com/bin/macosx/big-sur-arm64/base/R-4.5.0-arm64.pkg');
+    t.is(r.url, 'https://github.com/r-hub/R/releases/download/v4.5.0/R-4.5.0-arm64.pkg');
 });
 
-test.serial('resolve mac arm64 returns sonoma-arm64 URL for 4.6.0+', async t => {
+test.serial('resolve mac arm64 returns arm64 pkg URL for 4.6.0+', async t => {
     mockSvnTags();
     const r = await resolve('4.6.0', 'mac', 'arm64', false);
-    t.is(r.url, 'https://cran.rstudio.com/bin/macosx/sonoma-arm64/base/R-4.6.0-arm64.pkg');
+    t.is(r.url, 'https://github.com/r-hub/R/releases/download/v4.6.0/R-4.6.0-arm64.pkg');
 });
 
 test.serial('resolve mac x86_64 uses pre-4.3 URL format for older versions', async t => {
     mockSvnTags();
     const r = await resolve('4.2.0', 'mac', 'x86_64', false);
-    t.is(r.url, 'https://cran.rstudio.com/bin/macosx/base/R-4.2.0.pkg');
+    t.is(r.url, 'https://github.com/r-hub/R/releases/download/v4.2.0/R-4.2.0.pkg');
 });
 
 // --- Linux ----------------------------------------------------------------
@@ -302,8 +308,8 @@ function mockRdevelWin() {
 }
 
 function mockReleaseWinHead() {
-    nock('https://cran.rstudio.com')
-        .head('/bin/windows/base/R-4.5.3-win.exe').reply(200);
+    nock('https://github.com')
+        .head('/r-hub/R/releases/download/v4.5.3/R-4.5.3-win.exe').reply(200);
 }
 
 function mockNextWinHead() {
@@ -312,8 +318,8 @@ function mockNextWinHead() {
 }
 
 function mockReleaseMacHead() {
-    nock('https://cran.rstudio.com')
-        .head('/bin/macosx/big-sur-x86_64/base/R-4.5.3-x86_64.pkg').reply(200);
+    nock('https://github.com')
+        .head('/r-hub/R/releases/download/v4.5.3/R-4.5.3-x86_64.pkg').reply(200);
 }
 
 function mockNextMacHead() {
@@ -350,7 +356,7 @@ test.serial('resolve win release returns latest installer URL', async t => {
     const r = await resolve('release', 'win', 'x86_64', false);
     t.is(r.version, '4.5.3');
     t.is(r.type, 'release');
-    t.is(r.url, 'https://cran.rstudio.com/bin/windows/base/R-4.5.3-win.exe');
+    t.is(r.url, 'https://github.com/r-hub/R/releases/download/v4.5.3/R-4.5.3-win.exe');
 });
 
 test.serial('resolve win next returns beta installer URL', async t => {
@@ -370,7 +376,7 @@ test.serial('resolve win oldrel returns oldrel Windows URL', async t => {
     const r = await resolve('oldrel', 'win', 'x86_64', false);
     t.is(r.type, 'oldrel/1');
     t.is(r.version, '4.5.3');
-    t.true(r.url.includes('windows'));
+    t.true(r.url.includes('-win'));
 });
 
 test.serial('resolve win minor version returns latest patch installer', async t => {
@@ -380,7 +386,7 @@ test.serial('resolve win minor version returns latest patch installer', async t 
     const r = await resolve('4.5', 'win', 'x86_64', false);
     t.is(r.version, '4.5.3');
     t.is(r.type, '4.5');
-    t.is(r.url, 'https://cran.rstudio.com/bin/windows/base/old/4.5.3/R-4.5.3-win.exe');
+    t.is(r.url, 'https://github.com/r-hub/R/releases/download/v4.5.3/R-4.5.3-win.exe');
 });
 
 // --- Additional macOS tests -------------------------------------------------
@@ -392,16 +398,16 @@ test.serial('resolve mac throws for unsupported arch', async t => {
     );
 });
 
-test.serial('resolve mac aarch64 alias resolves as arm64 (big-sur for < 4.6.0)', async t => {
+test.serial('resolve mac aarch64 alias resolves as arm64', async t => {
     mockSvnTags();
     const r = await resolve('4.5.0', 'mac', 'aarch64', false);
-    t.is(r.url, 'https://cran.rstudio.com/bin/macosx/big-sur-arm64/base/R-4.5.0-arm64.pkg');
+    t.is(r.url, 'https://github.com/r-hub/R/releases/download/v4.5.0/R-4.5.0-arm64.pkg');
 });
 
 test.serial('resolve mac 3.2.5 returns revised package URL', async t => {
     mockSvnTags();
     const r = await resolve('3.2.5', 'mac', 'x86_64', false);
-    t.is(r.url, 'https://cran-archive.r-project.org/bin/macosx/base/R-3.2.4-revised.pkg');
+    t.is(r.url, 'https://github.com/r-hub/R/releases/download/v3.2.4/R-3.2.4-revised.pkg');
 });
 
 test.serial('resolve mac pre-2.10.0 throws', async t => {
@@ -412,10 +418,10 @@ test.serial('resolve mac pre-2.10.0 throws', async t => {
     );
 });
 
-test.serial('resolve mac pre-4.0 uses cran-archive URL', async t => {
+test.serial('resolve mac pre-4.0 uses GitHub URL', async t => {
     mockSvnTags();
     const r = await resolve('3.0.0', 'mac', 'x86_64', false);
-    t.is(r.url, 'https://cran-archive.r-project.org/bin/macosx/base/R-3.0.0.pkg');
+    t.is(r.url, 'https://github.com/r-hub/R/releases/download/v3.0.0/R-3.0.0.pkg');
 });
 
 test.serial('resolve mac pre-4.1.0 arm64 throws', async t => {
@@ -440,7 +446,7 @@ test.serial('resolve mac release returns latest pkg URL', async t => {
     const r = await resolve('release', 'mac', 'x86_64', false);
     t.is(r.version, '4.5.3');
     t.is(r.type, 'release');
-    t.is(r.url, 'https://cran.rstudio.com/bin/macosx/big-sur-x86_64/base/R-4.5.3-x86_64.pkg');
+    t.is(r.url, 'https://github.com/r-hub/R/releases/download/v4.5.3/R-4.5.3-x86_64.pkg');
 });
 
 test.serial('resolve mac next returns beta pkg URL', async t => {
@@ -460,7 +466,7 @@ test.serial('resolve mac oldrel returns oldrel pkg URL', async t => {
     const r = await resolve('oldrel', 'mac', 'x86_64', false);
     t.is(r.type, 'oldrel/1');
     t.is(r.version, '4.5.3');
-    t.true(r.url.includes('big-sur-x86_64'));
+    t.is(r.url, 'https://github.com/r-hub/R/releases/download/v4.5.3/R-4.5.3-x86_64.pkg');
 });
 
 test.serial('resolve mac minor version returns latest patch pkg', async t => {
@@ -470,7 +476,7 @@ test.serial('resolve mac minor version returns latest patch pkg', async t => {
     const r = await resolve('4.5', 'mac', 'x86_64', false);
     t.is(r.version, '4.5.3');
     t.is(r.type, '4.5');
-    t.is(r.url, 'https://cran.rstudio.com/bin/macosx/big-sur-x86_64/base/R-4.5.3-x86_64.pkg');
+    t.is(r.url, 'https://github.com/r-hub/R/releases/download/v4.5.3/R-4.5.3-x86_64.pkg');
 });
 
 // --- Additional Linux tests -------------------------------------------------

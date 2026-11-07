@@ -1,3 +1,14 @@
+# 2.4.27
+
+* Almost all installers and source tarballs point to GitHub Releases now.
+  The exceptions are R-devel and R-next tarballs and Windows x86_64
+  installers pointing to cran.rstudio.com and R-devel and R-next macOS
+  installers pointing to mac.cran.dev.
+
+* Resolving a specific version and listing the available versions now
+  return the same URL. Before, resolving some old versions (e.g. 1.x
+  tarballs and 2.x Windows installers) gave URLs that did not exist.
+
 # 2.4.26
 
 * Update Rtools <= 4.0 locations as well, CRAN moved those, too.

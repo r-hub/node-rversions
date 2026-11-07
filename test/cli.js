@@ -57,8 +57,8 @@ function mockSvnR46Branch() {
 }
 
 function mockTarball453Head() {
-    nock('https://cran.rstudio.com')
-        .head('/src/base/R-4/R-4.5.3.tar.gz').reply(200);
+    nock('https://github.com')
+        .head('/r-hub/R/releases/download/v4.5.3/R-4.5.3.tar.gz').reply(200);
 }
 
 test.beforeEach(() => { setup(); });
@@ -105,7 +105,7 @@ test.serial('cmdResolve prints version and url separated by a tab', async t => {
     t.is(lines.length, 1);
     const [ver, url] = lines[0].split('\t');
     t.is(ver, '4.5.0');
-    t.is(url, 'https://cran.rstudio.com/src/base/R-4/R-4.5.0.tar.gz');
+    t.is(url, 'https://github.com/r-hub/R/releases/download/v4.5.0/R-4.5.0.tar.gz');
 });
 
 test.serial('cmdResolve --json outputs the full resolved object', async t => {
@@ -115,7 +115,7 @@ test.serial('cmdResolve --json outputs the full resolved object', async t => {
     t.is(lines.length, 1);
     const obj = JSON.parse(lines[0]);
     t.is(obj.version, '4.5.0');
-    t.is(obj.url, 'https://cran.rstudio.com/src/base/R-4/R-4.5.0.tar.gz');
+    t.is(obj.url, 'https://github.com/r-hub/R/releases/download/v4.5.0/R-4.5.0.tar.gz');
     t.is(obj.type, '4.5.0');
 });
 
@@ -124,7 +124,7 @@ test.serial('cmdResolve forwards --os and --arch', async t => {
     const { out, lines } = makeOut();
     await cmdResolve('4.5.0', { os: 'win', arch: 'x86_64' }, out);
     const [, url] = lines[0].split('\t');
-    t.true(url.includes('windows'));
+    t.true(url.includes('-win'));
 });
 
 test.serial('cmdResolve devel uses trunk mocks', async t => {

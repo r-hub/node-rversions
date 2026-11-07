@@ -54,13 +54,13 @@ function mockSvnR46Branch() {
 }
 
 function mockTarball453Head() {
-    nock('https://cran.rstudio.com')
-        .head('/src/base/R-4/R-4.5.3.tar.gz').reply(200);
+    nock('https://github.com')
+        .head('/r-hub/R/releases/download/v4.5.3/R-4.5.3.tar.gz').reply(200);
 }
 
 function mockReleaseWinHead() {
-    nock('https://cran.rstudio.com')
-        .head('/bin/windows/base/R-4.5.3-win.exe').reply(200);
+    nock('https://github.com')
+        .head('/r-hub/R/releases/download/v4.5.3/R-4.5.3-win.exe').reply(200);
 }
 
 function mockNextWinHead() {
@@ -74,8 +74,8 @@ function mockRdevelWin() {
 }
 
 function mockReleaseMacHead() {
-    nock('https://cran.rstudio.com')
-        .head('/bin/macosx/big-sur-x86_64/base/R-4.5.3-x86_64.pkg').reply(200);
+    nock('https://github.com')
+        .head('/r-hub/R/releases/download/v4.5.3/R-4.5.3-x86_64.pkg').reply(200);
 }
 
 function mockNextMacHead() {
@@ -165,7 +165,7 @@ test.serial('available no-OS release entries have tarball URLs', async t => {
     mockSvnTrunk();
     const av = await available(undefined, undefined, false);
     const rel = av.find(v => v.version === '4.5.0');
-    t.is(rel.url, 'https://cran.rstudio.com/src/base/R-4/R-4.5.0.tar.gz');
+    t.is(rel.url, 'https://github.com/r-hub/R/releases/download/v4.5.0/R-4.5.0.tar.gz');
     t.is(rel.type, 'release');
     t.is(rel.name, '4.5.0');
 });
@@ -190,7 +190,7 @@ test.serial('available win x86_64 returns array with Windows installer URLs', as
     t.true(av.length > 5);
     // Release entries have Windows URLs
     const releases = av.filter(v => v.type === 'release');
-    t.true(releases.every(v => v.url.includes('windows') || v.url.includes('github.com')));
+    t.true(releases.every(v => v.url.startsWith('https://github.com/r-hub/R/releases/download/v')));
     // Last two are next and devel
     t.is(av[av.length - 2].name, 'next');
     t.is(av[av.length - 1].name, 'devel');
@@ -227,9 +227,7 @@ test.serial('available mac x86_64 returns array with macOS pkg URLs', async t =>
     t.true(av.length > 5);
     // Release entries have macOS URLs
     const releases = av.filter(v => v.type === 'release');
-    t.true(releases.every(v =>
-        v.url.includes('macosx') || v.url.includes('cran-archive') || v.url.includes('cran.rstudio.com')
-    ));
+    t.true(releases.every(v => v.url.startsWith('https://github.com/r-hub/R/releases/download/v')));
     // Last two are next and devel
     t.is(av[av.length - 2].name, 'next');
     t.is(av[av.length - 1].name, 'devel');
@@ -255,8 +253,8 @@ test.serial('available mac arm64 oldest release is 4.1.0', async t => {
     mockSvnR46Branch();
     mockSvnTrunk();
     // arm64 release HEAD
-    nock('https://cran.rstudio.com')
-        .head('/bin/macosx/sonoma-arm64/base/R-4.5.3-arm64.pkg').reply(200);
+    nock('https://github.com')
+        .head('/r-hub/R/releases/download/v4.5.3/R-4.5.3-arm64.pkg').reply(200);
     // arm64 next HEAD (same URL as x86_64 next but for arm64)
     nock('https://mac.cran.dev')
         .head('/sonoma/last-success/R-4.6-branch-arm64.pkg').reply(200);

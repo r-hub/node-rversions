@@ -38,12 +38,12 @@ default; use `--json` for full objects.
 
 ``` sh
 $ rver available | tail -3
-4.5.3   https://cran.rstudio.com/src/base/R-4/R-4.5.3.tar.gz
-4.6.0   https://cran.rstudio.com/src/base/R-4/R-4.6.0.tar.gz
+4.5.3   https://github.com/r-hub/R/releases/download/v4.5.3/R-4.5.3.tar.gz
+4.6.0   https://github.com/r-hub/R/releases/download/v4.6.0/R-4.6.0.tar.gz
 4.7.0   https://cran.rstudio.com/src/base-prerelease/R-devel.tar.gz
 
 $ rver available --os win --arch x86_64 | tail -3
-4.5.3   https://cran.rstudio.com/bin/windows/base/old/4.5.3/R-4.5.3-win.exe
+4.5.3   https://github.com/r-hub/R/releases/download/v4.5.3/R-4.5.3-win.exe
 4.6.0   https://cran.rstudio.com/bin/windows/base/R-4.6.0-win.exe
 4.7.0   https://cran.rstudio.com/bin/windows/base/R-devel-win.exe
 
@@ -58,10 +58,10 @@ Prints `version<TAB>url` by default; use `--json` for the full object.
 
 ``` sh
 $ rver resolve release
-4.6.0   https://cran.rstudio.com/src/base/R-4/R-4.6.0.tar.gz
+4.6.0   https://github.com/r-hub/R/releases/download/v4.6.0/R-4.6.0.tar.gz
 
 $ rver resolve release --os win --arch x86_64
-4.6.0   https://cran.rstudio.com/bin/windows/base/R-4.6.0-win.exe
+4.6.0   https://github.com/r-hub/R/releases/download/v4.6.0/R-4.6.0-win.exe
 
 $ rver resolve 4.4 --os mac --arch arm64 --json
 {
@@ -271,7 +271,7 @@ console.log(await rversions.resolve("release"));
     ##   version: '4.6.0',
     ##   nickname: 'Because it was There',
     ##   type: 'release',
-    ##   url: 'https://cran.rstudio.com/src/base/R-4/R-4.6.0.tar.gz',
+    ##   url: 'https://github.com/r-hub/R/releases/download/v4.6.0/R-4.6.0.tar.gz',
     ##   date: '2026-04-24T07:17:39.158455Z'
     ## }
 
@@ -284,7 +284,7 @@ console.log(await rversions.resolve("release", "win"));
     ##   version: '4.6.0',
     ##   nickname: 'Because it was There',
     ##   type: 'release',
-    ##   url: 'https://cran.rstudio.com/bin/windows/base/R-4.6.0-win.exe',
+    ##   url: 'https://github.com/r-hub/R/releases/download/v4.6.0/R-4.6.0-win.exe',
     ##   date: '2026-04-24T07:17:39.158455Z',
     ##   rtools: '45',
     ##   rtools_url: 'https://github.com/r-hub/rtools45/releases/download/latest/rtools45.exe'
@@ -299,7 +299,7 @@ console.log(await rversions.resolve("release", "macos"));
     ##   version: '4.6.0',
     ##   nickname: 'Because it was There',
     ##   type: 'release',
-    ##   url: 'https://cran.rstudio.com/bin/macosx/big-sur-x86_64/base/R-4.6.0-x86_64.pkg',
+    ##   url: 'https://github.com/r-hub/R/releases/download/v4.6.0/R-4.6.0-x86_64.pkg',
     ##   date: '2026-04-24T07:17:39.158455Z'
     ## }
 
@@ -346,7 +346,7 @@ console.log(await rversions.resolve("oldrel/1"));
     ##   version: '4.5.3',
     ##   nickname: 'Reassured Reassurer',
     ##   type: 'oldrel/1',
-    ##   url: 'https://cran.rstudio.com/src/base/R-4/R-4.5.3.tar.gz',
+    ##   url: 'https://github.com/r-hub/R/releases/download/v4.5.3/R-4.5.3.tar.gz',
     ##   date: '2026-03-11T08:14:07.678022Z'
     ## }
 
@@ -359,7 +359,7 @@ console.log(await rversions.resolve("oldrel/1", "win"));
     ##   version: '4.5.3',
     ##   nickname: 'Reassured Reassurer',
     ##   type: 'oldrel/1',
-    ##   url: 'https://cran.rstudio.com/bin/windows/base/old/4.5.3/R-4.5.3-win.exe',
+    ##   url: 'https://github.com/r-hub/R/releases/download/v4.5.3/R-4.5.3-win.exe',
     ##   date: '2026-03-11T08:14:07.678022Z',
     ##   rtools: '45',
     ##   rtools_url: 'https://github.com/r-hub/rtools45/releases/download/latest/rtools45.exe'
@@ -374,7 +374,7 @@ console.log(await rversions.resolve("oldrel/1", "macos"));
     ##   version: '4.5.3',
     ##   nickname: 'Reassured Reassurer',
     ##   type: 'oldrel/1',
-    ##   url: 'https://cran.rstudio.com/bin/macosx/big-sur-x86_64/base/R-4.5.3-x86_64.pkg',
+    ##   url: 'https://github.com/r-hub/R/releases/download/v4.5.3/R-4.5.3-x86_64.pkg',
     ##   date: '2026-03-11T08:14:07.678022Z'
     ## }
 
@@ -420,7 +420,7 @@ console.log(await rversions.resolve("4.2.2"));
     ##   nickname: 'Innocent and Trusting',
     ##   type: '4.2.2',
     ##   date: '2022-10-31T08:05:54.268400Z',
-    ##   url: 'https://cran.rstudio.com/src/base/R-4/R-4.2.2.tar.gz'
+    ##   url: 'https://github.com/r-hub/R/releases/download/v4.2.2/R-4.2.2.tar.gz'
     ## }
 
 ``` javascript
@@ -433,7 +433,7 @@ console.log(await rversions.resolve("4.2.2", "win"));
     ##   nickname: 'Innocent and Trusting',
     ##   type: '4.2.2',
     ##   date: '2022-10-31T08:05:54.268400Z',
-    ##   url: 'https://cran.rstudio.com/bin/windows/base/old/4.2.2/R-4.2.2-win.exe',
+    ##   url: 'https://github.com/r-hub/R/releases/download/v4.2.2/R-4.2.2-win.exe',
     ##   rtools: '42',
     ##   rtools_url: 'https://github.com/r-hub/rtools42/releases/download/latest/rtools42.exe'
     ## }
@@ -448,7 +448,7 @@ console.log(await rversions.resolve("4.2.2", "macos"));
     ##   nickname: 'Innocent and Trusting',
     ##   type: '4.2.2',
     ##   date: '2022-10-31T08:05:54.268400Z',
-    ##   url: 'https://cran.rstudio.com/bin/macosx/base/R-4.2.2.pkg'
+    ##   url: 'https://github.com/r-hub/R/releases/download/v4.2.2/R-4.2.2.pkg'
     ## }
 
 ``` javascript
@@ -492,7 +492,7 @@ console.log(await rversions.resolve("4.1"));
     ##   version: '4.1.3',
     ##   nickname: 'One Push-Up',
     ##   type: '4.1',
-    ##   url: 'https://cran.rstudio.com/src/base/R-4/R-4.1.3.tar.gz',
+    ##   url: 'https://github.com/r-hub/R/releases/download/v4.1.3/R-4.1.3.tar.gz',
     ##   date: '2022-03-10T08:05:38.083503Z'
     ## }
 
@@ -505,10 +505,10 @@ console.log(await rversions.resolve("4.1", "win"));
     ##   version: '4.1.3',
     ##   nickname: 'One Push-Up',
     ##   type: '4.1',
-    ##   url: 'https://cran-archive.r-project.org/bin/windows/base/old/4.1.3/R-4.1.3-win.exe',
+    ##   url: 'https://github.com/r-hub/R/releases/download/v4.1.3/R-4.1.3-win.exe',
     ##   date: '2022-03-10T08:05:38.083503Z',
     ##   rtools: '40',
-    ##   rtools_url: 'https://cran-archive.r-project.org/bin/windows/Rtools/rtools40-x86_64.exe'
+    ##   rtools_url: 'https://github.com/r-hub/rtools/releases/download/v40/rtools40-x86_64.exe'
     ## }
 
 ``` javascript
@@ -520,7 +520,7 @@ console.log(await rversions.resolve("4.1", "macos"));
     ##   version: '4.1.3',
     ##   nickname: 'One Push-Up',
     ##   type: '4.1',
-    ##   url: 'https://cran.rstudio.com/bin/macosx/base/R-4.1.3.pkg',
+    ##   url: 'https://github.com/r-hub/R/releases/download/v4.1.3/R-4.1.3.pkg',
     ##   date: '2022-03-10T08:05:38.083503Z'
     ## }
 
@@ -1370,103 +1370,103 @@ console.log(await rversions.rtools_versions());
     ## [
     ##   {
     ##     version: '26',
-    ##     url: 'https://cran-archive.r-project.org/bin/windows/Rtools/Rtools26.exe',
+    ##     url: 'https://github.com/r-hub/rtools/releases/download/v26/Rtools26.exe',
     ##     first: '2.0.0',
     ##     last: '2.6.2'
     ##   },
     ##   {
     ##     version: '27',
-    ##     url: 'https://cran-archive.r-project.org/bin/windows/Rtools/Rtools27.exe',
+    ##     url: 'https://github.com/r-hub/rtools/releases/download/v27/Rtools27.exe',
     ##     first: '2.6.0',
     ##     last: '2.7.2'
     ##   },
     ##   {
     ##     version: '28',
-    ##     url: 'https://cran-archive.r-project.org/bin/windows/Rtools/Rtools28.exe',
+    ##     url: 'https://github.com/r-hub/rtools/releases/download/v28/Rtools28.exe',
     ##     first: '2.7.0',
     ##     last: '2.8.1'
     ##   },
     ##   {
     ##     version: '29',
-    ##     url: 'https://cran-archive.r-project.org/bin/windows/Rtools/Rtools29.exe',
+    ##     url: 'https://github.com/r-hub/rtools/releases/download/v29/Rtools29.exe',
     ##     first: '2.8.0',
     ##     last: '2.9.2'
     ##   },
     ##   {
     ##     version: '210',
-    ##     url: 'https://cran-archive.r-project.org/bin/windows/Rtools/Rtools210.exe',
+    ##     url: 'https://github.com/r-hub/rtools/releases/download/v210/Rtools210.exe',
     ##     first: '2.9.0',
     ##     last: '2.10.1'
     ##   },
     ##   {
     ##     version: '211',
-    ##     url: 'https://cran-archive.r-project.org/bin/windows/Rtools/Rtools211.exe',
+    ##     url: 'https://github.com/r-hub/rtools/releases/download/v211/Rtools211.exe',
     ##     first: '2.10.0',
     ##     last: '2.11.1'
     ##   },
     ##   {
     ##     version: '212',
-    ##     url: 'https://cran-archive.r-project.org/bin/windows/Rtools/Rtools212.exe',
+    ##     url: 'https://github.com/r-hub/rtools/releases/download/v212/Rtools212.exe',
     ##     first: '2.12.0',
     ##     last: '2.12.2'
     ##   },
     ##   {
     ##     version: '213',
-    ##     url: 'https://cran-archive.r-project.org/bin/windows/Rtools/Rtools213.exe',
+    ##     url: 'https://github.com/r-hub/rtools/releases/download/v213/Rtools213.exe',
     ##     first: '2.13.0',
     ##     last: '2.13.2'
     ##   },
     ##   {
     ##     version: '214',
-    ##     url: 'https://cran-archive.r-project.org/bin/windows/Rtools/Rtools214.exe',
+    ##     url: 'https://github.com/r-hub/rtools/releases/download/v214/Rtools214.exe',
     ##     first: '2.13.0',
     ##     last: '2.14.2'
     ##   },
     ##   {
     ##     version: '215',
-    ##     url: 'https://cran-archive.r-project.org/bin/windows/Rtools/Rtools215.exe',
+    ##     url: 'https://github.com/r-hub/rtools/releases/download/v215/Rtools215.exe',
     ##     first: '2.14.2',
     ##     last: '2.15.1'
     ##   },
     ##   {
     ##     version: '30',
-    ##     url: 'https://cran-archive.r-project.org/bin/windows/Rtools/Rtools30.exe',
+    ##     url: 'https://github.com/r-hub/rtools/releases/download/v30/Rtools30.exe',
     ##     first: '2.15.2',
     ##     last: '3.0.3'
     ##   },
     ##   {
     ##     version: '31',
-    ##     url: 'https://cran-archive.r-project.org/bin/windows/Rtools/Rtools31.exe',
+    ##     url: 'https://github.com/r-hub/rtools/releases/download/v31/Rtools31.exe',
     ##     first: '3.0.0',
     ##     last: '3.1.3'
     ##   },
     ##   {
     ##     version: '32',
-    ##     url: 'https://cran-archive.r-project.org/bin/windows/Rtools/Rtools32.exe',
+    ##     url: 'https://github.com/r-hub/rtools/releases/download/v32/Rtools32.exe',
     ##     first: '3.1.0',
     ##     last: '3.2.5'
     ##   },
     ##   {
     ##     version: '33',
-    ##     url: 'https://cran-archive.r-project.org/bin/windows/Rtools/Rtools33.exe',
+    ##     url: 'https://github.com/r-hub/rtools/releases/download/v33/Rtools33.exe',
     ##     first: '3.2.0',
     ##     last: '3.3.3'
     ##   },
     ##   {
     ##     version: '34',
-    ##     url: 'https://cran-archive.r-project.org/bin/windows/Rtools/Rtools34.exe',
+    ##     url: 'https://github.com/r-hub/rtools/releases/download/v34/Rtools34.exe',
     ##     first: '3.3.0',
     ##     last: '3.6.3'
     ##   },
     ##   {
     ##     version: '35',
-    ##     url: 'https://cran-archive.r-project.org/bin/windows/Rtools/Rtools35.exe',
+    ##     url: 'https://github.com/r-hub/rtools/releases/download/v35/Rtools35.exe',
     ##     first: '3.3.0',
     ##     last: '3.6.3'
     ##   },
     ##   {
     ##     version: '40',
-    ##     url: 'https://cran-archive.r-project.org/bin/windows/Rtools/rtools40-x86_64.exe',
+    ##     url: 'https://github.com/r-hub/rtools/releases/download/v40/rtools40-x86_64.exe',
     ##     first: '4.0.0',
     ##     last: '4.2.100'
     ##   },
