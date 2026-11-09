@@ -68,6 +68,22 @@ test('r_versions includes versions from SVN', async t => {
     t.truthy(versions.find(v => v.version === '4.5.1'));
 });
 
+test('r_versions preserves the release dates from SVN tags', async t => {
+    mockSvnTags();
+    const versions = await r_versions(false);
+    // These tags receive later commits in the GitHub mirror, so branch-tip dates are wrong.
+    const expectedDates = {
+        '4.0.1': '2020-06-06T07:05:16.469439Z',
+        '4.0.2': '2020-06-22T07:05:19.236082Z',
+    };
+
+    for (const [version, date] of Object.entries(expectedDates)) {
+        const release = versions.find(v => v.version === version);
+        t.truthy(release, `release ${version} is present`);
+        t.is(release.date, date, `release date for R ${version}`);
+    }
+});
+
 test('r_versions are sorted by date ascending', async t => {
     mockSvnTags();
     const versions = await r_versions(false);
