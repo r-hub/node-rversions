@@ -1,3 +1,8 @@
+# 2.4.28
+
+* New `manylinux_2_28` Linux platform, with x86_64 and aarch64 builds
+  from https://github.com/r-hub/R/releases.
+
 # 2.4.27
 
 * Almost all installers and source tarballs point to GitHub Releases now.

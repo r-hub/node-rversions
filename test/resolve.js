@@ -16,6 +16,8 @@ const fix = {
     branch46Version:     fs.readFileSync(path.join(__dirname, 'fixtures/svn-branch-4-6-version.txt'), 'utf8'),
     branch46VersionNick: fs.readFileSync(path.join(__dirname, 'fixtures/svn-branch-4-6-version-nick.txt'), 'utf8'),
     positVersions:       JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/posit-versions.json'), 'utf8')),
+    rhubReleases1:       JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/rhub-releases-1.json'), 'utf8')),
+    rhubReleases2:       JSON.parse(fs.readFileSync(path.join(__dirname, 'fixtures/rhub-releases-2.json'), 'utf8')),
     nick452: fs.readFileSync(path.join(__dirname, 'fixtures/version-nick-4-5-2.txt'), 'utf8').trim(),
     nick453: fs.readFileSync(path.join(__dirname, 'fixtures/version-nick-4-5-3.txt'), 'utf8').trim(),
     nick460: fs.readFileSync(path.join(__dirname, 'fixtures/version-nick-4-6-0.txt'), 'utf8').trim(),
@@ -59,6 +61,16 @@ function mockSvnR46Branch() {
 function mockPositVersions() {
     nock('https://cdn.posit.co')
         .get('/r/versions.json').reply(200, fix.positVersions);
+}
+
+// r-hub/R release assets, two pages. 4.5.3 has an x86_64 build only.
+function mockRhubReleases() {
+    nock('https://api.github.com')
+        .post('/graphql', body => body.variables.cursor === null)
+        .reply(200, fix.rhubReleases1);
+    nock('https://api.github.com')
+        .post('/graphql', body => body.variables.cursor === 'CURSOR1')
+        .reply(200, fix.rhubReleases2);
 }
 
 function mockTarball453Head() {
@@ -286,6 +298,43 @@ test.serial('resolve linux manylinux_2_34 returns Posit arm64 tarball URL', asyn
     mockSvnTags();
     const r = await resolve('4.5.0', 'linux-manylinux_2_34', 'aarch64', false);
     t.is(r.url, 'https://cdn.posit.co/r/manylinux_2_34/R-4.5.0-manylinux_2_34-arm64.tar.gz');
+});
+
+test.serial('resolve linux manylinux_2_28 returns r-hub amd64 tarball URL', async t => {
+    mockSvnTags();
+    const r = await resolve('4.5.0', 'linux-manylinux_2_28', 'x86_64', false);
+    t.is(r.url, 'https://github.com/r-hub/R/releases/download/v4.5.0/r-rstudio-manylinux_2_28-4.5.0-x86_64.tar.gz');
+});
+
+test.serial('resolve linux manylinux-2.28 alias returns r-hub arm64 tarball URL', async t => {
+    mockSvnTags();
+    const r = await resolve('4.5.0', 'linux-manylinux-2.28', 'aarch64', false);
+    t.is(r.url, 'https://github.com/r-hub/R/releases/download/v4.5.0/r-rstudio-manylinux_2_28-4.5.0-arm64.tar.gz');
+});
+
+test.serial('resolve linux manylinux_2_28 release uses r-hub release assets', async t => {
+    mockSvnTags();
+    mockRhubReleases();
+    const r = await resolve('release', 'linux-manylinux_2_28', 'x86_64', false);
+    t.is(r.version, '4.5.3');
+    t.is(r.url, 'https://github.com/r-hub/R/releases/download/v4.5.3/r-rstudio-manylinux_2_28-4.5.3-x86_64.tar.gz');
+});
+
+test.serial('resolve linux manylinux_2_28 arm64 release skips versions without a build', async t => {
+    mockSvnTags();
+    mockRhubReleases();
+    const r = await resolve('release', 'linux-manylinux_2_28', 'aarch64', false);
+    t.is(r.version, '4.5.2');
+    t.is(r.url, 'https://github.com/r-hub/R/releases/download/v4.5.2/r-rstudio-manylinux_2_28-4.5.2-arm64.tar.gz');
+});
+
+test.serial('resolve linux manylinux_2_28 minor version uses r-hub release assets', async t => {
+    // r_minor and r_versions_bare both fetch the tags
+    mockSvnTags(); mockSvnTags();
+    mockRhubReleases();
+    const r = await resolve('4.5', 'linux-manylinux_2_28', 'aarch64', false);
+    t.is(r.version, '4.5.2');
+    t.is(r.url, 'https://github.com/r-hub/R/releases/download/v4.5.2/r-rstudio-manylinux_2_28-4.5.2-arm64.tar.gz');
 });
 
 test.serial('resolve linux musllinux_1_2 returns Posit amd64 tarball URL', async t => {

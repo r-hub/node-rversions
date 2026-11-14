@@ -1,0 +1,52 @@
+{
+  "data": {
+    "repository": {
+      "releases": {
+        "pageInfo": {
+          "hasNextPage": false,
+          "endCursor": "CURSOR2"
+        },
+        "nodes": [
+          {
+            "tagName": "v4.5.0",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.5.0/r-rstudio-manylinux_2_28-4.5.0-x86_64.tar.gz"
+                },
+                {
+                  "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.5.0/r-rstudio-manylinux_2_28-4.5.0-arm64.tar.gz"
+                },
+                {
+                  "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.5.0/r-rstudio-ubuntu-2404-4.5.0_1_amd64.deb"
+                }
+              ]
+            }
+          },
+          {
+            "tagName": "v3.6.3",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.3/r-rstudio-manylinux_2_28-3.6.3-x86_64.tar.gz"
+                },
+                {
+                  "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.3/r-rstudio-manylinux_2_28-3.6.3-arm64.tar.gz"
+                },
+                {
+                  "downloadUrl": "https://github.com/r-hub/R/releases/download/v3.6.3/r-rstudio-ubuntu-2404-3.6.3_1_amd64.deb"
+                }
+              ]
+            }
+          },
+          {
+            "tagName": "v3.2.4-1",
+            "releaseAssets": {
+              "nodes": []
+            }
+          }
+        ]
+      }
+    }
+  }
+}

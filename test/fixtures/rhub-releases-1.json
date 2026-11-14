@@ -1,0 +1,75 @@
+{
+  "data": {
+    "repository": {
+      "releases": {
+        "pageInfo": {
+          "hasNextPage": true,
+          "endCursor": "CURSOR1"
+        },
+        "nodes": [
+          {
+            "tagName": "vdevel",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "downloadUrl": "https://github.com/r-hub/R/releases/download/vdevel/r-rstudio-manylinux_2_28-devel-x86_64.tar.gz"
+                },
+                {
+                  "downloadUrl": "https://github.com/r-hub/R/releases/download/vdevel/r-rstudio-manylinux_2_28-devel-arm64.tar.gz"
+                },
+                {
+                  "downloadUrl": "https://github.com/r-hub/R/releases/download/vdevel/r-rstudio-ubuntu-2404-devel_1_amd64.deb"
+                }
+              ]
+            }
+          },
+          {
+            "tagName": "vnext",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "downloadUrl": "https://github.com/r-hub/R/releases/download/vnext/r-rstudio-manylinux_2_28-next-x86_64.tar.gz"
+                },
+                {
+                  "downloadUrl": "https://github.com/r-hub/R/releases/download/vnext/r-rstudio-manylinux_2_28-next-arm64.tar.gz"
+                },
+                {
+                  "downloadUrl": "https://github.com/r-hub/R/releases/download/vnext/r-rstudio-ubuntu-2404-next_1_amd64.deb"
+                }
+              ]
+            }
+          },
+          {
+            "tagName": "v4.5.3",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.5.3/r-rstudio-manylinux_2_28-4.5.3-x86_64.tar.gz"
+                },
+                {
+                  "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.5.3/r-rstudio-ubuntu-2404-4.5.3_1_amd64.deb"
+                }
+              ]
+            }
+          },
+          {
+            "tagName": "v4.5.2",
+            "releaseAssets": {
+              "nodes": [
+                {
+                  "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.5.2/r-rstudio-manylinux_2_28-4.5.2-x86_64.tar.gz"
+                },
+                {
+                  "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.5.2/r-rstudio-manylinux_2_28-4.5.2-arm64.tar.gz"
+                },
+                {
+                  "downloadUrl": "https://github.com/r-hub/R/releases/download/v4.5.2/r-rstudio-ubuntu-2404-4.5.2_1_amd64.deb"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}
